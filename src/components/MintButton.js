@@ -1,31 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import { ethers } from 'ethers';
+import { keccak256 } from 'ethers/lib/utils';
+import MerkleTree from 'merkletreejs';
 
-const contractAddress = "0xe6a1E520572e94A19EF253F3F676fe43f0f97b3b";
+const contractAddress = "0xD020E2D62b35AD1e7fAf36AFBBff6e59688c1f9b";
 const API_KEY = "VRRW7A39QJDDVF698UJFWU1R9V5FABRMQJ";
 const abi = [
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_name",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_symbol",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_initBaseURI",
-				"type": "string"
-			}
-		],
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	},
 	{
 		"inputs": [],
 		"name": "ApprovalCallerNotOwnerNorApproved",
@@ -178,25 +159,6 @@ const abi = [
 			{
 				"indexed": true,
 				"internalType": "address",
-				"name": "previousOwner",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "newOwner",
-				"type": "address"
-			}
-		],
-		"name": "OwnershipTransferred",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "address",
 				"name": "from",
 				"type": "address"
 			},
@@ -215,25 +177,6 @@ const abi = [
 		],
 		"name": "Transfer",
 		"type": "event"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"name": "_freeMintedCount",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
 	},
 	{
 		"inputs": [
@@ -265,39 +208,7 @@ const abi = [
 		"outputs": [
 			{
 				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "baseExtension",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "owner",
-				"type": "address"
-			}
-		],
-		"name": "freeMintedCount",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
+				"name": "balance",
 				"type": "uint256"
 			}
 		],
@@ -316,7 +227,7 @@ const abi = [
 		"outputs": [
 			{
 				"internalType": "address",
-				"name": "",
+				"name": "operator",
 				"type": "address"
 			}
 		],
@@ -348,103 +259,6 @@ const abi = [
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "_user",
-				"type": "address"
-			}
-		],
-		"name": "isWhitelisted",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "maxPerTransaction",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "maxPerTransactionWhitelist",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "maxSupply",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_quantity",
-				"type": "uint256"
-			}
-		],
-		"name": "mint",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "mintPricePublic",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "mintPriceWhitwliste",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
 		"inputs": [],
 		"name": "name",
 		"outputs": [
@@ -452,19 +266,6 @@ const abi = [
 				"internalType": "string",
 				"name": "",
 				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "owner",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
 			}
 		],
 		"stateMutability": "view",
@@ -482,44 +283,11 @@ const abi = [
 		"outputs": [
 			{
 				"internalType": "address",
-				"name": "",
+				"name": "owner",
 				"type": "address"
 			}
 		],
 		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "bool",
-				"name": "_state",
-				"type": "bool"
-			}
-		],
-		"name": "pause",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "paused",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "renounceOwnership",
-		"outputs": [],
-		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -564,7 +332,7 @@ const abi = [
 			},
 			{
 				"internalType": "bytes",
-				"name": "_data",
+				"name": "data",
 				"type": "bytes"
 			}
 		],
@@ -582,63 +350,11 @@ const abi = [
 			},
 			{
 				"internalType": "bool",
-				"name": "approved",
+				"name": "_approved",
 				"type": "bool"
 			}
 		],
 		"name": "setApprovalForAll",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_newBaseExtension",
-				"type": "string"
-			}
-		],
-		"name": "setBaseExtension",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_newBaseURI",
-				"type": "string"
-			}
-		],
-		"name": "setBaseURI",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_newMaxSupply",
-				"type": "uint256"
-			}
-		],
-		"name": "setMaxSupply",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "bool",
-				"name": "_state",
-				"type": "bool"
-			}
-		],
-		"name": "setOnlyWhitelisted",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -729,114 +445,23 @@ const abi = [
 		"outputs": [],
 		"stateMutability": "payable",
 		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "newOwner",
-				"type": "address"
-			}
-		],
-		"name": "transferOwnership",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"name": "walletMints",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "whitelistMint",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address[]",
-				"name": "_user",
-				"type": "address[]"
-			}
-		],
-		"name": "whitelistUsers",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"name": "whitelistWalletMints",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "whitelistedAddresses",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "withdrawAll",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
 	}
+];
+const addresses = ["0xB9277bb50FA9bD8Da38085622f5B782D47a64339",
+"0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+"0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+"0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+"0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+"0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+"0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+"0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+"0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+"0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db",
 ];
 
 function MintButton() {
 
+	const [mintAmount, setMintAmount] = useState("");
   const [currentAccount, setCurrentAccount] = useState(null);
   let [totalSupply, setSupply] = useState("");
 
@@ -850,32 +475,48 @@ function MintButton() {
       console.log("Wallet exist! We are ready to go!");
     }
 
-	const accoutns = await ethereum.request({ method: "eth_accounts" });
+		const accounts = await ethereum.request({ method: "eth_accounts" });
 
-	if (accoutns.lenght !== 0) {
-		const account = accoutns[0];
-		console.log("Found an authorized account: ", account);
-		setCurrentAccount(account);
-	} else {
-		console.log("No authorized account found");
-	}
-  }
-    
-  const connectWalletHandler = async () => {
-	const { ethereum } = window;
-    
-    if (!ethereum) {
-    alert("Please install Metamask!");
-  }
+		const leaves = addresses.map(x => keccak256(x))
+		const tree = new MerkleTree(leaves, keccak256, { sortPairs: true })
+		const buf2hex = (x) => '0x' + x.toString('hex')
+	
+		let leaf = "";
+		let proof = [""];
+		
+		console.log("root", buf2hex(tree.getRoot()))
+		
+		if (accounts !== undefined) {
+			leaf = keccak256(accounts) // accounts from accounts using accountsconnect/metamask
+			proof = tree.getProof(leaf).map(x => buf2hex(x.data))
+		}
+	
+		console.log("proof", proof)
+		console.log(accounts)
 
-  try {
-    const accounts = await ethereum.request({ method: "eth_requestAccounts"});
-    console.log("Found an account! Address: ", accounts[0]);
-    setCurrentAccount(accounts[0]);
-  } catch (err) {
-    console.log(err);
+		if (accounts.lenght !== 0) {
+			const account = accounts[0];
+			console.log("Found an authorized account: ", account);
+			setCurrentAccount(account);
+		} else {
+			console.log("No authorized account found");
+		}
   }
-} 
+		const connectWalletHandler = async () => {
+		const { ethereum } = window;
+			
+			if (!ethereum) {
+			alert("Please install Metamask!");
+		}
+
+		try {
+			const accounts = await ethereum.request({ method: "eth_requestAccounts"});
+			console.log("Found an account! Address: ", accounts[0]);
+			setCurrentAccount(accounts[0]);
+		} catch (err) {
+			console.log(err);
+		}
+	} 
 
   const mintNftHandler = async () => {
 	try {
@@ -887,8 +528,7 @@ function MintButton() {
 			const nftContract = new ethers.Contract(contractAddress, abi, signer);
 
 			console.log("Initialize payment");
-			let nftTxn = await nftContract.mint(1, { value: ethers.utils.parseEther("0.01") });
-
+			let nftTxn = await nftContract.mint(mintAmount, proof, { value: ethers.utils.parseEther(mintAmount*0.04) });
 			console.log("Minting... please wait!");
 			await nftTxn.wait();
 
@@ -934,6 +574,8 @@ function MintButton() {
 	fetchData();
 	},[]);
 
+
+	
   return (
     <Container>
       <Name>Testing</Name>
@@ -941,6 +583,7 @@ function MintButton() {
 	  	{currentAccount ? mintNftButton() : connectWalletButton()}
     </div>
 	  	<h2>Total Minted: {totalSupply}</h2>
+			<h2>Minting: {mintAmount}</h2>
     </Container>
   )
 }

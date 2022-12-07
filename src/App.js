@@ -19,7 +19,7 @@ function App() {
       <Router>
         <Switch>
           <Route path='/MintButton'>
-          <HeaderMint />
+            <HeaderMint />
             <MintButton />
           </Route>
           <Route path="/">

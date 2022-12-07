@@ -30,7 +30,7 @@ function Elixir() {
               <p>More and more people, until the complete kingdom was completely kidnapped to be able to improve their sources of energy of their body and to make so that these villagers survive longer and work longer. The more the years passed, the more the use of this liquid substance was obligatory. Since the body was used to receiving it and without it, the human body could no longer live.</p>
               <p>The whole body changes shape, before more human, but now a kind of alien. The rate of use of the liquid kept increasing, to the point that the tree itself was dying.</p>
               <p>The king was getting more and more worried, but he couldn't stop. He wanted to take everything for his daily wealth, but then the day came... One of the branches snapped and the liquid flowed out of the lab, freeing the drugged workers.</p>
-              <span>The guards, therefore, ask you to help them find the 888 escaped workers before they die, drained of their energy.</span>
+              <p>The guards, therefore, ask you to help them find the 888 escaped workers before they die, drained of their energy.</p>
             </ElixirText>
 
             <Splash5>
@@ -129,7 +129,7 @@ const Splash5 = styled.div`
 
   img {
       width: 450px;
-      opacity: 0.8;
+      opacity: 0.5;
     }
 `
 

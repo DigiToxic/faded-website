@@ -162,6 +162,7 @@ const Slider = styled.div`
 
   img {
     width: 300px;
+    border-radius: 20px;
   } 
 `
 
