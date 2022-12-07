@@ -5,10 +5,11 @@ import { keccak256 } from 'ethers/lib/utils';
 import MerkleTree from 'merkletreejs';
 import abi from './abi/abi.json';
 
-const contractAddress = "0xD020E2D62b35AD1e7fAf36AFBBff6e59688c1f9b";
+const contractAddress = "0xa9D01C95439a186A66be50A0C0C6326aBa8262F0";
 const API_KEY = "VRRW7A39QJDDVF698UJFWU1R9V5FABRMQJ";
 
 const addresses = ["0xB9277bb50FA9bD8Da38085622f5B782D47a64339",
+"0x2F6e6Cf9f8ace6C9bb3bDE1D991c844e20B1F1d2",
 "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
 "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
 "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
@@ -22,47 +23,46 @@ const addresses = ["0xB9277bb50FA9bD8Da38085622f5B782D47a64339",
 
 function MintButton() {
 
-  const [mintAmount, setMintAmount] = useState("");
-  const [currentAccount, setCurrentAccount] = useState(null);
-  let [totalSupply, setSupply] = useState("");
-	
-  let leaf = "";
-  let proof = [""];
+	const [mintAmount, setMintAmount] = useState("");
+	const [currentAccount, setCurrentAccount] = useState(null);
+	let [totalSupply, setSupply] = useState("");
 
-  const checkWalletIsConnected  = async () => {
-    const { ethereum } = window;
-
-    if (!ethereum) {
-      console.log("Make sure you have Metamask installed!");
-      return;
-    } else {
-      console.log("Wallet exist! We are ready to go!");
-    }
-
-		const accounts = await ethereum.request({ method: "eth_accounts" });
-
-		const leaves = addresses.map(x => keccak256(x))
-		const tree = new MerkleTree(leaves, keccak256, { sortPairs: true })
-		const buf2hex = (x) => '0x' + x.toString('hex')
+	const [proof, setProof] = useState([""]);
 		
-		console.log("root", buf2hex(tree.getRoot()))
-		
-		if (accounts !== undefined) {
-			leaf = keccak256(accounts) // accounts from accounts using accountsconnect/metamask
-			proof = tree.getProof(leaf).map(x => buf2hex(x.data))
-		}
-	
-		console.log("proof", proof)
-		console.log(accounts)
+	let leaf = "";
 
-		if (accounts.lenght !== 0) {
-			const account = accounts[0];
-			console.log("Found an authorized account: ", account);
-			setCurrentAccount(account);
+	const checkWalletIsConnected  = async () => {
+		const { ethereum } = window;
+
+		if (!ethereum) {
+			console.log("Make sure you have Metamask installed!");
+			return;
 		} else {
-			console.log("No authorized account found");
+			console.log("Wallet exist! We are ready to go!");const accounts = await ethereum.request({ method: "eth_accounts" });
+
+			const leaves = addresses.map(x => keccak256(x))
+			const tree = new MerkleTree(leaves, keccak256, { sortPairs: true })
+			const buf2hex = (x) => '0x' + x.toString('hex')
+			
+			console.log("root", buf2hex(tree.getRoot()))
+
+			leaf = keccak256(accounts[0]) // accounts from accounts using accountsconnect/metamask
+			setProof(tree.getProof(leaf).map(x => buf2hex(x.data)));
+		
+			console.log("proof", proof)
+			console.log(accounts)
+
+			if (accounts.lenght !== 0) {
+				const account = accounts[0];
+				console.log("Found an authorized account: ", account);
+				setCurrentAccount(account);
+			} else {
+				console.log("No authorized account found");
+			}
 		}
-  }
+
+		
+	}
 		const connectWalletHandler = async () => {
 		const { ethereum } = window;
 			
@@ -87,13 +87,20 @@ function MintButton() {
 			const provider = new ethers.providers.Web3Provider(ethereum);
 			const signer = provider.getSigner();
 			const nftContract = new ethers.Contract(contractAddress, abi, signer);
+			// setMintAmount(1);
+			let tempAmount = 1;
 
 			console.log("Initialize payment");
-			let nftTxn = await nftContract.mint(mintAmount, proof, { value: ethers.utils.parseEther(mintAmount*0.04) });
+			// let nftTxn = await nftContract.mint(1, { value: ethers.utils.parseEther("0.04") });
+			// let nftTxn = await nftContract.mint(mintAmount, { value: ethers.utils.parseEther(mintAmount*0.04) });
+			let cost = 0.04 * tempAmount;
+			console.log("proof", proof);
+
+			let nftTxn = await nftContract.WLmint(proof, tempAmount, { value: ethers.utils.parseEther(cost.toString()) });
 			console.log("Minting... please wait!");
 			await nftTxn.wait();
 
-			console.log("Minted, see transaction: https://goerli.etherscan.io/tx/${nftTxn.hash}");
+			console.log(`Minted, see transaction: https://goerli.etherscan.io/tx/${nftTxn.hash}`);
 
 		} else {
 			console.log("Ethereum object doesn't exist");
