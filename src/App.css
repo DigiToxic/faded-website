@@ -2,6 +2,16 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Playfair+Display:wght@600&family=Titillium+Web:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap");
 
+@font-face {
+  font-family: "anonymous";
+  src: url("./fonts/AnonymousPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: "judge";
+  src: url("./fonts/F37Judge-MediumCompressed.ttf");
+}
+
 body {
   background-color: rgb(33, 12, 94);
   overflow-x: hidden;
@@ -19,4 +29,8 @@ p {
 
 .Marquee {
   margin-right: 30px;
+}
+
+.Marquee img {
+  border-radius: 15px;
 }
