@@ -37,24 +37,24 @@ function Info() {
         NameDom="Dominic"
         TwitterDom="https://twitter.com/dominic_1654?s=20&t=SQSXaiAKq0T-TakNjiR8qA"
 
-        titleIssues="Community Manager"
+        /* titleIssues="Community Manager"
         pfpIssues="/images/Issues.jpg"
         Description1Issues="A nineteen-year old kid who decided to dip his toes into cryptocurrency in 2017 after discovering what bitcoin was while sitting in his french litterature class in high school. "
         Description2Issues="At first glance, he was skeptical about the whole subject and how it worked. After a couple days worth of research, he realized that it can be a great way to start investing and accumulate wealth: but he wasn’t at the legal age yet to trade or buy any crypto. So he decided to focus on Options Trading within the stock market with a papertrading account till he realized its potential as well. This is the moment when he realized something: Technical Analysis (TA) is important. He would spend his time with his discord friends who had experience in analyzing charts trying to figure out simple ways to make sense of the movements. It took him some time, but at the end, he figured it out. Since he still wasn’t at a legal age at that time either, he simply stopped trading options. At the age of 17, he made his first purchase during the COVID market crash and invested his time into Web3/Crypto Trading since then."
         Description3Issues="He met Mikail through a groupchat, and ever since then, the journey into Web3 had started for the both of them, together as a team."
         NameIssues="Issues"
-        TwitterIssues="https://twitter.com/stackingupbags?s=20&t=27W7Pqv9XlIWpS-r3m8Wdw"
+        TwitterIssues="https://twitter.com/stackingupbags?s=20&t=27W7Pqv9XlIWpS-r3m8Wdw" */
 
         /* Digi | Toxic + Mr.Alpha */
 
-        titleDigi="Head-mod + Dev"
+        titleDigi="Developer"
         pfpDigi="/images/Digi.jpg"
         Description1Digi="A 20-year-old developer just over his electromechanics studies, whose favorite subject during the course was programming. After finishing his education in electromechanics, the path was clear to industrial programming."
         Description2Digi="His desire to learn, continue to improve, and persevere in everything he does has allowed him to finish a serious industrial programming course. But it was never enough. When the word “inflation” came to his ear, he immediately got into crypto to save himself from the disaster. Hunger awakened inside of him to become a web3 developer, to have a better life, and to help as many projects as possible. He is now a developer, also a collab hunter as well as a moderator."
         NameDigi="Digi | Toxic"
         TwitterDigi="https://twitter.com/digi_toxic?s=21&t=uvesRa2IWu0lWT_VVu9VDQl"
 
-        titleAlpha="Head-mod + Dev"
+        titleAlpha="Developer"
         pfpAlpha="/images/Alpha.jpg"
         Description1Alpha="An 18 year old degen & full stack developer in dont worry by faded. "
         Description2Alpha="At the age of 16, he was deeply enthralled by programming & technology, and firmly believed that technology is the key to revolutionize and reform the future. During his journey, he was greatly inspired by nabil, who introduced him to the field of business and Web 3.0. Since then, he has been learning days in days out to improve his trading skills as well as deepening his understanding of blockchain ecosystem. "

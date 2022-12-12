@@ -37,7 +37,7 @@ function Team(props) {
         </Fade>
         <Fade right>
         <DevButton onClick={() => setButtonPopup3(true)}>
-          <span>Developer<br/> + <br/>moderator</span>
+          <span>Developer</span>
         </DevButton>
         </Fade>
 
@@ -92,27 +92,6 @@ function Team(props) {
             {props.Description3Dom}
           </TextDom>
         </PopupTextDom>
-
-
-        <HeaderIssues>
-           <p>{props.titleIssues}</p>
-        </HeaderIssues>
-        <PopupTextIssues>
-          <ContentIssues>
-            <img src={props.pfpIssues} />
-          <HandleIssues>
-            <p>{props.NameIssues}</p>
-            <a href={props.TwitterIssues}><img src="/images/twitter.png" /></a>
-          </HandleIssues>
-          </ContentIssues>
-          <TextIssues>
-            {props.Description1Issues}<br/>
-            <br/>
-            {props.Description2Issues}<br/>
-            <br/>
-            {props.Description3Issues}
-          </TextIssues>
-        </PopupTextIssues>
       </Popup>
 
 
@@ -235,7 +214,7 @@ export default Team
 const Container = styled.div`
   margin-top: 5px;
   background-color: rgb(234, 189, 252);
-  padding-bottom: 150px;
+  padding-bottom: 100px;
 `
 
 const NoblesName = styled.div`
@@ -252,6 +231,7 @@ const NoblesName = styled.div`
     border: 5px solid black;
     padding: 6px;
     border-radius: 15px;
+    color: green;
   }
 `
 
@@ -273,6 +253,13 @@ const TeamButton = styled.div`
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+
+  @media(max-width: 730px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
 `
 
 const FounderButton = styled.div`
@@ -287,13 +274,74 @@ const FounderButton = styled.div`
   cursor: pointer;
   transition: 0.5s ease-in-out;
 
+  span {
+    display: flex;
+    justify-content: center;
+  }
+
   &:hover {
     background-image: url("https://static.wixstatic.com/media/a67ef4_5d731120440047ea8331fa32d801a06b~mv2.png");
     background-size: 326px;
+    background-position: center;
+    background-repeat: no-repeat;
 
     color: rgba(255, 255, 255, 0);
     transition-timing-function: ease-in;
     transition-duration: 0.3s;
+  }
+  
+  @media(max-width: 1310px) {
+    padding: 90px 35px;
+    margin-left: 5px;
+
+    &:hover {
+      background-size: 280px;
+    }
+  }
+
+  @media(max-width: 1140px) {
+    padding: 80px 25px;
+
+    &:hover {
+      background-size: 260px;
+    }
+  }
+
+  @media(max-width: 1100px) {
+    padding: 70px 15px;
+
+    &:hover {
+      background-size: 240px;
+    }
+  }
+
+  @media(max-width: 980px) {
+    padding: 60px 5px;
+
+    &:hover {
+      background-size: 220px;
+    }
+  }
+
+  @media(max-width: 900px) {
+    padding: 50px 10px;
+    
+    span {
+      font-size: 46px;
+    }
+
+    &:hover {
+      background-size: 180px;
+    }
+  }
+
+  @media(max-width: 730px) {
+    margin-bottom: 10px;
+    margin-right: 5px;
+
+    &:hover {
+      background-size: 200px;
+    }
   }
 `
 
@@ -307,16 +355,79 @@ const CoFounderButton = styled.div`
   border-radius: 200px;
   cursor: pointer;
   transition: padding 0.15s;
-
   transition: 0.5s ease-in-out;
+
+  span {
+    display: flex;
+    justify-content: center;
+  }
 
   &:hover {
     background-image: url("https://static.wixstatic.com/media/a67ef4_c1a052d454434597b57805f756d4a713~mv2.png");
     background-size: 326px;
+    background-position: center;
+    background-repeat: no-repeat;
 
     color: rgba(255, 255, 255, 0);
     transition-timing-function: ease-in;
     transition-duration: 0.3s;
+  }
+
+  @media(max-width: 1310px) {
+    padding: 100px 24px;
+
+    &:hover {
+      background-size: 280px;
+    }
+  }
+
+  @media(max-width: 1140px) {
+    padding: 90px 14px;
+
+    &:hover {
+      background-size: 260px;
+    }
+  }
+
+  @media(max-width: 1100px) {
+    padding: 80px 4px;
+
+    &:hover {
+      background-size: 240px;
+    }
+  }
+
+  @media(max-width: 980px) {
+    padding: 74.1px 4px;
+
+    span {
+      font-size: 42.1px;
+    }
+
+    &:hover {
+      background-size: 220px;
+    }
+  }
+
+  @media(max-width: 900px) {
+    padding: 60px 4px;
+    
+    span {
+      font-size: 34.3px;
+    }
+
+    &:hover {
+      background-size: 180px;
+    }
+  }
+
+  @media(max-width: 730px) {
+    margin-bottom: 10px;
+    margin-left: 5px;
+
+    &:hover {
+      background-size: 200px;
+    }
   }
 `
 
@@ -326,21 +437,94 @@ const DevButton = styled.div`
   font-family: Pacifico;
   color: white;
   font-size: 46px;
-  padding: 40px 60px;
+  padding: 120px 63px;
   border-radius: 200px;
   cursor: pointer;
   align-items: center;
   text-align: center;
-
   transition: 0.5s ease-in-out;
+
+  span {
+    display: flex;
+    justify-content: center;
+  }
 
   &:hover {
     background-image: url("https://static.wixstatic.com/media/a67ef4_a0ef605341cc4c5b865beb01dc356539~mv2.png");
     background-size: 326px;
+    background-position: center;
+    background-repeat: no-repeat;
 
     color: rgba(255, 255, 255, 0);
     transition-timing-function: ease-in;
     transition-duration: 0.3s;
+  }
+
+  @media(max-width: 1310px) {
+    padding: 100px 43px;
+
+    &:hover {
+      background-size: 280px;
+    }
+  }
+
+  @media(max-width: 1140px) {
+    padding: 90px 33px;
+
+    span {
+      display: flex;
+      justify-content: center;
+    }
+
+    &:hover {
+      background-size: 260px;
+    }
+  }
+
+  @media(max-width: 1100px) {
+    padding: 80px 23px;
+
+
+    &:hover {
+      background-size: 240px;
+    }
+  }
+
+  @media(max-width: 980px) {
+    padding: 76px 23.6px;
+
+    span {
+      font-size: 41px;
+    }
+
+    &:hover {
+      background-size: 220px;
+    }
+  }
+
+  @media(max-width: 900px) {
+    padding: 62px 23px;
+    
+    span {
+      font-size: 32px;
+    }
+
+    &:hover {
+      background-size: 180px;
+    }
+  }
+
+  @media(max-width: 730px) {
+    padding: 55px 12px;
+    margin-right: 5px;
+
+    &:hover {
+      background-size: 200px;
+    }
+
+    span {
+      font-size: 40px;
+    }
   }
 `
 
@@ -352,18 +536,77 @@ const ArtistButton = styled.div`
   font-family: Pacifico;
   color: white;
   font-size: 46px;
-  padding: 120px 100px;
   border-radius: 200px;
   cursor: pointer;
   transition: 0.5s ease-in-out;
 
+  span {
+    display: flex;
+    justify-content: center;
+  }
+
     &:hover {
       background-image: url("https://static.wixstatic.com/media/a67ef4_46687043717b4947ba285e5372bb6933~mv2.png");
       background-size: 326px;
+      background-position: center;
+      background-repeat: no-repeat;
 
       color: rgba(255, 255, 255, 0);
       transition-timing-function: ease-in;
       transition-duration: 0.3s;
+    }
+  }
+
+  @media(max-width: 1310px) {
+    padding: 100px 80px;
+    margin-right: 5px;
+
+    &:hover {
+      background-size: 280px;
+    }
+  }
+
+  @media(max-width: 1140px) {
+    padding: 90px 70px;
+
+    &:hover {
+      background-size: 260px;
+    }
+  }
+
+  @media(max-width: 1100px) {
+    padding: 80px 60px;
+
+    &:hover {
+      background-size: 240px;
+    }
+  }
+
+  @media(max-width: 980px) {
+    padding: 70px 50px;
+
+    &:hover {
+      background-size: 220px;
+    }
+  }
+
+  @media(max-width: 900px) {
+    padding: 55px 33px;
+
+    span {
+      font-size: 40px;
+    }
+
+    &:hover {
+      background-size: 180px;
+    }
+  }
+
+  @media(max-width: 730px) {
+    margin-left: 5px;
+
+    &:hover {
+      background-size: 200px;
     }
   }
 `
@@ -397,6 +640,12 @@ const PopupText = styled.div`
   @keyframes fadeIn {
     0% {opacity: 0;}
     100% {opacity: 1;} 
+  }
+
+  @media(max-width: 1180px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center
   }
 `
 
@@ -461,6 +710,23 @@ const Text = styled.div`
   line-height: 25px;
   color: white;
 
+  @media(max-width: 1285px) {
+    margin-top: -10px;
+    font-size: 18px;
+  }
+
+  @media(max-width: 1250px) {
+    margin-top: -10px;
+    font-size: 16px;
+  }
+
+  @media(max-width: 1180px) {
+    margin-top: 20px;
+    margin-right: 60px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+  }
+
 `
 
 /* Dominic */
@@ -471,7 +737,6 @@ const HeaderDom = styled(Header)`
 
 const PopupTextDom = styled(PopupText)`
   background-color: rgb(206, 210, 217);
-  margin-bottom: 20px;
 `
 
 const ContentDom = styled(Content)`
@@ -483,6 +748,15 @@ const TextDom = styled(Text)`
   font-size: 19px;
   line-height: 21px;
   color: black;
+
+    @media(max-width: 1250px) {
+      margin-bottom: 10px;
+  }
+
+  @media(max-width: 1280px) {
+    margin-top: 10px;
+    font-size: 18px;
+  }
 `
 
 const HandleDom = styled(Handle)`
@@ -493,7 +767,7 @@ const HandleDom = styled(Handle)`
   }
 `
 
-/* Issues */
+/* Issues 
 
 const HeaderIssues = styled(Header)`
   background-color: rgb(59, 112, 204);
@@ -510,6 +784,10 @@ const TextIssues = styled(Text)`
   flex: 1;
   margin-right: 30px;
   line-height: 21px;
+
+  @media(max-width: 1180px) {
+    margin-top: 20px;
+  }
 `
 
 const HandleIssues = styled(Handle)`
@@ -518,7 +796,7 @@ const HandleIssues = styled(Handle)`
 
 const PopupTextIssues = styled(PopupText)`
   background-color: rgb(0, 0, 0);
-`
+` */
 
 /* Digi */
 
@@ -547,6 +825,10 @@ const TextDigi = styled(Text)`
   margin-right: 30px;
   line-height: 23px;
   font-size: 21px;
+
+  @media(max-width: 1180px) {
+    margin-top: 0px;
+  }
 `
 
 /* Alpha */
@@ -580,6 +862,19 @@ const TextAlpha = styled(Text)`
   flex: 1;
   margin-right: 30px;
   line-height: 20px;
+
+  @media(max-width: 1301px) {
+    margin-top: -18px;
+    font-size: 18px;
+  }
+
+  @media(max-width: 1273px) {
+    margin-bottom: 10px;
+}
+
+  @media(max-width: 1180px) {
+    margin-top: 0px;
+  }
 `
 
 /* Therealinh */
@@ -608,6 +903,10 @@ const TextLinh = styled(Text)`
   flex: 1;
   margin-right: 30px;
   line-height: 20px;
+
+  @media(max-width: 1180px) {
+    margin-top: 0px;
+  }
 `
 
 /* Funky */
@@ -640,6 +939,11 @@ const TextFunky = styled(Text)`
   margin-right: 30px;
   line-height: 20px;
   color: black;
+
+  @media(max-width: 1180px) {
+    margin-top: 0px;
+    font-size: 18px;
+  }
 `
 
 /* Funky */
@@ -664,6 +968,10 @@ const TextAreum = styled(Text)`
   font-size: 25px;
   margin-right: 30px;
   line-height: 30px;
+
+  @media(max-width: 1180px) {
+    margin-top: 0px;
+  }
 `
 
 const HandleAreum = styled(Handle)`
@@ -681,4 +989,9 @@ const Splash3 = styled.div`
       width: 300px;
       opacity: 0.8;
     }
+
+    
+  @media(max-width: 1049px) {
+    z-index: 1;
+  }
 `

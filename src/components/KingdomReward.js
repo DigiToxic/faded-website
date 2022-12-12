@@ -12,9 +12,9 @@ function KingdomReward() {
         </KingdomName>
         </Fade>
 
-        <Splash>
+        <Splash1>
               <img src="/images/splash/splash 1.png" alt="" />
-        </Splash>
+        </Splash1>
 
         <Fade right>
         <Kingdom>
@@ -101,7 +101,7 @@ function KingdomReward() {
 export default KingdomReward
 
 const Container = styled.div`
-position: relative;
+  position: relative;
   background-color: rgb(234, 189, 252);
   padding-bottom: 70px;
 `
@@ -109,7 +109,6 @@ position: relative;
 const KingdomName = styled.div`
   display: flex;
   justify-content: center;
-
   span {
     font-family: Arial;
     font-size: 30px;
@@ -120,6 +119,7 @@ const KingdomName = styled.div`
     border: 5px solid black;
     padding: 6px;
     border-radius: 15px;
+    color: green;
   }
 `
 
@@ -130,36 +130,69 @@ const Kingdom = styled.div`
   img {
     width: 600px;
     margin-top: 70px;
-    margin-left: 30px;
+    margin-left: 50px;
     box-shadow: 1px 1px 30px;
     border-radius: 20px;
   } 
+
+  @media (max-width: 1040px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      margin-left: 0px;
+    }
+
+  @media (max-width: 1300px) {
+    img {
+      width: 500px;
+    }
+  }
 `
 
 const KingdomText = styled.div`
-  margin-top: 200px;
-  margin-left: 30px;
-  margin-right: 20px;
+  margin-top: 190px;
+  margin-left: 60px;
+  margin-right: 100px;
   font-size: 20px;
   font-weight: bold;
+
+  p {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 1880px) {
+    margin-top: 200px;
+  }
+
+  @media (max-width: 1500px) {
+    margin-top: 190px;
+  }
 
   @media (max-width: 1300px) {
     margin-top: 170px;
   }
 
-  @media (max-width: 1100px) {
-    margin-top: 130px;
+  @media (max-width: 1200px) {
+    margin-top: 140px;
   }
 
-  p {
-    margin-bottom: 30px;
+  @media (max-width: 1040px) {
+    margin-left: 100px;
+    margin-top: 80px;
+    font-size: 22px;
+  }
+
+  @media (max-width: 1300px) {
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 `
 
 const Slider = styled.div`
-
   margin-top: 80px;
-
   img {
     width: 300px;
     border-radius: 20px;
@@ -206,13 +239,18 @@ const LastDiv = styled.div`
   margin-left: 60px;
 `
 
-const Splash = styled.div`
+const Splash1 = styled.div`
   position: absolute;
   left: 80%;
   
   img {
-      width: 300px;
+      width: 100%;
       opacity: 0.8;
+    }
+
+    @media (max-width: 1040px) {
+      left: 70%;
+      top: 40%;
     }
 `
 
