@@ -2,9 +2,9 @@
 
 ## You will need to :
 
-cd faded-website
+- cd faded-website
 
-## And then adding all those packages :
+## And then adding all those packages (don't be scare to use --force) :
 
 - npm install react-router-dom@5.2.0
 - npm i react-reveal
@@ -13,4 +13,4 @@ cd faded-website
 
 ## Now you should be good to go to do :
 
-npm start
+- npm start
