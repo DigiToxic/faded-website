@@ -10,6 +10,7 @@
 - npm i react-reveal
 - npm i react-scroll
 - npm install slick-carousel
+- npm install --save styled-components
 
 ## Now you should be good to go to do :
 
