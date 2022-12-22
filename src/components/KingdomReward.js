@@ -147,6 +147,16 @@ const Kingdom = styled.div`
     img {
       width: 500px;
     }
+
+    @media (max-width: 500px) {
+      img {
+        width: 400px;
+      }
+
+      @media (max-width: 430px) {
+        img {
+          width: 350px;
+        }
   }
 `
 
@@ -192,10 +202,25 @@ const KingdomText = styled.div`
 
 const Slider = styled.div`
   margin-top: 80px;
+
   img {
     width: 300px;
     border-radius: 20px;
-  } 
+  }
+  
+  @media (max-width: 1100px) {
+    img {
+      width: 250px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    margin-top: 40px;
+
+    img {
+      width: 200px;
+    }
+  }
 `
 
 const FirstDiv = styled.div`

@@ -114,6 +114,16 @@ const ElixirImage = styled.div`
     img {
       width: 500px;
     }
+
+      @media (max-width: 500px) {
+    img {
+      width: 400px;
+    }
+
+    @media (max-width: 401px) {
+      img {
+        width: 350px;
+      }
   }
 `
 

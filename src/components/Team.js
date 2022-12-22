@@ -260,6 +260,16 @@ const TeamButton = styled.div`
     margin-right: 10%;
     margin-left: 10%;
   }
+
+  @media(max-width: 480px) {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+  @media(max-width: 480px) {
+    margin-right: 2%;
+    margin-left: 2%;
+  }
 `
 
 const FounderButton = styled.div`

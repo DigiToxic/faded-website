@@ -235,6 +235,15 @@ const Door = styled.div`
   margin-top: 125px;
   background-color: rgb(255, 255, 255, 0.5);
 
+  @media (max-width: 1881px) {
+    margin-top: 130px;
+    padding-bottom: 225px;
+    padding-right: 145px;
+    padding-left: 145px;
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
+  }
+
   @media (max-width: 1500px) {
     margin-top: 84px;
     padding-bottom: 125px;
@@ -294,7 +303,7 @@ const Button1 = styled.div`
   padding: 15px;
   border: none;
   border-radius: 12px;
-  width: 150px;
+  width: 170px;
   color: white;
   font-size: 18px;
   cursor: pointer;

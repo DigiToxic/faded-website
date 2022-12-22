@@ -44,7 +44,7 @@ function Header() {
           </Section2>
 
           <Section3>
-            <div><a href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg"><img src="/images/twitter.png" alt=""/></a></div>
+            <a href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg"><img src="/images/twitter.png" alt=""/></a>
             <img src="/images/opensea.png" alt=""/>
             <img src="/images/etherscan.png" alt=""/>
           </Section3>
@@ -77,6 +77,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 
   position: fixed;
   top: 0;
@@ -122,6 +123,10 @@ const Section2 = styled.div`
   a {
     text-decoration-line: none;
   }
+
+  @media(max-width: 950px) {
+    display: none;
+  }
 `
 
 const ButtonLab = styled.div`
@@ -142,10 +147,6 @@ const ButtonLab = styled.div`
     background-color: white;
     color: green;
   }
-}
-
-@media(max-width: 950px) {
-  display: none;
 }
 `
 const ButtonKingdom = styled(ButtonLab)`
@@ -173,18 +174,18 @@ const Section3 = styled.div`
     margin-right: 20px;
   }
 
-  div {
-    margin-top: 6px;
-  }
-
   @media(max-width: 950px) {
     display: none;
   }
 `
 
 const OpenWrapper = styled.div`
-  width: 60px;
   display: none;
+
+  svg {
+    width: 50px;
+    height: 50px;
+  }
 
   @media(max-width: 950px) {
     display: initial;

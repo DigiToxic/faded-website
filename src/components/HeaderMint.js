@@ -52,6 +52,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 
   position: fixed;
   top: 0;
@@ -86,7 +87,7 @@ const Section2 = styled.div`
     text-decoration-line: none;
   }
 
-  @media(max-width: 1000px) {
+  @media(max-width: 950px) {
     display: none;
   }
 `
@@ -132,7 +133,7 @@ const Section3 = styled.div`
     margin-top: 6px;
   }
 
-  @media(max-width: 1000px) {
+  @media(max-width: 950px) {
     display: none;
   }
 `
@@ -141,7 +142,12 @@ const OpenWrapper = styled.div`
   width: 60px;
   display: none;
 
-  @media(max-width: 1000px) {
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  @media(max-width: 950px) {
     display: initial;
   }
 `
@@ -176,7 +182,7 @@ const BurgerNav = styled.div`
   }
 
 
-  @media(max-width: 1000px) {
+  @media(max-width: 950px) {
     display: initial;
   }
 `

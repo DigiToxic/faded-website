@@ -35,7 +35,6 @@ const Container = styled.div`
 const Button = styled.div`
   position: absolute;
   color: white;
-  font-size: 30px;
   z-index: 3;
   top: 105px;
   left: 120px;
@@ -56,5 +55,12 @@ const Button = styled.div`
   &:hover {
     background-color: white;
     color: purple;
+  }
+
+  @media(max-width: 490px) {
+    font-size: 10px;
+    top: 80px;
+    left: 10px;
+    padding: 8px 15px;
   }
 `
