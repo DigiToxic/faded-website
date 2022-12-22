@@ -101,14 +101,14 @@ function MintButton() {
 				const nftContract = new ethers.Contract(contractAddress, abi, signer);
 				let amount = mintAmount;
 
-				console.log("Initialize payment");
-				let cost = 0.04 * mintAmount;
-				// let nftTxn = await nftContract.mint(mintAmount, { value: ethers.utils.parseEther(cost.toString()) });
-				console.log("proof", proof);
+			console.log("Initialize payment");
+			let cost = 0.04 * amount;
+			// let nftTxn = await nftContract.mint(amount, { value: ethers.utils.parseEther(cost.toString()) });
+			console.log("proof", proof);
 
-				let nftTxn = await nftContract.WLmint(proof, mintAmount, { value: ethers.utils.parseEther(cost.toString()) });
-				console.log("Minting... please wait!");
-				await nftTxn.wait();
+			let nftTxn = await nftContract.WLmint(proof, amount, {value: ethers.utils.parseEther(cost.toString())});
+			console.log("Minting... please wait!");
+			await nftTxn.wait();
 
 				console.log(`Minted, see transaction: https://goerli.etherscan.io/tx/${nftTxn.hash}`);
 
@@ -136,13 +136,17 @@ function MintButton() {
 		)
 	}
 
-	async function fetchData() {
-		const response = await fetch(
-			`https://api-goerli.etherscan.io/api?module=stats&action=tokensupply&contractaddress=${contractAddress}&apikey=${API_KEY}`
-		)
-		const mintedTokens = await response.json()
-		setSupply(mintedTokens.result)
-	}
+  useEffect(() => {
+    checkWalletIsConnected();
+  },[])
+
+  async function fetchData()  {
+	const response = await fetch(
+	  `https://api-goerli.etherscan.io/api?module=stats&action=tokensupply&contractaddress=${contractAddress}&apikey=${API_KEY}`
+	)
+	const mintedTokens = await response.json()
+	setSupply(mintedTokens.result)
+   }
 
 
 	function increment() {
@@ -156,28 +160,28 @@ function MintButton() {
 		});
 	}
 
-	function decrement() {
-		setMintAmount(function (prevCount) {
-			if (prevCount = 0) {
-				return (prevCount -= 1);
-			} else {
-				return (prevCount = 1);
-			}
-		});
-	}
-
-	return (
-		<Container>
-			<Door>
-				<Button>
-					{currentAccount ? mintNftButton() : connectWalletButton()}
-				</Button>
-				<PlusMoins>
-					<ButtonPlus onClick={increment}><div>+</div></ButtonPlus>
-					<ButtonMoins onClick={decrement}><div>-</div></ButtonMoins>
-				</PlusMoins>
-				<MintAmount>Minting: {mintAmount}</MintAmount>
-				<TotalSupply>Total Minted: {totalSupply}</TotalSupply>
+  function decrement() {
+    setMintAmount(function (prevCount) {
+      if (prevCount === 0) {
+        return (prevCount -= 1); 
+      } else {
+        return (prevCount = 1);
+      }
+    });
+  }
+	
+  return (
+    <Container>
+      <Door>
+    <Button>
+	  	{currentAccount ? mintNftButton() : connectWalletButton()}
+    </Button>
+			<PlusMoins>
+				<ButtonPlus onClick={increment}><div>+</div></ButtonPlus>
+				<ButtonMoins onClick={decrement}><div>-</div></ButtonMoins>
+			</PlusMoins>
+			<MintAmount>Minting: {mintAmount}</MintAmount>
+			<TotalSupply>Total Minted: {totalSupply}</TotalSupply>
 			</Door>
 			<Ligne></Ligne>
 			<WLchecker>
@@ -357,7 +361,7 @@ const ButtonPlus = styled.div`
 		border-radius: 5px;
 	}
 
-	a:active{
+	div:active{
 		top:10px;
 		background-color: darkgreen;
 		
@@ -402,7 +406,7 @@ const ButtonMoins = styled.div`
 		border-radius: 5px;
 	}
 
-	a:active{
+	div:active{
 		top:10px;
 		background-color: darkgreen;
 		
@@ -412,7 +416,7 @@ const ButtonMoins = styled.div`
 	}
 
 	@media(max-width: 1060px) {
-		a {
+		div {
 			font-size: 30px;
 			padding: 0px 15px;
 		}
