@@ -36,6 +36,36 @@ function MintButton() {
 	let leaf = "";
 
 	useEffect(() => {
+		const checkWalletIsConnected = async () => {
+			const { ethereum } = window;
+
+			if (!ethereum) {
+				console.log("Make sure you have Metamask installed!");
+				return;
+			} else {
+				console.log("Wallet exist! We are ready to go!"); const accounts = await ethereum.request({ method: "eth_accounts" });
+
+				const leaves = addresses.map(x => keccak256(x))
+				const tree = new MerkleTree(leaves, keccak256, { sortPairs: true })
+				const buf2hex = (x) => '0x' + x.toString('hex')
+
+				console.log("root", buf2hex(tree.getRoot()))
+
+				leaf = keccak256(accounts[0]) // accounts from accounts using accountsconnect/metamask
+				setProof(tree.getProof(leaf).map(x => buf2hex(x.data)));
+
+				console.log("proof", proof)
+				console.log(accounts)
+
+				if (accounts.lenght !== 0) {
+					const account = accounts[0];
+					console.log("Found an authorized account: ", account);
+					setCurrentAccount(account);
+				} else {
+					console.log("No authorized account found");
+				}
+			}
+		}
 		checkWalletIsConnected();
 	})
 
@@ -43,38 +73,7 @@ function MintButton() {
 		fetchData();
 	}, []);
 
-	const checkWalletIsConnected = async () => {
-		const { ethereum } = window;
 
-		if (!ethereum) {
-			console.log("Make sure you have Metamask installed!");
-			return;
-		} else {
-			console.log("Wallet exist! We are ready to go!"); const accounts = await ethereum.request({ method: "eth_accounts" });
-
-			const leaves = addresses.map(x => keccak256(x))
-			const tree = new MerkleTree(leaves, keccak256, { sortPairs: true })
-			const buf2hex = (x) => '0x' + x.toString('hex')
-
-			console.log("root", buf2hex(tree.getRoot()))
-
-			leaf = keccak256(accounts[0]) // accounts from accounts using accountsconnect/metamask
-			setProof(tree.getProof(leaf).map(x => buf2hex(x.data)));
-
-			console.log("proof", proof)
-			console.log(accounts)
-
-			if (accounts.lenght !== 0) {
-				const account = accounts[0];
-				console.log("Found an authorized account: ", account);
-				setCurrentAccount(account);
-			} else {
-				console.log("No authorized account found");
-			}
-		}
-
-
-	}
 	const connectWalletHandler = async () => {
 		const { ethereum } = window;
 
@@ -101,14 +100,14 @@ function MintButton() {
 				const nftContract = new ethers.Contract(contractAddress, abi, signer);
 				let amount = mintAmount;
 
-			console.log("Initialize payment");
-			let cost = 0.04 * amount;
-			// let nftTxn = await nftContract.mint(amount, { value: ethers.utils.parseEther(cost.toString()) });
-			console.log("proof", proof);
+				console.log("Initialize payment");
+				let cost = 0.04 * amount;
+				// let nftTxn = await nftContract.mint(amount, { value: ethers.utils.parseEther(cost.toString()) });
+				console.log("proof", proof);
 
-			let nftTxn = await nftContract.WLmint(proof, amount, {value: ethers.utils.parseEther(cost.toString())});
-			console.log("Minting... please wait!");
-			await nftTxn.wait();
+				let nftTxn = await nftContract.WLmint(proof, amount, { value: ethers.utils.parseEther(cost.toString()) });
+				console.log("Minting... please wait!");
+				await nftTxn.wait();
 
 				console.log(`Minted, see transaction: https://goerli.etherscan.io/tx/${nftTxn.hash}`);
 
@@ -136,17 +135,13 @@ function MintButton() {
 		)
 	}
 
-  useEffect(() => {
-    checkWalletIsConnected();
-  },[])
-
-  async function fetchData()  {
-	const response = await fetch(
-	  `https://api-goerli.etherscan.io/api?module=stats&action=tokensupply&contractaddress=${contractAddress}&apikey=${API_KEY}`
-	)
-	const mintedTokens = await response.json()
-	setSupply(mintedTokens.result)
-   }
+	async function fetchData() {
+		const response = await fetch(
+			`https://api-goerli.etherscan.io/api?module=stats&action=tokensupply&contractaddress=${contractAddress}&apikey=${API_KEY}`
+		)
+		const mintedTokens = await response.json()
+		setSupply(mintedTokens.result)
+	}
 
 
 	function increment() {
@@ -160,28 +155,28 @@ function MintButton() {
 		});
 	}
 
-  function decrement() {
-    setMintAmount(function (prevCount) {
-      if (prevCount === 0) {
-        return (prevCount -= 1); 
-      } else {
-        return (prevCount = 1);
-      }
-    });
-  }
-	
-  return (
-    <Container>
-      <Door>
-    <Button>
-	  	{currentAccount ? mintNftButton() : connectWalletButton()}
-    </Button>
-			<PlusMoins>
-				<ButtonPlus onClick={increment}><div>+</div></ButtonPlus>
-				<ButtonMoins onClick={decrement}><div>-</div></ButtonMoins>
-			</PlusMoins>
-			<MintAmount>Minting: {mintAmount}</MintAmount>
-			<TotalSupply>Total Minted: {totalSupply}</TotalSupply>
+	function decrement() {
+		setMintAmount(function (prevCount) {
+			if (prevCount === 0) {
+				return (prevCount -= 1);
+			} else {
+				return (prevCount = 1);
+			}
+		});
+	}
+
+	return (
+		<Container>
+			<Door>
+				<Button>
+					{currentAccount ? mintNftButton() : connectWalletButton()}
+				</Button>
+				<PlusMoins>
+					<ButtonPlus onClick={increment}><div>+</div></ButtonPlus>
+					<ButtonMoins onClick={decrement}><div>-</div></ButtonMoins>
+				</PlusMoins>
+				<MintAmount>Minting: {mintAmount}</MintAmount>
+				<TotalSupply>Total Minted: {totalSupply}</TotalSupply>
 			</Door>
 			<Ligne></Ligne>
 			<WLchecker>
