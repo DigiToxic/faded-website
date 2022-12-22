@@ -18,7 +18,7 @@ const PopUp = styled.div`
   position: fixed;
   background: rgb(0, 0, 0, 0.6);
   width: 100%;
-  height: 100%;
+  height: 1000px;
   top: 0;
   left: 0;
   animation: fadeIn 1s;
