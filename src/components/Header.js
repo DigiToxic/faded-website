@@ -37,6 +37,12 @@ function Header() {
               <span>Elixirs</span>
             </ButtonElixirs>
             </div></Link>
+
+            <a href="/MintButton"><div>
+           <ButtonMint>
+           <span>Mint</span>
+          </ButtonMint>
+          </div></a>
           </Section2>
 
           <Section3>
@@ -44,6 +50,7 @@ function Header() {
             <img src="/images/opensea.png"/>
             <img src="/images/etherscan.png"/>
           </Section3>
+          
         <OpenWrapper>
           <CustomMenu onClick={() => setBurgerStatus(true)} />
         </OpenWrapper>
@@ -55,6 +62,7 @@ function Header() {
               <li><Link to="Kingdom" spy={true} smooth={true} onClick={() => setBurgerStatus(false)}>Kingdom</Link></li>
               <li><Link to="Team" spy={true} smooth={true} onClick={() => setBurgerStatus(false)}>Nobles</Link></li>
               <li><Link to="Elixir" spy={true} smooth={true} onClick={() => setBurgerStatus(false)}>Elixirs</Link></li>
+              <a href="/MintButton"><div><li><a href="/MintButton">Mint</a></li></div></a>
               <a href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg"><img src="/images/twitter.png"/></a>
               <img src="/images/opensea.png"/>
               <img src="/images/etherscan.png"/>
@@ -100,7 +108,7 @@ const Section1 = styled.div`
     }
   }
 
-  @media(max-width: 862px) {
+  @media(max-width: 950px) {
       img {
         width: 300px;
     }
@@ -138,7 +146,7 @@ const ButtonLab = styled.div`
   }
 }
 
-@media(max-width: 862px) {
+@media(max-width: 950px) {
   display: none;
 }
 `
@@ -171,7 +179,7 @@ const Section3 = styled.div`
     margin-top: 6px;
   }
 
-  @media(max-width: 862px) {
+  @media(max-width: 950px) {
     display: none;
   }
 `
@@ -181,7 +189,7 @@ const OpenWrapper = styled.div`
   margin-top: 17px;
   display: none;
 
-  @media(max-width: 862px) {
+  @media(max-width: 950px) {
     display: initial;
   }
 `
@@ -190,7 +198,7 @@ const CustomMenu = styled(MenuIcon)`
   color: white;
   transform: scale(2);
 
-  @media(max-width: 862px) {
+  @media(max-width: 950px) {
     cursor: pointer;
   }
 `
@@ -225,7 +233,7 @@ const BurgerNav = styled.div`
   }
 
 
-  @media(max-width: 862px) {
+  @media(max-width: 950px) {
     display: initial;
   }
 `

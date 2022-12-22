@@ -4,11 +4,12 @@ import { ethers } from 'ethers';
 import { keccak256 } from 'ethers/lib/utils';
 import MerkleTree from 'merkletreejs';
 import abi from './abi/abi.json';
+import WalletChecker from './walletChecker';
 
-const contractAddress = "0xa9D01C95439a186A66be50A0C0C6326aBa8262F0";
+const contractAddress = "0x54f2c38d2c6F155Ec8edc044D65A7A69afe9DB0b";
 const API_KEY = "VRRW7A39QJDDVF698UJFWU1R9V5FABRMQJ";
 
-const addresses = ["0x9A41426ae9C88110188276bAF8046dC420005249",
+export const addresses = ["0x9A41426ae9C88110188276bAF8046dC420005249",
 "0x2F6e6Cf9f8ace6C9bb3bDE1D991c844e20B1F1d2",
 "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
 "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
@@ -113,7 +114,7 @@ function MintButton() {
 
   const connectWalletButton = () => {
     return (
-      <Button1 onClick={connectWalletHandler} className='cta-button connect-wallet-button'>
+      <Button1 onClick={connectWalletHandler}>
         Connect Wallet
       </Button1>
     )
@@ -121,7 +122,7 @@ function MintButton() {
 
   const mintNftButton = () => {
     return (
-      <Button2 onClick={mintNftHandler} className='cta-button mint-nft-button'>
+      <Button2 onClick={mintNftHandler}>
         Mint NFT
       </Button2>
     )
@@ -166,14 +167,21 @@ function MintButton() {
 	
   return (
     <Container>
-      <Name>Testing</Name>
-    <div>
+      <Door>
+    <Button>
 	  	{currentAccount ? mintNftButton() : connectWalletButton()}
-    </div>
-	  	<h2>Total Minted: {totalSupply}</h2>
-			<button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
-			<h2>Minting: {mintAmount}</h2>
+    </Button>
+			<PlusMoins>
+				<ButtonPlus onClick={increment}><a>+</a></ButtonPlus>
+				<ButtonMoins onClick={decrement}><a>-</a></ButtonMoins>
+			</PlusMoins>
+			<MintAmount>Minting: {mintAmount}</MintAmount>
+			<TotalSupply>Total Minted: {totalSupply}</TotalSupply>
+			</Door>
+				<Ligne></Ligne>
+				<WLchecker>
+					<WalletChecker />
+				</WLchecker>
     </Container>
   )
 }
@@ -182,33 +190,356 @@ export default MintButton
 
 const Container = styled.div`
 	text-align: center;
-	padding-bottom: 200px;
-	background-color: rgb(255, 255, 255);
+	padding-bottom: 47px;
+  background-image: url("https://static.wixstatic.com/media/a67ef4_e1e8f6bf485444998699b0b84cd6f3a7~mv2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+	@media(max-width: 1500px) {
+		padding-bottom: 8px;
+	}
+
+	@media(max-width: 1450px) {
+		padding-bottom: 11px;
+	}
+
+	@media(max-width: 1385px) {
+		padding-bottom: 21px;
+	}
+
+	@media(max-width: 1300px) {
+		padding-bottom: 21px;
+	}
+
+	@media(max-width: 1220px) {
+		padding-bottom: 49px;
+	}
+
+	@media(max-width: 1060px) {
+		padding-bottom: 74px;
+	}
 `
 
-const Name = styled.div`
+const Door = styled.div`
+	display: inline-block;
+	border-top-left-radius: 192px;
+	border-top-right-radius: 192px;
+	padding-top: 100px;
+	padding-bottom: 132px;
+	padding-right: 99px;
+	padding-left: 99px;
 	text-align: center;
-	margin: 100px;
+	margin-top: 125px;
+	background-color: rgb(255, 255, 255, 0.5);
+
+	@media(max-width: 1500px) {
+		margin-top: 84px;
+		padding-bottom: 125px;
+	}
+
+	@media(max-width: 1450px) {
+		margin-top: 91px;
+		padding-bottom: 115px;
+		padding-right: 90px;
+		padding-left: 90px;
+	}
+
+	@media(max-width: 1385px) {
+		margin-top: 101px;
+		padding-bottom: 95px;
+		padding-right: 83px;
+		padding-left: 83px;
+	}
+
+	@media(max-width: 1300px) {
+		margin-top: 118px;
+		padding-bottom: 65px;
+		padding-right: 73px;
+		padding-left: 73px;
+	}
+
+	@media(max-width: 1220px) {
+		margin-top: 130px;
+		padding-bottom: 38px;
+		padding-right: 62px;
+		padding-left: 62px;
+	}
+	
+	@media(max-width: 1140px) {
+		margin-top: 145px;
+		padding-bottom: 12px;
+		padding-right: 52px;
+		padding-left: 52px;
+	}
+
+	@media(max-width: 1060px) {
+		margin-top: 158px;
+		padding-top: 10px;
+		padding-bottom: 32px;
+		padding-right: 45px;
+		padding-left: 45px;
+	}
+`
+
+const Button = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
 `
 
 const Button1 = styled.div`
 	padding: 15px;
 	border: none;
 	border-radius: 12px;
-	min-width: 250px;
+	width: 150px;
 	color: white;
 	font-size: 18px;
 	cursor: pointer;
 	background: rgb(32, 129, 226);
+
+	@media(max-width: 1060px) {
+		padding: 10px;
+		margin-top: 10px;
+	}
 `
 
 const Button2 = styled.div`
 	padding: 15px;
 	border: none;
 	border-radius: 12px;
-	min-width: 250px;
+	width: 150px;
 	color: white;
 	font-size: 18px;
 	cursor: pointer;
-	background: orange;
+	background: rgb(178, 58, 255);
+
+	@media(max-width: 1060px) {
+		padding: 10px;
+		margin-top: 60px;
+	}
+`
+
+const PlusMoins = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
+`
+
+const ButtonPlus = styled.div`
+	margin-right: 20px;
+	cursor: pointer;
+
+	a {
+		color: white;
+		font-family: Helvetica, sans-serif;
+		font-weight: bold;
+		font-size: 36px;
+		text-align: center;
+		text-decoration: none;
+		background-color: green;
+		position: relative;
+		padding: 0px 20px;
+		
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		text-shadow: 0px 1px 0px #000;
+		filter: dropshadow(color=#000, offx=0px, offy=1px);
+		
+		-webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 darkgreen;
+		-moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 darkgreen;
+		box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 darkgreen;
+		
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+
+	a:active{
+		top:10px;
+		background-color: darkgreen;
+		
+		-webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 darkgreen;
+		-moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 darkgreen;
+		box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 darkgreen;
+	}
+
+	@media(max-width: 1060px) {
+		a {
+			font-size: 30px;
+			padding: 0px 11.3px;
+		}
+	}
+`
+
+const ButtonMoins = styled.div`
+	margin-left: 20px;
+	cursor: pointer;
+
+	a {
+		color:white;
+		font-family:Helvetica, sans-serif;
+		font-weight:bold;
+		font-size:36px;
+		text-align: center;
+		text-decoration:none;
+		background-color: green;
+		position:relative;
+		padding: 0px 20px;
+		
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		text-shadow: 0px 1px 0px #000;
+		filter: dropshadow(color=#000, offx=0px, offy=1px);
+		
+		-webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 darkgreen;
+		-moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 darkgreen;
+		box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 darkgreen;
+		
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+
+	a:active{
+		top:10px;
+		background-color: darkgreen;
+		
+		-webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 darkgreen;
+		-moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 darkgreen;
+		box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 darkgreen;
+	}
+
+	@media(max-width: 1060px) {
+		a {
+			font-size: 30px;
+			padding: 0px 15px;
+		}
+	}
+`
+
+const MintAmount = styled.div`
+	display: block;
+	font-size: 1.5em;
+	margin-block-start: 0.83em;
+	margin-block-end: 0.83em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+	margin-top: 30px;
+`
+
+const TotalSupply = styled.div`
+	display: block;
+	font-size: 1.5em;
+	margin-block-start: 0.83em;
+	margin-block-end: 0.83em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+`
+
+const Ligne = styled.div`
+	position: absolute;
+	padding: 110px 190px;
+  border-right: 10px solid rgb(0, 0, 0);
+	border-left: 10px solid rgb(0, 0, 0);
+	top: 5%;
+	left: 3%;
+	box-shadow: 1px 1px 100px;
+
+	@media(max-width: 1400px) {
+		padding: 110px 170px;
+	}
+
+	@media(max-width: 1260px) {
+		padding: 110px 157px;
+	}
+
+	@media(max-width: 1190px) {
+		padding: 110px 142px;
+	}
+
+	@media(max-width: 1090px) {
+		padding: 110px 130px;
+	}
+
+	@media(max-width: 1000px) {
+		padding: 40px 200px;
+		top: 4%;
+		left: 27%;
+		right: 27%;
+		margin: auto;
+	}
+
+	@media(max-width: 904px) {
+		top: 4%;
+		left: 22%;
+		right: 22%;
+		margin: auto;
+	}
+
+	@media(max-width: 753px) {
+		top: 4%;
+		left: 17%;
+		right: 17%;
+		margin: auto;
+	}
+
+	@media(max-width: 645px) {
+		top: 4%;
+		left: 12%;
+		right: 12%;
+		margin: auto;
+	}
+`
+
+const WLchecker = styled.div`
+	position: absolute;
+	background-color: rgb(150, 111, 51);
+	padding: 10px;
+	top: 30%;
+	left: 1%;
+	box-shadow: 1px 1px 50px;
+	border-radius: 15px;
+
+	@media(max-width: 1260px) {
+		padding: 7px;
+	}
+
+	@media(max-width: 1000px) {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		top: 13%;
+		left: 25%;
+		right: 25%;
+		margin: auto;
+	}
+
+	@media(max-width: 904px) {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		top: 13%;
+		left: 20%;
+		right: 20%;
+		margin: auto;
+	}
+
+	@media(max-width: 753px) {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		top: 13%;
+		left: 15%;
+		right: 15%;
+		margin: auto;
+	}
+
+	@media(max-width: 645px) {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		top: 13%;
+		left: 10%;
+		right: 10%;
+		margin: auto;
+	}
 `

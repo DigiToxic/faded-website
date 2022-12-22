@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Playfair+Display:wght@600&family=Titillium+Web:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 @font-face {
   font-family: "anonymous";
@@ -22,6 +23,21 @@ p {
     font-family: Anonymous Pro;
 }
 
+a {
+  color: black;
+}
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
 .Overflow {
   margin-left: -100px;
   overflow-x: hidden;
@@ -33,18 +49,4 @@ p {
 
 .Marquee img {
   border-radius: 15px;
-}
-
-@media (min-width: 900px) {
-  .large-menu a {
-    color: DarkOrange;
-    font-size: 30px;
-  }
-}
-
-.small-menu a {
-  color: Skyblue;
-  text-decoration: line-through;
-  width: 100px;
-  height: 100px;
 }
