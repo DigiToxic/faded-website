@@ -94,11 +94,11 @@ function MintButton() {
 			let amount = mintAmount;
 
 			console.log("Initialize payment");
-			let cost = 0.04 * mintAmount;
-			// let nftTxn = await nftContract.mint(mintAmount, { value: ethers.utils.parseEther(cost.toString()) });
+			let cost = 0.04 * amount;
+			// let nftTxn = await nftContract.mint(amount, { value: ethers.utils.parseEther(cost.toString()) });
 			console.log("proof", proof);
 
-			let nftTxn = await nftContract.WLmint(proof, mintAmount, {value: ethers.utils.parseEther(cost.toString())});
+			let nftTxn = await nftContract.WLmint(proof, amount, {value: ethers.utils.parseEther(cost.toString())});
 			console.log("Minting... please wait!");
 			await nftTxn.wait();
 
@@ -130,7 +130,7 @@ function MintButton() {
 
   useEffect(() => {
     checkWalletIsConnected();
-  }, [])
+  },[])
 
   async function fetchData()  {
 	const response = await fetch(
@@ -157,7 +157,7 @@ function MintButton() {
 
   function decrement() {
     setMintAmount(function (prevCount) {
-      if (prevCount = 0) {
+      if (prevCount === 0) {
         return (prevCount -= 1); 
       } else {
         return (prevCount = 1);
@@ -356,7 +356,7 @@ const ButtonPlus = styled.div`
 		border-radius: 5px;
 	}
 
-	a:active{
+	div:active{
 		top:10px;
 		background-color: darkgreen;
 		
@@ -401,7 +401,7 @@ const ButtonMoins = styled.div`
 		border-radius: 5px;
 	}
 
-	a:active{
+	div:active{
 		top:10px;
 		background-color: darkgreen;
 		
@@ -411,7 +411,7 @@ const ButtonMoins = styled.div`
 	}
 
 	@media(max-width: 1060px) {
-		a {
+		div {
 			font-size: 30px;
 			padding: 0px 15px;
 		}
