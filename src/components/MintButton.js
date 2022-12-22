@@ -135,13 +135,17 @@ function MintButton() {
 		)
 	}
 
-	async function fetchData() {
-		const response = await fetch(
-			`https://api-goerli.etherscan.io/api?module=stats&action=tokensupply&contractaddress=${contractAddress}&apikey=${API_KEY}`
-		)
-		const mintedTokens = await response.json()
-		setSupply(mintedTokens.result)
-	}
+  useEffect(() => {
+    checkWalletIsConnected();
+  },[])
+
+  async function fetchData()  {
+	const response = await fetch(
+	  `https://api-goerli.etherscan.io/api?module=stats&action=tokensupply&contractaddress=${contractAddress}&apikey=${API_KEY}`
+	)
+	const mintedTokens = await response.json()
+	setSupply(mintedTokens.result)
+   }
 
 
 	function increment() {
