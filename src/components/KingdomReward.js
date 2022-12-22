@@ -6,7 +6,7 @@ import { Fade } from "react-awesome-reveal";
 function KingdomReward() {
   return (
     <Container id='Kingdom'>
-      <Fade duration={1000} delay={500} direction="left" triggerOnce="true">
+      <Fade triggerOnce="true">
         <KingdomName>
           <span>Kingdom's reward</span>
         </KingdomName>
@@ -15,7 +15,7 @@ function KingdomReward() {
         <img src="/images/splash/splash 1.png" alt="" />
       </Splash1>
 
-      <Fade duration={1000} delay={500} direction="right" triggerOnce="true">
+      <Fade triggerOnce="true">
         <Kingdom>
           <img src="/images/castle.png" alt="" />
           <KingdomText>

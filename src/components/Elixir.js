@@ -22,7 +22,7 @@ function Elixir() {
         </Fade>
 
          <TextContainer>
-            <Fade duration={1000} delay={500} direction="right" triggerOnce="true">
+            <Fade triggerOnce="true">
             <ElixirText>
               <p>In a very distant time, there was a kingdom called "The Faded Kingdom", crowned by a king envious of power and manipulation. This kingdom was intended to wash out the inhabitants of it by making them work until their complete exhaustion, that is to say, their death.</p>
               <p>One day, the king found, in the basement of his kingdom, a gigantic purple tree filled with renewing energy. After a few years of testing, he had concluded that it could greatly improve the performance of its inhabitants.</p>

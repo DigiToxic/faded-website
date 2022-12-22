@@ -23,25 +23,25 @@ function Team(props) {
         </NobleText>
 
         <TeamButton>
-        <Fade duration={1000} delay={500} direction="right" triggerOnce="true">
+        <Fade triggerOnce="true">
         <FounderButton onClick={() => setButtonPopup1(true)}>
           <span>Founder</span>
         </FounderButton>
         </Fade>
 
-        <Fade duration={1000} delay={500} direction="right" triggerOnce="true">
+        <Fade triggerOnce="true">
         <CoFounderButton onClick={() => setButtonPopup2(true)}>
           <span>Co-Founder</span>
         </CoFounderButton>
         </Fade>
 
-        <Fade duration={1000} delay={500} direction="right" triggerOnce="true">
+        <Fade triggerOnce="true">
         <DevButton onClick={() => setButtonPopup3(true)}>
           <span>Developer</span>
         </DevButton>
         </Fade>
 
-        <Fade duration={1000} delay={500} direction="top-right" triggerOnce="true">
+        <Fade triggerOnce="true">
         <ArtistButton onClick={() => setButtonPopup4(true)}>
           <span>Artist</span>
         </ArtistButton>

@@ -18,11 +18,11 @@ const PopUp = styled.div`
   position: fixed;
   background: rgb(0, 0, 0, 0.6);
   width: 100%;
-  height: 100vh;
+  height: 100%;
   top: 0;
   left: 0;
   animation: fadeIn 1s;
-  z-index: 10;
+  z-index: 100;
 `
 
 const Box = styled.div`
