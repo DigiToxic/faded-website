@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
-import MenuIcon from "@material-ui/icons/Menu";
-import CloseIcon from '@material-ui/icons/Close';
 
 function HeaderMint() {
   const [burgerStatus, setBurgerStatus] = useState(false);
@@ -31,11 +29,11 @@ function HeaderMint() {
         </Section3>
 
         <OpenWrapper>
-          <CustomMenu onClick={() => setBurgerStatus(true)} />
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" color="white" xmlns="http://www.w3.org/2000/svg" onClick={() => setBurgerStatus(true)}><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
         </OpenWrapper>
           <BurgerNav show={burgerStatus}>
             <CloseWrapper>
-              <CustomClose onClick={() => setBurgerStatus(false)}/>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" height="50px" width="50px" xmlns="http://www.w3.org/2000/svg" onClick={() => setBurgerStatus(false)}><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/></svg>
             </CloseWrapper>
             <a href="/"><div><li onClick={() => setBurgerStatus(false)}>Secret Lab</li></div></a>
               <li><a href="/MintButton">Mint</a></li>
@@ -141,20 +139,10 @@ const Section3 = styled.div`
 
 const OpenWrapper = styled.div`
   width: 60px;
-  margin-top: 17px;
   display: none;
 
   @media(max-width: 1000px) {
     display: initial;
-  }
-`
-
-const CustomMenu = styled(MenuIcon)`
-  color: white;
-  transform: scale(2);
-
-  @media(max-width: 1000px) {
-    cursor: pointer;
   }
 `
 
@@ -196,9 +184,4 @@ const BurgerNav = styled.div`
 const CloseWrapper = styled.div`
   display: flex;
   justify-content: end
-`
-
-const CustomClose = styled(CloseIcon)`
-  cursor: pointer;
-  transform: scale(1.4);
 `

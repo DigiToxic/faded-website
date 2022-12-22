@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 
 function Elixir() {
   return (
@@ -15,14 +15,14 @@ function Elixir() {
         </ElixirName>
 
         <ElixirBox>
-        <Fade>
+        <Fade triggerOnce="true">
         <ElixirImage>
             <img src="/images/elixir.png" />
         </ElixirImage>
         </Fade>
 
-        <Fade right>
          <TextContainer>
+            <Fade duration={1000} delay={500} direction="right" triggerOnce="true">
             <ElixirText>
               <p>In a very distant time, there was a kingdom called "The Faded Kingdom", crowned by a king envious of power and manipulation. This kingdom was intended to wash out the inhabitants of it by making them work until their complete exhaustion, that is to say, their death.</p>
               <p>One day, the king found, in the basement of his kingdom, a gigantic purple tree filled with renewing energy. After a few years of testing, he had concluded that it could greatly improve the performance of its inhabitants.</p>
@@ -32,6 +32,7 @@ function Elixir() {
               <p>The king was getting more and more worried, but he couldn't stop. He wanted to take everything for his daily wealth, but then the day came... One of the branches snapped and the liquid flowed out of the lab, freeing the drugged workers.</p>
               <span>The guards, therefore, ask you to help them find the 888 escaped workers before they die, drained of their energy.</span>
             </ElixirText>
+            </Fade>
 
             <Splash5>
                 <img src="/images/splash/splash 5.png" alt="" />
@@ -42,7 +43,6 @@ function Elixir() {
             </Splash6>
 
           </TextContainer>
-          </Fade>
         </ElixirBox>
     </Container>
   )
@@ -200,43 +200,58 @@ const Splash4 = styled.div`
 
 const Splash5 = styled.div`
   position: absolute;
-  top: 20%;
-  left: 20%;
-  z-index: -1;
+  top: 3150px;
+  left: 15%;
+  z-index: 10;
   img {
-      width: 80%;
-      opacity: 0.5;
+      width: 25%;
+      opacity: 0.9;
     }
 
     @media(max-width: 1049px) {
-      top: 20%;
+      top: 3700px;
       left: 20%;
+
+      img {
+        width: 50%;
+        opacity: 0.5;
+      }
     }
 
     @media(max-width: 660px) {
-      top: 40%;
+      top: 4000px;
       left: 20%;
     }
 `
 
 const Splash6 = styled.div`
   position: absolute;
-  top: 60%;
-  right: 125%;
-  z-index: -1;
+  top: 2800px;
+  right: 50px;
+  z-index: 10;
   img {
-      width: 300px;
-      opacity: 0.9;
+      width: 500px;
+      opacity: 0.5;
+    }
+
+    @media(max-width: 1138px) {
+      top: 2800px;
+      right: 100px;
+
+      img {
+        width: 300px;
+        opacity: 0.5;
+      }
     }
 
     @media(max-width: 1049px) {
-      left: 35%;
-      top: -50%;
+      top: 3000px;
+      right: 100px;
     }
 
     @media(max-width: 660px) {
-      left: 35%;
-      top: 0%;
-      opacity: 0.7;
+      top: 3200px;
+      right: 10px;
+      opacity: 0.9;
     }
 `

@@ -1,22 +1,21 @@
 import React from 'react'
 import styled from "styled-components";
 import Marquee from "react-fast-marquee";
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 
 function KingdomReward() {
   return (
     <Container id='Kingdom'>
-      <Fade left>
+      <Fade duration={1000} delay={500} direction="left" triggerOnce="true">
         <KingdomName>
           <span>Kingdom's reward</span>
         </KingdomName>
-        </Fade>
-
+      </Fade>
         <Splash1>
               <img src="/images/splash/splash 1.png" alt="" />
         </Splash1>
 
-        <Fade right>
+        <Fade duration={1000} delay={500} direction="right" triggerOnce="true">
         <Kingdom>
           <img src="/images/castle.png" />
           <KingdomText>

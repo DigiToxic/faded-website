@@ -1,9 +1,7 @@
 import React, {useState} from 'react'
 import styled from "styled-components";
 import Popup from './Popup';
-import Zoom from 'react-reveal/Zoom';
-import Fade from 'react-reveal/Fade';
-import Rotate from 'react-reveal/Rotate';
+import { Fade, Zoom } from "react-awesome-reveal";
 
 function Team(props) {
   const [buttonPopup1, setButtonPopup1] = useState(false);
@@ -14,7 +12,7 @@ function Team(props) {
   return (
     <Container id='Team'>
 
-        <Zoom>
+        <Zoom triggerOnce="true">
         <NoblesName>
           <span>Nobles Team</span>
         </NoblesName>
@@ -25,27 +23,29 @@ function Team(props) {
         </NobleText>
 
         <TeamButton>
-        <Fade right>
+        <Fade duration={1000} delay={500} direction="right" triggerOnce="true">
         <FounderButton onClick={() => setButtonPopup1(true)}>
           <span>Founder</span>
         </FounderButton>
         </Fade>
-        <Fade right>
+
+        <Fade duration={1000} delay={500} direction="right" triggerOnce="true">
         <CoFounderButton onClick={() => setButtonPopup2(true)}>
           <span>Co-Founder</span>
         </CoFounderButton>
         </Fade>
-        <Fade right>
+
+        <Fade duration={1000} delay={500} direction="right" triggerOnce="true">
         <DevButton onClick={() => setButtonPopup3(true)}>
           <span>Developer</span>
         </DevButton>
         </Fade>
 
-        <Rotate top right>
+        <Fade duration={1000} delay={500} direction="top-right" triggerOnce="true">
         <ArtistButton onClick={() => setButtonPopup4(true)}>
           <span>Artist</span>
         </ArtistButton>
-        </Rotate>
+        </Fade>
         </TeamButton>
         
 
