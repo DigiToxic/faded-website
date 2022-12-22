@@ -11,19 +11,19 @@ function KingdomReward() {
           <span>Kingdom's reward</span>
         </KingdomName>
       </Fade>
-        <Splash1>
-              <img src="/images/splash/splash 1.png" alt="" />
-        </Splash1>
+      <Splash1>
+        <img src="/images/splash/splash 1.png" alt="" />
+      </Splash1>
 
-        <Fade duration={1000} delay={500} direction="right" triggerOnce="true">
+      <Fade duration={1000} delay={500} direction="right" triggerOnce="true">
         <Kingdom>
           <img src="/images/castle.png" alt="" />
           <KingdomText>
-          <p>The king offers all his soldiers who successfully execute their mission will have the gratitude of receiving eternal wealth, no matter what path the soldier decides to take. It can be magic money as well as real money.</p>
-          <p>Health and eternal freedom are another option given by the king and finally, the possibility of speaking freely with the high leaders.</p>
+            <p>The king offers all his soldiers who successfully execute their mission will have the gratitude of receiving eternal wealth, no matter what path the soldier decides to take. It can be magic money as well as real money.</p>
+            <p>Health and eternal freedom are another option given by the king and finally, the possibility of speaking freely with the high leaders.</p>
           </KingdomText>
         </Kingdom>
-        </Fade>
+      </Fade>
 
       <Slider className='Overflow'>
         <Marquee gradient={false} speed={200} className="Marquee">

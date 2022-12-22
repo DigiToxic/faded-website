@@ -7,9 +7,10 @@ import Foot from './components/Foot';
 import Info from './components/Info';
 import HeaderMint from './components/HeaderMint';
 import MintButton from './components/MintButton';
-import { BrowserRouter as Router,
-  Switch, 
-  Route, 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
 } from "react-router-dom";
 
 
@@ -18,12 +19,12 @@ function App() {
     <div>
       <Router>
         <Switch>
-          <Route path='/MintButton'>
+          <Route path="/mint">
             <HeaderMint />
             <MintButton />
           </Route>
           <Route path="/">
-          <Header />
+            <Header />
             <Body />
             <KingdomReward />
             <Info />
