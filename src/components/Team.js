@@ -55,10 +55,10 @@ function Team(props) {
         </Header>
         <PopupText>
           <Content>
-            <img src={props.pfpWolf} />
+            <img src={props.pfpWolf} alt="" />
           <Handle>
             <p>{props.NameWolf}</p>
-            <a href={props.TwitterWolf}><img src="/images/twitter.png" /></a>
+            <a href={props.TwitterWolf}><img src="/images/twitter.png" alt="" /></a>
           </Handle>
           </Content>
           <Text>
@@ -78,10 +78,10 @@ function Team(props) {
         </HeaderDom>
         <PopupTextDom>
           <ContentDom>
-            <img src={props.pfpDom} />
+            <img src={props.pfpDom} alt="" />
           <HandleDom>
             <p>{props.NameDom}</p>
-            <a href={props.TwitterDom}><img src="/images/twitter.png" /></a>
+            <a href={props.TwitterDom}><img src="/images/twitter.png" alt="" /></a>
           </HandleDom>
           </ContentDom>
           <TextDom>
@@ -101,10 +101,10 @@ function Team(props) {
         </HeaderDigi>
         <PopupTextDigi>
           <ContentDigi>
-            <img src={props.pfpDigi} />
+            <img src={props.pfpDigi} alt="" />
           <HandleDigi>
             <p>{props.NameDigi}</p>
-            <a href={props.TwitterDigi}><img src="/images/twitter.png" /></a>
+            <a href={props.TwitterDigi}><img src="/images/twitter.png" alt="" /></a>
           </HandleDigi>
           </ContentDigi>
           <TextDigi>
@@ -120,10 +120,10 @@ function Team(props) {
         </HeaderAlpha>
         <PopupTextAlpha>
           <ContentAlpha>
-            <img src={props.pfpAlpha} />
+            <img src={props.pfpAlpha} alt="" />
           <HandleAlpha>
             <p>{props.NameAlpha}</p>
-            <a href={props.TwitterAlpha}><img src="/images/twitter.png" /></a>
+            <a href={props.TwitterAlpha}><img src="/images/twitter.png" alt="" /></a>
           </HandleAlpha>
           </ContentAlpha>
           <TextAlpha>
@@ -149,10 +149,10 @@ function Team(props) {
         </HeaderLinh>
         <PopupTextLinh>
           <ContentLinh>
-            <img src={props.pfpLinh} />
+            <img src={props.pfpLinh} alt="" />
           <HandleLinh>
             <p>{props.NameLinh}</p>
-            <a href={props.TwitterLinh}><img src="/images/twitter.png" /></a>
+            <a href={props.TwitterLinh}><img src="/images/twitter.png" alt="" /></a>
           </HandleLinh>
           </ContentLinh>
           <TextLinh>
@@ -170,10 +170,10 @@ function Team(props) {
         </HeaderFunky>
         <PopupTextFunky>
           <ContentFunky>
-            <img src={props.pfpFunky} />
+            <img src={props.pfpFunky} alt="" />
           <HandleFunky>
             <p>{props.NameFunky}</p>
-            <a href={props.TwitterFunky}><img src="/images/twitter.png" /></a>
+            <a href={props.TwitterFunky}><img src="/images/twitter.png" alt="" /></a>
           </HandleFunky>
           </ContentFunky>
           <TextFunky>
@@ -191,10 +191,10 @@ function Team(props) {
         </HeaderAreum>
         <PopupTextAreum>
           <ContentAreum>
-            <img src={props.pfpAreum} />
+            <img src={props.pfpAreum} alt="" />
           <HandleAreum>
             <p>{props.NameAreum}</p>
-            <a href={props.TwitterAreum}><img src="/images/twitter.png" /></a>
+            <a href={props.TwitterAreum}><img src="/images/twitter.png" alt="" /></a>
           </HandleAreum>
           </ContentAreum>
           <TextAreum>

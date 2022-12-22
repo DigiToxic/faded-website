@@ -7,7 +7,7 @@ function HeaderMint() {
   return (
     <Container>
         <Section1>
-            <img src="/images/faded-logo.png"/>
+            <img src="/images/faded-logo.png" alt="" />
         </Section1>
 
         <Section2>
@@ -23,9 +23,9 @@ function HeaderMint() {
         </Section2>
 
         <Section3>
-        <div><a href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg"><img src="/images/twitter.png"/></a></div>
-          <img src="/images/opensea.png"/>
-          <img src="/images/etherscan.png"/>
+        <div><a href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg"><img src="/images/twitter.png" alt=""/></a></div>
+          <img src="/images/opensea.png" alt=""/>
+          <img src="/images/etherscan.png" alt=""/>
         </Section3>
 
         <OpenWrapper>
@@ -37,9 +37,9 @@ function HeaderMint() {
             </CloseWrapper>
             <a href="/"><div><li onClick={() => setBurgerStatus(false)}>Secret Lab</li></div></a>
               <li><a href="/MintButton">Mint</a></li>
-              <a href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg"><img src="/images/twitter.png"/></a>
-              <img src="/images/opensea.png"/>
-              <img src="/images/etherscan.png"/>
+              <a href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg"><img src="/images/twitter.png" alt=""/></a>
+              <img src="/images/opensea.png" alt=""/>
+              <img src="/images/etherscan.png" alt=""/>
           </BurgerNav>
     </Container>
   )

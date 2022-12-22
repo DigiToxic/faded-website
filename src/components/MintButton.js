@@ -172,8 +172,8 @@ function MintButton() {
 	  	{currentAccount ? mintNftButton() : connectWalletButton()}
     </Button>
 			<PlusMoins>
-				<ButtonPlus onClick={increment}><a>+</a></ButtonPlus>
-				<ButtonMoins onClick={decrement}><a>-</a></ButtonMoins>
+				<ButtonPlus onClick={increment}><div>+</div></ButtonPlus>
+				<ButtonMoins onClick={decrement}><div>-</div></ButtonMoins>
 			</PlusMoins>
 			<MintAmount>Minting: {mintAmount}</MintAmount>
 			<TotalSupply>Total Minted: {totalSupply}</TotalSupply>
@@ -332,7 +332,7 @@ const ButtonPlus = styled.div`
 	margin-right: 20px;
 	cursor: pointer;
 
-	a {
+	div {
 		color: white;
 		font-family: Helvetica, sans-serif;
 		font-weight: bold;
@@ -366,7 +366,7 @@ const ButtonPlus = styled.div`
 	}
 
 	@media(max-width: 1060px) {
-		a {
+		div {
 			font-size: 30px;
 			padding: 0px 11.3px;
 		}
@@ -377,7 +377,7 @@ const ButtonMoins = styled.div`
 	margin-left: 20px;
 	cursor: pointer;
 
-	a {
+	div {
 		color:white;
 		font-family:Helvetica, sans-serif;
 		font-weight:bold;

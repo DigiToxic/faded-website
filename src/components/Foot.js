@@ -5,7 +5,7 @@ function Foot() {
   return (
     <Container>
       <RightNav>
-        <img src="/images/faded-logo.png" />
+        <img src="/images/faded-logo.png" alt="" />
       </RightNav>
     </Container>
   )

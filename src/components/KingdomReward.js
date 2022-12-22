@@ -17,7 +17,7 @@ function KingdomReward() {
 
         <Fade duration={1000} delay={500} direction="right" triggerOnce="true">
         <Kingdom>
-          <img src="/images/castle.png" />
+          <img src="/images/castle.png" alt="" />
           <KingdomText>
           <p>The king offers all his soldiers who successfully execute their mission will have the gratitude of receiving eternal wealth, no matter what path the soldier decides to take. It can be magic money as well as real money.</p>
           <p>Health and eternal freedom are another option given by the king and finally, the possibility of speaking freely with the high leaders.</p>
@@ -28,64 +28,64 @@ function KingdomReward() {
       <Slider className='Overflow'>
         <Marquee gradient={false} speed={200} className="Marquee">
           <FirstDiv>
-            <img src="/images/Carousel/Faded 1.jpg" />
+            <img src="/images/Carousel/Faded 1.jpg" alt="" />
           </FirstDiv>
           <SecondDiv>
-            <img src="/images/Carousel/Faded 2.jpg" />
+            <img src="/images/Carousel/Faded 2.jpg" alt="" />
           </SecondDiv>
           <ThirdDiv>
-            <img src="/images/Carousel/Faded 3.jpg" />
+            <img src="/images/Carousel/Faded 3.jpg" alt="" />
           </ThirdDiv>
           <ForthDiv>
-            <img src="/images/Carousel/Faded 4.jpg" />
+            <img src="/images/Carousel/Faded 4.jpg" alt="" />
           </ForthDiv>
           <FiveDiv>
-            <img src="/images/Carousel/Faded 5.jpg" />
+            <img src="/images/Carousel/Faded 5.jpg" alt="" />
           </FiveDiv>
           <SixDiv>
-            <img src="/images/Carousel/Faded 6.jpg" />
+            <img src="/images/Carousel/Faded 6.jpg" alt="" />
           </SixDiv>
           <SevenDiv>
-            <img src="/images/Carousel/Faded 7.jpg" />
+            <img src="/images/Carousel/Faded 7.jpg" alt="" />
           </SevenDiv>
           <HeightDiv>
-            <img src="/images/Carousel/Faded 8.jpg" />
+            <img src="/images/Carousel/Faded 8.jpg" alt="" />
           </HeightDiv>
           <NineDiv>
-            <img src="/images/Carousel/Faded 9.jpg" />
+            <img src="/images/Carousel/Faded 9.jpg" alt="" />
           </NineDiv>
           <LastDiv>
-            <img src="/images/Carousel/Faded 10.jpg" />
+            <img src="/images/Carousel/Faded 10.jpg" alt="" />
           </LastDiv>
           <FirstDiv>
-            <img src="/images/Carousel/Faded 1.jpg" />
+            <img src="/images/Carousel/Faded 1.jpg" alt="" />
           </FirstDiv>
           <SecondDiv>
-            <img src="/images/Carousel/Faded 2.jpg" />
+            <img src="/images/Carousel/Faded 2.jpg" alt="" />
           </SecondDiv>
           <ThirdDiv>
-            <img src="/images/Carousel/Faded 3.jpg" />
+            <img src="/images/Carousel/Faded 3.jpg" alt="" />
           </ThirdDiv>
           <ForthDiv>
-            <img src="/images/Carousel/Faded 4.jpg" />
+            <img src="/images/Carousel/Faded 4.jpg" alt="" />
           </ForthDiv>
           <FiveDiv>
-            <img src="/images/Carousel/Faded 5.jpg" />
+            <img src="/images/Carousel/Faded 5.jpg" alt="" />
           </FiveDiv>
           <SixDiv>
-            <img src="/images/Carousel/Faded 6.jpg" />
+            <img src="/images/Carousel/Faded 6.jpg" alt="" />
           </SixDiv>
           <SevenDiv>
-            <img src="/images/Carousel/Faded 7.jpg" />
+            <img src="/images/Carousel/Faded 7.jpg" alt="" />
           </SevenDiv>
           <HeightDiv>
-            <img src="/images/Carousel/Faded 8.jpg" />
+            <img src="/images/Carousel/Faded 8.jpg" alt="" />
           </HeightDiv>
           <NineDiv>
-            <img src="/images/Carousel/Faded 9.jpg" />
+            <img src="/images/Carousel/Faded 9.jpg" alt="" />
           </NineDiv>
           <LastDiv>
-            <img src="/images/Carousel/Faded 10.jpg" />
+            <img src="/images/Carousel/Faded 10.jpg" alt="" />
           </LastDiv>
         </Marquee>
       </Slider>

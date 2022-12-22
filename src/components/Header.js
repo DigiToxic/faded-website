@@ -8,7 +8,7 @@ function Header() {
   return (
       <Container>
           <Section1>
-              <img src="/images/faded-logo.png"/>
+              <img src="/images/faded-logo.png" alt=""/>
           </Section1>
 
           <Section2>
@@ -44,9 +44,9 @@ function Header() {
           </Section2>
 
           <Section3>
-            <div><a href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg"><img src="/images/twitter.png"/></a></div>
-            <img src="/images/opensea.png"/>
-            <img src="/images/etherscan.png"/>
+            <div><a href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg"><img src="/images/twitter.png" alt=""/></a></div>
+            <img src="/images/opensea.png" alt=""/>
+            <img src="/images/etherscan.png" alt=""/>
           </Section3>
           
         <OpenWrapper>
@@ -61,9 +61,9 @@ function Header() {
               <li><Link to="Team" spy={true} smooth={true} onClick={() => setBurgerStatus(false)}>Nobles</Link></li>
               <li><Link to="Elixir" spy={true} smooth={true} onClick={() => setBurgerStatus(false)}>Elixirs</Link></li>
               <a href="/MintButton"><div><li><a href="/MintButton">Mint</a></li></div></a>
-              <a href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg"><img src="/images/twitter.png"/></a>
-              <img src="/images/opensea.png"/>
-              <img src="/images/etherscan.png"/>
+              <a href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg"><img src="/images/twitter.png" alt=""/></a>
+              <img src="/images/opensea.png" alt=""/>
+              <img src="/images/etherscan.png" alt=""/>
           </BurgerNav>
 
       </Container>

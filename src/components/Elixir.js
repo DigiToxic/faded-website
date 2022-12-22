@@ -17,7 +17,7 @@ function Elixir() {
         <ElixirBox>
         <Fade triggerOnce="true">
         <ElixirImage>
-            <img src="/images/elixir.png" />
+            <img src="/images/elixir.png" alt="" />
         </ElixirImage>
         </Fade>
 
