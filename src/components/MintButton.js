@@ -34,38 +34,40 @@ function MintButton() {
 	const [proof, setProof] = useState([""]);
 
 	let leaf = "";
+	
+	const checkWalletIsConnected = async () => {
+		const { ethereum } = window;
 
-	useEffect(() => {
-		const checkWalletIsConnected = async () => {
-			const { ethereum } = window;
+		if (!ethereum) {
+			console.log("Make sure you have Metamask installed!");
+			return;
+		} else {
+			console.log("Wallet exist! We are ready to go!"); const accounts = await ethereum.request({ method: "eth_accounts" });
 
-			if (!ethereum) {
-				console.log("Make sure you have Metamask installed!");
-				return;
+			const leaves = addresses.map(x => keccak256(x))
+			const tree = new MerkleTree(leaves, keccak256, { sortPairs: true })
+			const buf2hex = (x) => '0x' + x.toString('hex')
+
+			console.log("root", buf2hex(tree.getRoot()))
+
+			leaf = keccak256(accounts[0]) // accounts from accounts using accountsconnect/metamask
+			setProof(tree.getProof(leaf).map(x => buf2hex(x.data)));
+
+			console.log("proof", proof)
+			console.log(accounts)
+
+			if (accounts.lenght !== 0) {
+				const account = accounts[0];
+				console.log("Found an authorized account: ", account);
+				setCurrentAccount(account);
 			} else {
-				console.log("Wallet exist! We are ready to go!"); const accounts = await ethereum.request({ method: "eth_accounts" });
-
-				const leaves = addresses.map(x => keccak256(x))
-				const tree = new MerkleTree(leaves, keccak256, { sortPairs: true })
-				const buf2hex = (x) => '0x' + x.toString('hex')
-
-				console.log("root", buf2hex(tree.getRoot()))
-
-				leaf = keccak256(accounts[0]) // accounts from accounts using accountsconnect/metamask
-				setProof(tree.getProof(leaf).map(x => buf2hex(x.data)));
-
-				console.log("proof", proof)
-				console.log(accounts)
-
-				if (accounts.lenght !== 0) {
-					const account = accounts[0];
-					console.log("Found an authorized account: ", account);
-					setCurrentAccount(account);
-				} else {
-					console.log("No authorized account found");
-				}
+				console.log("No authorized account found");
 			}
 		}
+	}
+
+	useEffect(() => {
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 		checkWalletIsConnected();
 	})
 
@@ -134,10 +136,6 @@ function MintButton() {
 			</Button2>
 		)
 	}
-
-  useEffect(() => {
-    checkWalletIsConnected();
-  },[])
 
   async function fetchData()  {
 	const response = await fetch(
