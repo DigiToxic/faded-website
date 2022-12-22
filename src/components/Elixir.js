@@ -143,35 +143,19 @@ const ElixirText = styled.div`
     font-size: 22px;
   }
 
-  @media(max-width: 1880px) {
-    margin-top: 150px;
-    font-size: 22px;
-  }
-
   @media(max-width: 1721px) {
     margin-top: 135px;
     font-size: 21px;
   }
 
   @media(max-width: 1611px) {
-    margin-top: 120px;
-    font-size: 21px;
-  }
-
-  @media(max-width: 1525px) {
-    margin-top: 100px;
-    font-size: 21px;
-  }
-
-  @media(max-width: 1491px) {
-    margin-top: 100px;
-    font-size: 20px;
+    margin-top: 60px;
+    font-size: 18px;
   }
 
   @media(max-width: 1355px) {
-    margin-top: 80px;
+    margin-top: 40px;
     font-size: 19px;
-    line-height: 20px;
   }
 
   @media(max-width: 1316px) {
