@@ -36,7 +36,7 @@ function Header() {
             </ButtonElixirs>
             </div></Link>
 
-            <a href="/Mint"><div>
+            <a href="/MintButton"><div>
            <ButtonMint>
            <span>Mint</span>
           </ButtonMint>
@@ -60,7 +60,7 @@ function Header() {
               <li><Link to="Kingdom" spy={true} smooth={true} onClick={() => setBurgerStatus(false)}>Kingdom</Link></li>
               <li><Link to="Team" spy={true} smooth={true} onClick={() => setBurgerStatus(false)}>Nobles</Link></li>
               <li><Link to="Elixir" spy={true} smooth={true} onClick={() => setBurgerStatus(false)}>Elixirs</Link></li>
-              <a href="/MintButton"><div><li><a href="/Mint">Mint</a></li></div></a>
+              <a href="/MintButton"><div><li><a href="/MintButton">Mint</a></li></div></a>
               <a href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg"><img src="/images/twitter.png" alt=""/></a>
               <img src="/images/opensea.png" alt=""/>
               <img src="/images/etherscan.png" alt=""/>
