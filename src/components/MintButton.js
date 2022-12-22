@@ -130,7 +130,7 @@ function MintButton() {
 
   useEffect(() => {
     checkWalletIsConnected();
-  },[])
+  },[checkWalletIsConnected])
 
   async function fetchData()  {
 	const response = await fetch(
