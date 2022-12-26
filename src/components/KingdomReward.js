@@ -17,7 +17,7 @@ function KingdomReward() {
 
       <Fade triggerOnce="true">
         <Kingdom>
-          <img src="/images/castle.png" alt="" />
+          <img src="/images/castle.gif" alt="" />
           <KingdomText>
             <p>The king offers all his soldiers who successfully execute their mission will have the gratitude of receiving eternal wealth, no matter what path the soldier decides to take. It can be magic money as well as real money.</p>
             <p>Health and eternal freedom are another option given by the king and finally, the possibility of speaking freely with the high leaders.</p>
@@ -109,7 +109,7 @@ const KingdomName = styled.div`
   display: flex;
   justify-content: center;
   span {
-    font-family: Arial;
+    font-family: Morris Roman;
     font-size: 30px;
     font-weight: bold;
     margin-top: 10px;
@@ -161,30 +161,27 @@ const Kingdom = styled.div`
 `
 
 const KingdomText = styled.div`
-  margin-top: 190px;
+  margin-top: 150px;
   margin-left: 60px;
   margin-right: 100px;
   font-size: 20px;
-  font-weight: bold;
 
   p {
     margin-bottom: 30px;
+    font-family: BlackChancery;
+    font-size: 30px;
   }
 
   @media (max-width: 1880px) {
-    margin-top: 200px;
+    margin-top: 150px;
+  }
+
+  @media (max-width: 1631px) {
+    margin-top: 125px;
   }
 
   @media (max-width: 1500px) {
-    margin-top: 190px;
-  }
-
-  @media (max-width: 1300px) {
-    margin-top: 170px;
-  }
-
-  @media (max-width: 1200px) {
-    margin-top: 140px;
+    margin-top: 100px;
   }
 
   @media (max-width: 1040px) {

@@ -222,7 +222,7 @@ const NoblesName = styled.div`
   justify-content: center;
 
   span {
-    font-family: Arial;
+    font-family: Morris Roman;
     font-size: 30px;
     font-weight: bold;
     margin-top: 10px;
@@ -237,13 +237,13 @@ const NoblesName = styled.div`
 
 const NobleText = styled.div`
   font-style: italic;
-  font-weight: bold;
   text-align: center;
-  font-size: 30px;
   margin-top: 50px;
 
   p {
     margin-bottom: 0px;
+    font-family: BlackChancery;
+    font-size: 30px;
   }
 `
 

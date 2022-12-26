@@ -17,7 +17,7 @@ function Elixir() {
         <ElixirBox>
         <Fade triggerOnce="true">
         <ElixirImage>
-            <img src="/images/elixir.png" alt="" />
+            <img src="/images/elixir.gif" alt="" />
         </ElixirImage>
         </Fade>
 
@@ -60,7 +60,7 @@ const ElixirName = styled.div`
   display: flex;
   justify-content: center;
   span {
-    font-family: Arial;
+    font-family: Morris Roman;
     font-size: 30px;
     font-weight: bold;
     margin-top: 10px;
@@ -147,6 +147,14 @@ const ElixirText = styled.div`
   font-size: 20px;
   font-weight: bold;
   z-index: 5;
+
+  p {
+    font-family: BlackChancery;
+  }
+
+  span {
+        font-family: BlackChancery;
+  }
 
   @media(max-width: 1880px) {
     margin-top: 150px;
