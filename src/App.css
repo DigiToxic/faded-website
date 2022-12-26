@@ -8,6 +8,11 @@
   src: url("./components/fonts/BLKCHCRY.TTF");
 }
 
+@font-face {
+  font-family: "Morris Roman";
+  src: url("./components/fonts/MorrisRoman-Black.TTF");
+}
+
 body {
   background-color: rgb(33, 12, 94);
   overflow-x: hidden;
