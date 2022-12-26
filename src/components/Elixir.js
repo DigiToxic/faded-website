@@ -137,7 +137,7 @@ const TextContainer = styled.div`
   }
 
   span {
-    font-family: blackchancery;
+    font-family: BlackChancery;
   }
 `
 
