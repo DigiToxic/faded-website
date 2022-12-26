@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css?family=blackchancery");
-@import url("https://fonts.googleapis.com/css?family=morris+roman");
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: "BlackChancery";
+  src: url("./components/fonts/BLKCHCRY.TTF");
+}
 
 body {
   background-color: rgb(33, 12, 94);
