@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Playfair+Display:wght@600&family=Titillium+Web:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css?family=BlackChancery");
-@import url("https://fonts.googleapis.com/css?family=Morris+Roman");
+@import url("https://fonts.googleapis.com/css?family=blackchancery");
+@import url("https://fonts.googleapis.com/css?family=morris+roman");
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
