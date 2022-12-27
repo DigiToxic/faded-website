@@ -237,59 +237,70 @@ const Door = styled.div`
 
   @media (max-width: 1881px) {
     margin-top: 130px;
-    padding-bottom: 225px;
+    padding-top: 150px;
+    padding-bottom: 125px;
     padding-right: 145px;
     padding-left: 145px;
     border-top-left-radius: 250px;
     border-top-right-radius: 250px;
   }
 
-  @media (max-width: 1500px) {
-    margin-top: 84px;
+  @media (max-width: 1778px) {
+    margin-top: 145px;
+    padding-top: 125px;
     padding-bottom: 125px;
+    padding-right: 135px;
+    padding-left: 135px;
+    border-top-left-radius: 310px;
+    border-top-right-radius: 310px;
+  }
+
+  @media (max-width: 1700px) {
+    margin-top: 155px;
+    padding-bottom: 100px;
+    padding-right: 120px;
+    padding-left: 120px;
+  }
+
+  @media (max-width: 1600px) {
+    margin-top: 170px;
+    padding-top: 95px;
+    padding-bottom: 100px;
+    padding-right: 110px;
+    padding-left: 110px;
+    border-top-left-radius: 310px;
+    border-top-right-radius: 310px;
+  }
+
+  @media (max-width: 1500px) {
+    margin-top: 193px;
+    padding-top: 95px;
+    padding-bottom: 62px;
+    padding-right: 100px;
+    padding-left: 100px;
   }
 
   @media (max-width: 1450px) {
-    margin-top: 91px;
-    padding-bottom: 115px;
+    margin-top: 200px;
+    padding-top: 93px;
+    padding-bottom: 50px;
     padding-right: 90px;
     padding-left: 90px;
   }
 
   @media (max-width: 1385px) {
-    margin-top: 101px;
-    padding-bottom: 95px;
+    margin-top: 210px;
+    padding-bottom: 31px;
     padding-right: 83px;
     padding-left: 83px;
   }
 
   @media (max-width: 1300px) {
-    margin-top: 118px;
-    padding-bottom: 65px;
-    padding-right: 73px;
-    padding-left: 73px;
-  }
-
-  @media (max-width: 1220px) {
-    margin-top: 130px;
-    padding-bottom: 38px;
-    padding-right: 62px;
-    padding-left: 62px;
-  }
-
-  @media (max-width: 1140px) {
-    margin-top: 145px;
-    padding-bottom: 12px;
-    padding-right: 52px;
-    padding-left: 52px;
+    padding-bottom: 31px;
   }
 
   @media (max-width: 1060px) {
-    margin-top: 158px;
-    padding-top: 10px;
-    padding-bottom: 32px;
-    padding-right: 45px;
-    padding-left: 45px;
+    padding-bottom: 38px;
   }
 `;
 
@@ -336,6 +347,10 @@ const PlusMoins = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 30px;
+
+  @media (max-width: 1881px) {
+    margin-top: 50px;
+  }
 `;
 
 const ButtonPlus = styled.div`
@@ -437,6 +452,10 @@ const MintAmount = styled.div`
   margin-inline-end: 0px;
   font-weight: bold;
   margin-top: 30px;
+
+  @media (max-width: 1881px) {
+    margin-top: 50px;
+  }
 `;
 
 const TotalSupply = styled.div`
@@ -447,6 +466,10 @@ const TotalSupply = styled.div`
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
+
+  @media (max-width: 1881px) {
+    margin-top: 30px;
+  }
 `;
 
 const Ligne = styled.div`
