@@ -215,6 +215,10 @@ const Container = styled.div`
   margin-top: 5px;
   background-color: rgb(234, 189, 252);
   padding-bottom: 100px;
+
+  @media (max-width: 1040px) {
+    padding-bottom: 50px;
+  }
 `
 
 const NoblesName = styled.div`
@@ -232,6 +236,10 @@ const NoblesName = styled.div`
     padding: 6px;
     border-radius: 15px;
     color: green;
+
+    @media (max-width: 1040px) {
+      margin-top: 40px;
+    }
   }
 `
 
@@ -253,6 +261,10 @@ const TeamButton = styled.div`
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+
+  @media (max-width: 1040px) {
+    margin-top: 40px;
+  }
 
   @media(max-width: 730px) {
     display: grid;

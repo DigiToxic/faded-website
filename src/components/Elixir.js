@@ -77,7 +77,7 @@ const ElixirBox = styled.div`
   display: grid;
   grid-template-columns: 700px 1fr;
 
-  @media (max-width: 1050px) {
+  @media (max-width: 1270px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,6 +89,7 @@ const ElixirImage = styled.div`
   grid-template-columns: 700px 700px;
 
   img {
+    border-radius: 20px;
     width: 600px;
     margin-left: 45px;
     margin-top: 60px;
@@ -100,7 +101,7 @@ const ElixirImage = styled.div`
     }
   }
 
-  @media (max-width: 1050px) {
+  @media (max-width: 1270px) {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -128,31 +129,23 @@ const ElixirImage = styled.div`
 `
 
 const TextContainer = styled.div`
-  margin-top: 10px;
-  font-size: 20px;
-  font-weight: bold;
-  p {
-    margin-top: 0px;
-    margin-bottom: 30px;
-  }
 
-  span {
-    font-family: BlackChancery;
-  }
 `
 
 const ElixirText = styled.div`
   margin-top: 80px;
   margin-right: 45px;
-  font-size: 20px;
-  font-weight: bold;
+  
   z-index: 5;
 
   p {
+    font-size: 25px;
     font-family: BlackChancery;
+    margin-bottom: 30px;
   }
 
   span {
+        font-size: 25px;
         font-family: BlackChancery;
   }
 
@@ -177,12 +170,14 @@ const ElixirText = styled.div`
   }
 
   @media(max-width: 1316px) {
-    margin-top: 50px;
-    font-size: 17.5px;
-    line-height: 20px;
+    margin-top: 40px;
+
+    p {
+      line-height: 30px;
+    }
   }
 
-  @media(max-width: 1050px) {
+  @media(max-width: 1270px) {
     font-size: 20px;
     margin-right: 40px;
     margin-left: 40px;
