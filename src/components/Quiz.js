@@ -82,12 +82,13 @@ export default FillInTheBlank;
 
 const Container = styled.div`
     h1 {
-      font-family: family Anonymous Pro;
+      font-family: Morris Roman;
       text-align: center;
       margin-right: 35%;
       margin-left: 35%;
       margin-top: 0px;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
+      font-size: 2em;
 
       @media(max-width: 1200px) {
         margin-right: 30%;
@@ -113,10 +114,10 @@ const Question1 = styled.div`
   margin-bottom: 50px;
 
   p {
+    font-family: BlackChancery;
     margin-bottom: 10px;
     margin-left: 2px;
     font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
   }
 
   input {
