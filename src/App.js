@@ -7,6 +7,7 @@ import Foot from './components/Foot';
 import Info from './components/Info';
 import HeaderMint from './components/HeaderMint';
 import MintButton from './components/MintButton';
+import FootMint from './components/FootMint';
 import {
   BrowserRouter as Router,
   Switch,
@@ -22,6 +23,7 @@ function App() {
           <Route path="/mint">
             <HeaderMint />
             <MintButton />
+            <FootMint />
           </Route>
           <Route path="/">
             <Header />
@@ -29,9 +31,9 @@ function App() {
             <KingdomReward />
             <Info />
             <Elixir />
+            <Foot />
           </Route>
         </Switch>
-        <Foot />
       </Router>
     </div>
   );

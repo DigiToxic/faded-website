@@ -191,7 +191,8 @@ export default MintButton;
 
 const Container = styled.div`
   text-align: center;
-  padding-bottom: 47px;
+  
+  height: 663px;
   background-image: url("https://static.wixstatic.com/media/a67ef4_e1e8f6bf485444998699b0b84cd6f3a7~mv2.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -199,108 +200,56 @@ const Container = styled.div`
   background-size: cover;
 
   @media (max-width: 1500px) {
-    padding-bottom: 8px;
-  }
-
-  @media (max-width: 1450px) {
-    padding-bottom: 11px;
-  }
-
-  @media (max-width: 1385px) {
-    padding-bottom: 21px;
-  }
-
-  @media (max-width: 1300px) {
-    padding-bottom: 21px;
-  }
-
-  @media (max-width: 1220px) {
-    padding-bottom: 49px;
-  }
-
-  @media (max-width: 1060px) {
-    padding-bottom: 74px;
+    height: 576px;
   }
 `;
 
 const Door = styled.div`
-  display: inline-block;
-  border-top-left-radius: 192px;
-  border-top-right-radius: 192px;
-  padding-top: 100px;
-  padding-bottom: 132px;
-  padding-right: 99px;
-  padding-left: 99px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-top: 125px;
-  background-color: rgb(255, 255, 255, 0.5);
-
-  @media (max-width: 1881px) {
-    margin-top: 130px;
-    padding-top: 150px;
-    padding-bottom: 125px;
-    padding-right: 145px;
-    padding-left: 145px;
-    border-top-left-radius: 250px;
-    border-top-right-radius: 250px;
-  }
-
-  @media (max-width: 1778px) {
-    margin-top: 145px;
-    padding-top: 125px;
-    padding-bottom: 125px;
-    padding-right: 135px;
-    padding-left: 135px;
-    border-top-left-radius: 310px;
-    border-top-right-radius: 310px;
-  }
-
-  @media (max-width: 1700px) {
-    margin-top: 155px;
-    padding-bottom: 100px;
-    padding-right: 120px;
-    padding-left: 120px;
-  }
-
-  @media (max-width: 1600px) {
-    margin-top: 170px;
-    padding-top: 95px;
-    padding-bottom: 100px;
-    padding-right: 110px;
-    padding-left: 110px;
-    border-top-left-radius: 310px;
-    border-top-right-radius: 310px;
-  }
+  padding-top: 14%;
 
   @media (max-width: 1500px) {
-    margin-top: 193px;
-    padding-top: 95px;
-    padding-bottom: 62px;
-    padding-right: 100px;
-    padding-left: 100px;
-  }
-
-  @media (max-width: 1450px) {
-    margin-top: 200px;
-    padding-top: 93px;
-    padding-bottom: 50px;
-    padding-right: 90px;
-    padding-left: 90px;
-  }
-
-  @media (max-width: 1385px) {
-    margin-top: 210px;
-    padding-bottom: 31px;
-    padding-right: 83px;
-    padding-left: 83px;
+    padding-top: 12%;
   }
 
   @media (max-width: 1300px) {
-    padding-bottom: 31px;
+    padding-top: 14%;
   }
 
-  @media (max-width: 1060px) {
-    padding-bottom: 38px;
+  @media (max-width: 1200px) {
+    padding-top: 17.5%;
+  }
+
+  @media (max-width: 1100px) {
+    padding-top: 19%;
+  }
+
+  @media (max-width: 1031px) {
+    padding-top: 21%;
+  }
+
+  @media (max-width: 920px) {
+    padding-top: 25%;
+  }
+
+  @media (max-width: 785px) {
+    padding-top: 29%;
+  }
+
+  @media (max-width: 675px) {
+    padding-top: 33%;
+  }
+
+  @media (max-width: 571px) {
+    padding-top: 38%;
+  }
+
+  @media (max-width: 511px) {
+    padding-top: 42%;
   }
 `;
 
@@ -320,9 +269,9 @@ const Button1 = styled.div`
   cursor: pointer;
   background: rgb(32, 129, 226);
 
-  @media (max-width: 1060px) {
-    padding: 10px;
-    margin-top: 10px;
+  @media (max-width: 1200px) {
+    font-size: 17px;
+    padding: 13px;
   }
 `;
 
@@ -336,9 +285,9 @@ const Button2 = styled.div`
   cursor: pointer;
   background: rgb(178, 58, 255);
 
-  @media (max-width: 1060px) {
-    padding: 10px;
-    margin-top: 60px;
+  @media (max-width: 1200px) {
+    font-size: 17px;
+    padding: 13px;
   }
 `;
 
@@ -347,10 +296,6 @@ const PlusMoins = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 30px;
-
-  @media (max-width: 1881px) {
-    margin-top: 50px;
-  }
 `;
 
 const ButtonPlus = styled.div`
@@ -390,10 +335,11 @@ const ButtonPlus = styled.div`
     box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 darkgreen;
   }
 
-  @media (max-width: 1060px) {
-    div {
-      font-size: 30px;
-      padding: 0px 11.3px;
+    @media (max-width: 1200px) {
+      div {
+        font-size: 30px;
+        padding: 0px 15px;
+      }
     }
   }
 `;
@@ -435,10 +381,10 @@ const ButtonMoins = styled.div`
     box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 darkgreen;
   }
 
-  @media (max-width: 1060px) {
+  @media (max-width: 1200px) {
     div {
       font-size: 30px;
-      padding: 0px 15px;
+      padding: 0px 18px;
     }
   }
 `;
@@ -447,14 +393,15 @@ const MintAmount = styled.div`
   display: block;
   font-size: 1.5em;
   margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
   margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
 
-  @media (max-width: 1881px) {
-    margin-top: 50px;
+  @media (max-width: 1200px) {
+    margin-top: 30px;
   }
 `;
 
@@ -462,13 +409,14 @@ const TotalSupply = styled.div`
   display: block;
   font-size: 1.5em;
   margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
 
-  @media (max-width: 1881px) {
-    margin-top: 30px;
+  @media (max-width: 1031px) {
+    margin-bottom: 0px;
   }
 `;
 
@@ -506,24 +454,23 @@ const Ligne = styled.div`
   }
 
   @media (max-width: 904px) {
-    top: 4%;
     left: 22%;
     right: 22%;
-    margin: auto;
   }
 
   @media (max-width: 753px) {
-    top: 4%;
     left: 17%;
     right: 17%;
-    margin: auto;
   }
 
   @media (max-width: 645px) {
-    top: 4%;
     left: 12%;
     right: 12%;
-    margin: auto;
+  }
+
+  @media(max-width: 570px) {
+    left: 7%;
+    right: 7%;
   }
 `;
 
@@ -573,6 +520,15 @@ const WLchecker = styled.div`
     top: 13%;
     left: 10%;
     right: 10%;
+    margin: auto;
+  }
+
+  @media(max-width: 570px) {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    top: 13%;
+    left: 5%;
+    right: 5%;
     margin: auto;
   }
 `;

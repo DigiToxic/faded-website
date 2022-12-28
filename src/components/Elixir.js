@@ -41,7 +41,6 @@ function Elixir() {
             <Splash6>
                 <img src="/images/splash/splash 6.png" alt="" />
             </Splash6>
-
           </TextContainer>
         </ElixirBox>
     </Container>
@@ -182,6 +181,10 @@ const ElixirText = styled.div`
     margin-right: 40px;
     margin-left: 40px;
   }
+`
+
+const Button = styled.div`
+
 `
 
 const Splash4 = styled.div`

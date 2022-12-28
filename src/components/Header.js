@@ -8,16 +8,12 @@ function Header() {
   return (
       <Container>
           <Section1>
+            <Link activeClass="active" to="Body" spy={true} smooth={true}><div>
               <img src="/images/faded-logo.png" alt=""/>
+            </div></Link>
           </Section1>
 
           <Section2>
-          <Link activeClass="active" to="Body" spy={true} smooth={true}><div>
-            <ButtonLab>
-              <span>Secret Lab</span>
-            </ButtonLab>
-            </div></Link>
-
             <Link to="Kingdom" spy={true} smooth={true}><div>
             <ButtonKingdom>
               <span>Kingdom</span>
@@ -99,6 +95,7 @@ const Section1 = styled.div`
 
   img {
       width: 300px;
+      cursor: pointer;
   }
 
   @media(max-width: 1123px) {
@@ -128,8 +125,7 @@ const Section2 = styled.div`
     display: none;
   }
 `
-
-const ButtonLab = styled.div`
+const ButtonKingdom = styled.div`
   font-family: Arial;
   font-weight: bold;
   font-size: 15px;
@@ -147,18 +143,14 @@ const ButtonLab = styled.div`
     background-color: white;
     color: green;
   }
-}
 `
-const ButtonKingdom = styled(ButtonLab)`
+const ButtonNobles = styled(ButtonKingdom)`
 
 `
-const ButtonNobles = styled(ButtonLab)`
+const ButtonElixirs = styled(ButtonKingdom)`
 
 `
-const ButtonElixirs = styled(ButtonLab)`
-
-`
-const ButtonMint = styled(ButtonLab)`
+const ButtonMint = styled(ButtonKingdom)`
   margin-right: 0px;
 `
 

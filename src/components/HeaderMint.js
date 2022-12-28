@@ -7,20 +7,10 @@ function HeaderMint() {
   return (
     <Container>
         <Section1>
+          <a href="/"><div>
             <img src="/images/faded-logo.png" alt="" />
-        </Section1>
-
-        <Section2>
-        <a href="/"><div>
-          <ButtonLab>
-            <span>Secret Lab</span>
-          </ButtonLab>
           </div></a>
-
-           <ButtonMint>
-           <span>Mint</span>
-          </ButtonMint>
-        </Section2>
+        </Section1>
 
         <Section3>
         <div><a href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg"><img src="/images/twitter.png" alt=""/></a></div>
