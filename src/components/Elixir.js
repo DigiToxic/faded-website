@@ -183,10 +183,6 @@ const ElixirText = styled.div`
   }
 `
 
-const Button = styled.div`
-
-`
-
 const Splash4 = styled.div`
   position: absolute;
   top: 2550px;

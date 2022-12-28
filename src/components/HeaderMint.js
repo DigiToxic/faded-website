@@ -67,21 +67,6 @@ const Section1 = styled.div`
   }
 `
 
-const Section2 = styled.div`
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  a {
-    text-decoration-line: none;
-  }
-
-  @media(max-width: 950px) {
-    display: none;
-  }
-`
-
 const ButtonLab = styled.div`
   font-family: Arial;
   font-weight: bold;
@@ -101,10 +86,6 @@ const ButtonLab = styled.div`
     color: green;
   }
 }
-`
-
-const ButtonMint = styled(ButtonLab)`
-  margin-right: 0px;
 `
 
 const Section3 = styled.div`
