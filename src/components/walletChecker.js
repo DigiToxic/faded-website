@@ -80,6 +80,18 @@ const Container = styled.div`
     @media(max-width: 570px) {
       width: 300px;
     }
+
+    @media(max-width: 472px) {
+      width: 280px;
+    }
+
+    @media(max-width: 430px) {
+      width: 260px;
+    }
+    
+    @media(max-width: 401px) {
+      width: 240px;
+    }
   }
 `
 

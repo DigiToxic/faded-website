@@ -251,6 +251,18 @@ const Door = styled.div`
   @media (max-width: 511px) {
     padding-top: 42%;
   }
+
+  @media (max-width: 460px) {
+    padding-top: 43%;
+  }
+
+  @media (max-width: 448px) {
+    padding-top: 48%;
+  }
+
+  @media (max-width: 401px) {
+    padding-top: 53%;
+  }
 `;
 
 const Button = styled.div`
@@ -403,6 +415,11 @@ const MintAmount = styled.div`
   @media (max-width: 1200px) {
     margin-top: 30px;
   }
+
+  @media (max-width: 448px) {
+    padding: 5px;
+    font-size: 20px;
+  }
 `;
 
 const TotalSupply = styled.div`
@@ -417,6 +434,11 @@ const TotalSupply = styled.div`
 
   @media (max-width: 1031px) {
     margin-bottom: 0px;
+  }
+  
+  @media (max-width: 448px) {
+    padding: 5px;
+    font-size: 20px;
   }
 `;
 
@@ -472,6 +494,14 @@ const Ligne = styled.div`
     left: 7%;
     right: 7%;
   }
+
+  @media(max-width: 472px) {
+    padding: 40px 170px;
+  }
+
+  @media(max-width: 401px) {
+    padding: 40px 150px;
+  }
 `;
 
 const WLchecker = styled.div`
@@ -497,38 +527,27 @@ const WLchecker = styled.div`
   }
 
   @media (max-width: 904px) {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    top: 13%;
     left: 20%;
     right: 20%;
-    margin: auto;
   }
 
   @media (max-width: 753px) {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    top: 13%;
     left: 15%;
     right: 15%;
-    margin: auto;
   }
 
   @media (max-width: 645px) {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    top: 13%;
     left: 10%;
     right: 10%;
-    margin: auto;
   }
 
   @media(max-width: 570px) {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    top: 13%;
     left: 5%;
     right: 5%;
-    margin: auto;
+  }
+
+  @media(max-width: 472px) {
+    left: 2%;
+    right: 2%;
   }
 `;
