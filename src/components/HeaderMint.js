@@ -67,27 +67,6 @@ const Section1 = styled.div`
   }
 `
 
-const ButtonLab = styled.div`
-  font-family: Arial;
-  font-weight: bold;
-  font-size: 15px;
-  padding: 10px 24px;
-  margin-right: 10px;
-  border: none;
-  color: white;
-  background-color: green;
-  cursor: pointer;
-  border-radius: 100px;
-  transition: background-color 0.3s;
-  white-space: nowrap;
-
-  &:hover {
-    background-color: white;
-    color: green;
-  }
-}
-`
-
 const Section3 = styled.div`
   flex: 1;
   display: flex;
