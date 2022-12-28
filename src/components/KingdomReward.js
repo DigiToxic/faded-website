@@ -112,7 +112,7 @@ const KingdomName = styled.div`
     font-family: Morris Roman;
     font-size: 30px;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 40px;
     text-align: center;
     justify-content: center;
     border: 5px solid black;

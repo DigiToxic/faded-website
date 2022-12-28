@@ -58,7 +58,7 @@ function Team(props) {
             <img src={props.pfpWolf} alt="" />
           <Handle>
             <p>{props.NameWolf}</p>
-            <a href={props.TwitterWolf}><img src="/images/twitter.png" alt="" /></a>
+            <a href={props.TwitterWolf} rel="noreferrer" target="_blank"><img src="/images/twitter.png" alt="" /></a>
           </Handle>
           </Content>
           <Text>
@@ -81,7 +81,7 @@ function Team(props) {
             <img src={props.pfpDom} alt="" />
           <HandleDom>
             <p>{props.NameDom}</p>
-            <a href={props.TwitterDom}><img src="/images/twitter.png" alt="" /></a>
+            <a href={props.TwitterDom} rel="noreferrer" target="_blank"><img src="/images/twitter.png" alt="" /></a>
           </HandleDom>
           </ContentDom>
           <TextDom>
@@ -104,7 +104,7 @@ function Team(props) {
             <img src={props.pfpDigi} alt="" />
           <HandleDigi>
             <p>{props.NameDigi}</p>
-            <a href={props.TwitterDigi}><img src="/images/twitter.png" alt="" /></a>
+            <a href={props.TwitterDigi} rel="noreferrer" target="_blank"><img src="/images/twitter.png" alt="" /></a>
           </HandleDigi>
           </ContentDigi>
           <TextDigi>
@@ -123,7 +123,7 @@ function Team(props) {
             <img src={props.pfpAlpha} alt="" />
           <HandleAlpha>
             <p>{props.NameAlpha}</p>
-            <a href={props.TwitterAlpha}><img src="/images/twitter.png" alt="" /></a>
+            <a href={props.TwitterAlpha} rel="noreferrer" target="_blank"><img src="/images/twitter.png" alt="" /></a>
           </HandleAlpha>
           </ContentAlpha>
           <TextAlpha>
@@ -152,7 +152,7 @@ function Team(props) {
             <img src={props.pfpLinh} alt="" />
           <HandleLinh>
             <p>{props.NameLinh}</p>
-            <a href={props.TwitterLinh}><img src="/images/twitter.png" alt="" /></a>
+            <a href={props.TwitterLinh} rel="noreferrer" target="_blank"><img src="/images/twitter.png" alt="" /></a>
           </HandleLinh>
           </ContentLinh>
           <TextLinh>
@@ -173,7 +173,7 @@ function Team(props) {
             <img src={props.pfpFunky} alt="" />
           <HandleFunky>
             <p>{props.NameFunky}</p>
-            <a href={props.TwitterFunky}><img src="/images/twitter.png" alt="" /></a>
+            <a href={props.TwitterFunky} rel="noreferrer" target="_blank"><img src="/images/twitter.png" alt="" /></a>
           </HandleFunky>
           </ContentFunky>
           <TextFunky>
@@ -194,7 +194,7 @@ function Team(props) {
             <img src={props.pfpAreum} alt="" />
           <HandleAreum>
             <p>{props.NameAreum}</p>
-            <a href={props.TwitterAreum}><img src="/images/twitter.png" alt="" /></a>
+            <a href={props.TwitterAreum} rel="noreferrer" target="_blank"><img src="/images/twitter.png" alt="" /></a>
           </HandleAreum>
           </ContentAreum>
           <TextAreum>
@@ -229,7 +229,7 @@ const NoblesName = styled.div`
     font-family: Morris Roman;
     font-size: 30px;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 40px;
     text-align: center;
     justify-content: center;
     border: 5px solid black;
