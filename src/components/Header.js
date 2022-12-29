@@ -32,6 +32,12 @@ function Header() {
             </ButtonElixirs>
             </div></Link>
 
+            <Link to="FAQ" spy={true} smooth={true}><div>
+            <ButtonFAQ>
+              <span>FAQ</span>
+            </ButtonFAQ>
+            </div></Link>
+
             <a href="/mint"><div>
            <ButtonMint>
            <span>Mint</span>
@@ -55,6 +61,7 @@ function Header() {
               <li><Link to="Kingdom" spy={true} smooth={true} onClick={() => setBurgerStatus(false)}>Kingdom</Link></li>
               <li><Link to="Team" spy={true} smooth={true} onClick={() => setBurgerStatus(false)}>Nobles</Link></li>
               <li><Link to="Elixir" spy={true} smooth={true} onClick={() => setBurgerStatus(false)}>Elixirs</Link></li>
+              <li><Link to="FAQ" spy={true} smooth={true} onClick={() => setBurgerStatus(false)}>FAQ</Link></li>
               <a href="/MintButton"><div><li><a href="/mint">Mint</a></li></div></a>
               <a href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg" rel="noreferrer" target="_blank"><img src="/images/twitter.png" alt=""/></a>
               <img src="/images/opensea.png" alt=""/>
@@ -149,6 +156,11 @@ const ButtonNobles = styled(ButtonKingdom)`
 const ButtonElixirs = styled(ButtonKingdom)`
 
 `
+
+const ButtonFAQ = styled(ButtonKingdom)`
+
+`
+
 const ButtonMint = styled(ButtonKingdom)`
   margin-right: 0px;
 `

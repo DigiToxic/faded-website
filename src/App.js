@@ -8,6 +8,7 @@ import Info from './components/Info';
 import HeaderMint from './components/HeaderMint';
 import MintButton from './components/MintButton';
 import FootMint from './components/FootMint';
+import FAQ from './components/FAQ';
 import {
   BrowserRouter as Router,
   Switch,
@@ -31,6 +32,7 @@ function App() {
             <KingdomReward />
             <Info />
             <Elixir />
+            <FAQ />
             <Foot />
           </Route>
         </Switch>
