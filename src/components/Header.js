@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
 import {Link} from 'react-scroll';
+import Music from './Music';
 
 function Header() {
   const [burgerStatus, setBurgerStatus] = useState(false);
@@ -44,6 +45,10 @@ function Header() {
           </ButtonMint>
           </div></a>
           </Section2>
+
+          <Section4>
+            <Music />
+          </Section4>
 
           <Section3>
             <a href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg" rel="noreferrer" target="_blank"><img src="/images/twitter.png" alt=""/></a>
@@ -100,7 +105,7 @@ const Section1 = styled.div`
   align-items: center;
 
   img {
-      width: 300px;
+      width: 350px;
       cursor: pointer;
   }
 
@@ -112,13 +117,13 @@ const Section1 = styled.div`
 
   @media(max-width: 950px) {
       img {
-        width: 300px;
+        width: 350px;
     }
   }
 `
 
 const Section2 = styled.div`
-  flex: 1;
+  flex: 2.5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,6 +181,16 @@ const Section3 = styled.div`
     width: 40px;
     margin-right: 20px;
   }
+
+  @media(max-width: 950px) {
+    display: none;
+  }
+`
+
+const Section4 = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media(max-width: 950px) {
     display: none;

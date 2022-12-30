@@ -8,7 +8,7 @@ function Body() {
 
   return (
     <Container id='Body'>
-      <img src="/images/faded.png" alt="" />
+      <img src="/images/lab.gif" alt="" id='Top'/>
       <Button onClick={() => setButtonPopup5(true)}>
         Are you getting faded...?
       </Button>

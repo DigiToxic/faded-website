@@ -54,7 +54,7 @@ function FAQ() {
 
       <Box>
         <Answer2>
-          <p>2- Utility? </p>
+          <p>2- What would be the Utility in Faded? </p>
           <Arrow rotation={rotation2} onClick={handleClick2}>
             <img src="/images/GArrow.png" onClick={() => setIsVisible2(!isVisible2)}/>
           </Arrow>
