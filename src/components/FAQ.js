@@ -44,7 +44,7 @@ function FAQ() {
           <p>1- Who are we?</p>
 
           <Arrow rotation={rotation} onClick={handleClick}>
-            <img src="/images/GArrow.png" onClick={toggleCollapsed}/>
+            <img src="/images/GArrow.png" alt=""  onClick={toggleCollapsed}/>
           </Arrow>
         </Answer>
         <BurgerNav isVisible={isVisible}>
@@ -56,7 +56,7 @@ function FAQ() {
         <Answer2>
           <p>2- What would be the Utility in Faded? </p>
           <Arrow rotation={rotation2} onClick={handleClick2}>
-            <img src="/images/GArrow.png" onClick={() => setIsVisible2(!isVisible2)}/>
+            <img src="/images/GArrow.png" alt=""  onClick={() => setIsVisible2(!isVisible2)}/>
           </Arrow>
         </Answer2>
           <BurgerNav3 isVisible={isVisible2}>
@@ -68,7 +68,7 @@ function FAQ() {
         <Answer2>
           <p>3- How do I get whitelisted?</p>
           <Arrow rotation={rotation3} onClick={handleClick3}>
-            <img src="/images/GArrow.png" onClick={() => setIsVisible3(!isVisible3)}/>
+            <img src="/images/GArrow.png" alt=""  onClick={() => setIsVisible3(!isVisible3)}/>
           </Arrow>
         </Answer2>
         <BurgerNav4 isVisible={isVisible3}>
@@ -80,7 +80,7 @@ function FAQ() {
         <Answer2>
           <p>4- What is the total supply?</p>
           <Arrow rotation={rotation4} onClick={handleClick4}>
-            <img src="/images/GArrow.png"  onClick={() => setIsVisible4(!isVisible4)}/>
+            <img src="/images/GArrow.png" alt=""  onClick={() => setIsVisible4(!isVisible4)}/>
           </Arrow>
         </Answer2>
         <BurgerNav5 isVisible={isVisible4}>
