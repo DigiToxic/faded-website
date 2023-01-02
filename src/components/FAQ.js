@@ -206,8 +206,14 @@ const Answer2 = styled(Answer)`
   margin-top: 0px;
 
   span {
-    font-size: 19px;
+    font-size: 22px;
     font-family: BlackChancery;
+  }
+
+  @media(max-width: 500px) {
+    span {
+      font-size: 19px;
+    }
   }
 
   @media(max-width: 450px) {

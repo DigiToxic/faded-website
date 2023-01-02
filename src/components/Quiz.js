@@ -145,6 +145,7 @@ const Text = styled.div`
 
   p {
     font-size: 20px;
+    font-family: BlackChancery;
   }
 `
 
@@ -184,5 +185,6 @@ const Button = styled.div`
   p {
     margin-left: 20px;
     font-size: 20px;
+    font-family: BlackChancery;
   }
 `

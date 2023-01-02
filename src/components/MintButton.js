@@ -199,6 +199,18 @@ const Container = styled.div`
   background-attachment: fixed;
   background-size: cover;
 
+  @media (max-width: 1930px) {
+    height: 879px;
+  }
+
+  @media (max-width: 1890px) {
+    height: 792px;
+  }
+
+  @media (max-width: 1540px) {
+    height: 663px;
+  }
+
   @media (max-width: 1500px) {
     height: 576px;
   }
