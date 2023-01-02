@@ -54,7 +54,7 @@ function FAQ() {
 
       <Box>
         <Answer2>
-          <p>2- What would be the Utility in Faded? </p>
+          <span>2- What would be the Utility in Faded? </span>
           <Arrow rotation={rotation2} onClick={handleClick2}>
             <img src="/images/GArrow.png" alt=""  onClick={() => setIsVisible2(!isVisible2)}/>
           </Arrow>
@@ -144,7 +144,6 @@ const Answer = styled.div`
   height: 80px;
 
   p {
-    font-family: Comic Sans MS;
     font-size: 22px;
     font-family: BlackChancery;
   }
@@ -205,6 +204,17 @@ const Answer = styled.div`
 const Answer2 = styled(Answer)`
   border-bottom: 0px solid rgb(0, 0, 0);
   margin-top: 0px;
+
+  span {
+    font-size: 19px;
+    font-family: BlackChancery;
+  }
+
+  @media(max-width: 450px) {
+    span {
+      font-size: 16px;
+    }
+  }
 `
 
 const Arrow = styled.div`
