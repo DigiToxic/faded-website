@@ -149,6 +149,22 @@ const Answer = styled.div`
     font-family: BlackChancery;
   }
 
+  @media(max-width: 1890px) {
+    width: 1700px;
+  }
+
+  @media(max-width: 1770px) {
+    width: 1600px;
+  }
+
+  @media(max-width: 1620px) {
+    width: 1500px;
+  }
+
+  @media(max-width: 1565px) {
+    width: 1400px;
+  }
+
   @media(max-width: 1420px) {
     width: 1200px;
   }
@@ -171,6 +187,18 @@ const Answer = styled.div`
 
   @media(max-width: 655px) {
     width: 500px;
+  }
+
+  @media(max-width: 551px) {
+    width: 450px;
+  }
+
+  @media(max-width: 500px) {
+    width: 400px;
+  }
+
+  @media(max-width: 450px) {
+    width: 350px;
   }
 `
 
@@ -283,6 +311,14 @@ const BurgerNav3 = styled.div`
     width: 500px;
     height: ${props => (props.isVisible ? "140px": 0)};
   }
+
+  @media(max-width: 550px) {
+    width: 400px;
+  }
+
+  @media(max-width: 500px) {
+    width: 350px;
+  }
 `
 
 const BurgerNav4 = styled.div`
@@ -389,5 +425,10 @@ const BurgerNav5 = styled.div`
   @media(max-width: 701px) {
     margin-right: 90px;
     margin-left: 70px;
+  }
+
+  @media(max-width: 500px) {
+    margin-right: 45px;
+    margin-left: 45px;
   }
 `
