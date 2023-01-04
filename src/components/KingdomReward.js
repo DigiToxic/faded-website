@@ -19,8 +19,8 @@ function KingdomReward() {
         <Kingdom>
           <img src="/images/castle.gif" alt="" />
           <KingdomText>
-            <p>The king offers all his soldiers who successfully execute their mission will have the gratitude of receiving eternal wealth, no matter what path the soldier decides to take. It can be magic money as well as real money.</p>
-            <p>Health and eternal freedom are another option given by the king and finally, the possibility of speaking freely with the high leaders.</p>
+            <p>The king promises that all soldiers who successfully complete their mission will be rewarded with eternal wealth, whether it be in the form of magic money or real money.</p>
+            <p>In addition, the soldiers will be granted health, eternal freedom, and the opportunity to speak freely with the kingdom's high leaders.</p>
           </KingdomText>
         </Kingdom>
       </Fade>

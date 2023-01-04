@@ -463,6 +463,10 @@ const Ligne = styled.div`
   left: 3%;
   box-shadow: 1px 1px 100px;
 
+  @media (max-width: 1930px) {
+    padding: 130px 190px;
+  }
+
   @media (max-width: 1400px) {
     padding: 110px 170px;
   }

@@ -24,13 +24,7 @@ function Elixir() {
          <TextContainer>
             <Fade triggerOnce="true">
             <ElixirText>
-              <p>In a very distant time, there was a kingdom called "The Faded Kingdom", crowned by a king envious of power and manipulation. This kingdom was intended to wash out the inhabitants of it by making them work until their complete exhaustion, that is to say, their death.</p>
-              <p>One day, the king found, in the basement of his kingdom, a gigantic purple tree filled with renewing energy. After a few years of testing, he had concluded that it could greatly improve the performance of its inhabitants.</p>
-              <p>After returning to the surface, he kidnapped some helpless villagers to inject them with this liquid substance that renews the user's energy. Unfortunately, the side effects were not known and they will soon find out that this liquid will soon turn into a drug.</p>
-              <p>More and more people, until the complete kingdom was completely kidnapped to be able to improve their sources of energy of their body and to make so that these villagers survive longer and work longer. The more the years passed, the more the use of this liquid substance was obligatory. Since the body was used to receiving it and without it, the human body could no longer live.</p>
-              <p>The whole body changes shape, before more human, but now a kind of alien. The rate of use of the liquid kept increasing, to the point that the tree itself was dying.</p>
-              <p>The king was getting more and more worried, but he couldn't stop. He wanted to take everything for his daily wealth, but then the day came... One of the branches snapped and the liquid flowed out of the lab, freeing the drugged workers.</p>
-              <span>The guards, therefore, ask you to help them find the 888 escaped workers before they die, drained of their energy.</span>
+              <p>In a far-off kingdom, a greedy king discovered a tree with energy-renewing essence and began injecting his subjects with it. The substance became addictive and the entire kingdom became dependent on it, undergoing physical changes and becoming more alien-like. The tree eventually died and disaster struck when a branch broke, freeing the addicted workers. The guards turn to you for help in finding the 3333 escaped workers before they exhaust all of their energy.</p>
             </ElixirText>
             </Fade>
 
@@ -73,8 +67,8 @@ const ElixirName = styled.div`
 `
 
 const ElixirBox = styled.div`
-  display: grid;
-  grid-template-columns: 700px 1fr;
+display: flex;
+justify-content: space-around;
 
   @media (max-width: 1270px) {
     display: flex;
@@ -84,12 +78,10 @@ const ElixirBox = styled.div`
 `
 
 const ElixirImage = styled.div`
-  display: grid;
-  grid-template-columns: 700px 700px;
-
+    
   img {
     border-radius: 20px;
-    width: 600px;
+    width: 500px;
     margin-left: 45px;
     margin-top: 60px;
   }
@@ -128,56 +120,48 @@ const ElixirImage = styled.div`
 `
 
 const TextContainer = styled.div`
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const ElixirText = styled.div`
-  margin-top: 80px;
   margin-right: 45px;
-  
+  width: 700px;
+  margin-top: 60px;
   z-index: 5;
 
   p {
-    font-size: 25px;
+    font-size: 27px;
     font-family: BlackChancery;
     margin-bottom: 30px;
   }
 
-  span {
-        font-size: 25px;
-        font-family: BlackChancery;
-  }
-
   @media(max-width: 1880px) {
-    margin-top: 150px;
     font-size: 22px;
   }
 
   @media(max-width: 1721px) {
-    margin-top: 135px;
     font-size: 21px;
   }
 
   @media(max-width: 1611px) {
-    margin-top: 60px;
     font-size: 18px;
   }
 
-  @media(max-width: 1355px) {
-    margin-top: 40px;
+  @media(max-width: 1350px) {
+    margin-top: 45px;
     font-size: 19px;
+    margin-left: 30px;
   }
 
-  @media(max-width: 1316px) {
-    margin-top: 40px;
-
-    p {
-      line-height: 30px;
-    }
+  @media(max-width: 1305px) {
+    width: 600px;
   }
 
   @media(max-width: 1270px) {
     font-size: 20px;
+    width: initial;
     margin-right: 40px;
     margin-left: 40px;
   }
@@ -205,19 +189,27 @@ const Splash5 = styled.div`
     }
 
     @media(max-width: 1049px) {
-      top: 3700px;
-      left: 20%;
+      top: 3500px;
+      right: 0%;
 
       img {
-        width: 50%;
+        width: 15%;
         opacity: 0.5;
       }
     }
 
     @media(max-width: 660px) {
-      top: 4000px;
+      top: 3800px;
       left: 20%;
+
+      
+      img {
+        width: 20%;
+        opacity: 0.5;
+      }
     }
+    
+
 `
 
 const Splash6 = styled.div`

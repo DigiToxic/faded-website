@@ -48,7 +48,7 @@ function FAQ() {
           </Arrow>
         </Answer>
         <BurgerNav isVisible={isVisible}>
-            <p>Ledding by a team of blockchain enthusiasts and collectors that have experience in fields like business management, design, and software development.</p>
+            <p>We are a highly motivated team dedicated to bridging the gap between web2 and web3 to create a truly valuable project. Our focus encompasses everything from building businesses to improving health and finding innovative ways to generate revenue.</p>
         </BurgerNav>
       </Box>
 
@@ -60,7 +60,7 @@ function FAQ() {
           </Arrow>
         </Answer2>
           <BurgerNav3 isVisible={isVisible2}>
-              <p>Utility is a mysterious force that drives our actions, yet it remains hidden from view. We can only trust our instincts and make our best guesses. Even the most carefully planned actions can be upended by the unpredictable nature of utility. Only time will tell!</p>
+              <p>For those who didn't got faded, we are offering the opportunity to participate in our alpha program, which includes guidance on starting any type of business, as well as how to trade coins, jpeg, and fiat in any market. Our course is led by extremely successful entrepreneurs who are committed to helping you succeed on any path you choose.</p>
           </BurgerNav3>
       </Box>
 
@@ -72,7 +72,7 @@ function FAQ() {
           </Arrow>
         </Answer2>
         <BurgerNav4 isVisible={isVisible3}>
-            <p>Register to our <a href="https://www.premint.xyz/home/">premint</a> or engaging with our tweets, providing value to our discord, and being with a 1:1 call with our founder and our team!.</p>
+            <p>The king is always watching your actions, so the best way to gain his favor is to provide as much value as possible to our Discord community and work together to succeed. Occasionally, the king will send out quests that can be completed by entering premints or participating in the Alphabot raffle, giving you the chance to get whitelisted!</p>
         </BurgerNav4>
       </Box>
 
@@ -84,7 +84,7 @@ function FAQ() {
           </Arrow>
         </Answer2>
         <BurgerNav5 isVisible={isVisible4}>
-          <p>Faded total supply is limited to 3,333 NFTs.</p>
+          <p>The total supply of Faded NFTs is limited to 3,333 NFTs.</p>
         </BurgerNav5>
       </Box2>
 
@@ -127,6 +127,7 @@ const Box = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 `
 
 const Box2 = styled(Box)`
@@ -245,7 +246,7 @@ const BurgerNav = styled.div`
 
   p {
     font-family: Comic Sans MS;
-    font-size: 17px;
+    font-size: 20px;
     font-family: BlackChancery;
   }
 
@@ -278,6 +279,10 @@ const BurgerNav = styled.div`
     margin-left: 100px;
   }
 
+  @media(max-width: 885px) {
+    height: ${props => (props.isVisible ? "140px": 0)};
+  }
+
   @media(max-width: 856px) {
     margin-right: 110px;
     margin-left: 90px;
@@ -286,6 +291,22 @@ const BurgerNav = styled.div`
   @media(max-width: 701px) {
     margin-right: 90px;
     margin-left: 70px;
+  }
+
+  @media(max-width: 663px) {
+    height: ${props => (props.isVisible ? "160px": 0)};
+  }
+
+  @media(max-width: 568px) {
+    height: ${props => (props.isVisible ? "180px": 0)};
+  }
+
+  @media(max-width: 487px) {
+    height: ${props => (props.isVisible ? "240px": 0)};
+  }
+
+  @media(max-width: 424px) {
+    height: ${props => (props.isVisible ? "270px": 0)};
   }
 `
 
@@ -298,7 +319,7 @@ const BurgerNav3 = styled.div`
 
   p {
     font-family: Comic Sans MS;
-    font-size: 17px;
+    font-size: 20px;
     font-family: BlackChancery;
   }
 
@@ -307,6 +328,10 @@ const BurgerNav3 = styled.div`
   }
 
   @media(max-width: 1200px) {
+    width: 900px;
+  }
+
+  @media(max-width: 1124px) {
     width: 800px;
   }
 
@@ -320,20 +345,22 @@ const BurgerNav3 = styled.div`
 
   @media(max-width: 856px) {
     width: 600px;
-    height: ${props => (props.isVisible ? "130px": 0)};
+    height: ${props => (props.isVisible ? "150px": 0)};
   }
 
   @media(max-width: 701px) {
     width: 500px;
-    height: ${props => (props.isVisible ? "140px": 0)};
+    height: ${props => (props.isVisible ? "180px": 0)};
   }
 
-  @media(max-width: 550px) {
+  @media(max-width: 551px) {
     width: 400px;
+    height: ${props => (props.isVisible ? "220px": 0)};
   }
 
   @media(max-width: 500px) {
     width: 350px;
+    height: ${props => (props.isVisible ? "240px": 0)};
   }
 `
 
@@ -346,7 +373,7 @@ const BurgerNav4 = styled.div`
 
   p {
     font-family: Comic Sans MS;
-    font-size: 17px;
+    font-size: 20px;
     font-family: BlackChancery;
   }
 
@@ -367,6 +394,7 @@ const BurgerNav4 = styled.div`
   @media(max-width: 1125px) {
     margin-right: 160px;
     margin-left: 150px;
+    height: ${props => (props.isVisible ? "120px": 0)};
   }
 
   @media(max-width: 1070px) {
@@ -379,15 +407,46 @@ const BurgerNav4 = styled.div`
     margin-left: 100px;
   }
 
+  @media(max-width: 895px) {
+    height: ${props => (props.isVisible ? "150px": 0)};
+  }
+
   @media(max-width: 856px) {
     margin-right: 110px;
     margin-left: 90px;
   }
 
+  @media(max-width: 745px) {
+    height: ${props => (props.isVisible ? "180px": 0)};
+  }
+
   @media(max-width: 701px) {
     margin-right: 90px;
     margin-left: 70px;
-    height: ${props => (props.isVisible ? "120px": 0)};
+  }
+
+  @media(max-width: 600px) {
+    height: ${props => (props.isVisible ? "220px": 0)};
+  }
+
+  @media(max-width: 533px) {
+    height: ${props => (props.isVisible ? "240px": 0)};
+  }
+
+  @media(max-width: 500px) {
+    height: ${props => (props.isVisible ? "280px": 0)};
+  }
+
+  @media(max-width: 464px) {
+    height: ${props => (props.isVisible ? "300px": 0)};
+  }
+
+  @media(max-width: 433px) {
+    height: ${props => (props.isVisible ? "340px": 0)};
+  }
+
+  @media(max-width: 417px) {
+    height: ${props => (props.isVisible ? "360px": 0)};
   }
 `
 
@@ -400,7 +459,7 @@ const BurgerNav5 = styled.div`
 
   p {
     font-family: Comic Sans MS;
-    font-size: 17px;
+    font-size: 20px;
     font-family: BlackChancery;
   }
 
@@ -438,13 +497,40 @@ const BurgerNav5 = styled.div`
     margin-left: 90px;
   }
 
-  @media(max-width: 701px) {
-    margin-right: 90px;
-    margin-left: 70px;
+  @media(max-width: 790px) {
+    margin-right: 80px;
+    margin-left: 50px;
+  }
+
+  @media(max-width: 655px) {
+    margin-right: 30px;
+    margin-left: 10px;
+  }
+
+  @media(max-width: 551px) {
+    margin-right: -10px;
+    margin-left: -10px;
+
+    p {
+      width: 400px;
+    }
   }
 
   @media(max-width: 500px) {
-    margin-right: 45px;
-    margin-left: 45px;
+    margin-right: -30px;
+    margin-left: -30px;
+
+    p {
+      width: 350px;
+    }
+  }
+
+  @media(max-width: 449px) {
+    margin-right: -60px;
+    margin-left: -60px;
+
+    p {
+      width: 300px;
+    }
   }
 `

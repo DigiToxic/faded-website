@@ -1021,4 +1021,8 @@ const Splash3 = styled.div`
   @media(max-width: 1049px) {
     z-index: 1;
   }
+
+  @media(max-width: 458px) {
+    top: 2350px;
+  }
 `
