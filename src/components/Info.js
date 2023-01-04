@@ -59,7 +59,7 @@ function Info() {
         Description1Alpha="An 18 year old degen & full stack developer in dont worry by faded. "
         Description2Alpha="At the age of 16, he was deeply enthralled by programming & technology, and firmly believed that technology is the key to revolutionize and reform the future. During his journey, he was greatly inspired by nabil, who introduced him to the field of business and Web 3.0. Since then, he has been learning days in days out to improve his trading skills as well as deepening his understanding of blockchain ecosystem. "
         Description3Alpha="In real life, he is a casual and accommodating person who has a vast range of interests: piano& music production , foreign language acquisitions, table tennis, programming and more. In addition, with solid academic achievements, he managed to start his tutoring business (both academic advisory service and subject specific tutoring) since IB2 with the goal to help as many people to achieve their desired grades and hence getting into their dream universities. Now he’s in RWTH Aachen in Germany and is striving to further his understanding by taking computer science there. "
-        Description4Alpha="My med-long term goal is straightforward: helping traders and business owners achieve their best possible outcomes by integrating technologies and advanced business models."
+        Description4Alpha="My mid-long term goal is straightforward: helping traders and business owners achieve their best possible outcomes by integrating technologies and advanced business models."
         NameAlpha="Mr. Alpha"
         TwitterAlpha="https://twitter.com/mrAlpha5555?s=20&t=27W7Pqv9XlIWpS-r3m8Wdw"
 

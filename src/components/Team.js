@@ -749,8 +749,7 @@ const Text = styled.div`
 
   @media(max-width: 1180px) {
     margin-top: 20px;
-    margin-right: 60px;
-    margin-left: 60px;
+    margin-left: 30px;
     margin-bottom: 20px;
   }
 
@@ -955,6 +954,10 @@ const HandleFunky = styled(Handle)`
   p {
     color: black;
   }
+
+  @media(max-width: 418px) {
+    margin-left: 10px;
+  }
 `
 
 const TextFunky = styled(Text)`
@@ -971,9 +974,10 @@ const TextFunky = styled(Text)`
     margin-top: 0px;
     font-size: 18px;
   }
+
 `
 
-/* Funky */
+/* Areum */
 
 const HeaderAreum = styled(Header)`
   background-color: rgb(249, 252, 18);
