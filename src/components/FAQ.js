@@ -306,7 +306,7 @@ const BurgerNav = styled.div`
   }
 
   @media(max-width: 424px) {
-    height: ${props => (props.isVisible ? "270px": 0)};
+    height: ${props => (props.isVisible ? "290px": 0)};
   }
 `
 
@@ -446,7 +446,7 @@ const BurgerNav4 = styled.div`
   }
 
   @media(max-width: 417px) {
-    height: ${props => (props.isVisible ? "360px": 0)};
+    height: ${props => (props.isVisible ? "380px": 0)};
   }
 `
 
