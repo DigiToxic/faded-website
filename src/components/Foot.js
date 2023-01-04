@@ -44,7 +44,7 @@ const RightNav = styled.div`
 
 const LeftNav = styled.div`
   color: white;
-  margin-left: 70px;
+  margin-left: 5%;
 `
 
 const Button = styled.div`
