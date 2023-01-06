@@ -1,14 +1,14 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 import styled from "styled-components";
-import Popup from './Popup';
-import FillInTheBlankQuiz from './Quiz';
+import Popup from "./Popup";
+import FillInTheBlankQuiz from "./Quiz";
 
 function Body() {
   const [buttonPopup5, setButtonPopup5] = useState(false);
 
   return (
-    <Container id='Body'>
-      <img src="/images/lab.gif" alt="" id='Top'/>
+    <Container id="Body">
+      <img src="/images/lab.gif" alt="" id="Top" />
       <Button onClick={() => setButtonPopup5(true)}>
         Are you getting faded...?
       </Button>
@@ -16,12 +16,11 @@ function Body() {
       <Popup trigger={buttonPopup5} setTrigger={setButtonPopup5}>
         <FillInTheBlankQuiz />
       </Popup>
-
     </Container>
-  )
+  );
 }
 
-export default Body
+export default Body;
 
 const Container = styled.div`
   position: relative;
@@ -31,7 +30,7 @@ const Container = styled.div`
     width: 100%;
     object-fit: contain;
   }
-`
+`;
 
 const Button = styled.div`
   position: absolute;
@@ -58,17 +57,17 @@ const Button = styled.div`
     color: purple;
   }
 
-  @media(max-width: 808px) {
+  @media (max-width: 808px) {
     font-size: 15px;
     top: 15px;
     left: 10px;
     padding: 8px 25px;
   }
 
-  @media(max-width: 570px) {
+  @media (max-width: 570px) {
     font-size: 13px;
     top: 15px;
     left: 10px;
     padding: 6px 18px;
   }
-`
+`;

@@ -191,7 +191,7 @@ export default MintButton;
 
 const Container = styled.div`
   text-align: center;
-  
+
   height: 663px;
   background-image: url("https://static.wixstatic.com/media/a67ef4_e1e8f6bf485444998699b0b84cd6f3a7~mv2.png");
   background-position: center;
@@ -447,7 +447,7 @@ const TotalSupply = styled.div`
   @media (max-width: 1031px) {
     margin-bottom: 0px;
   }
-  
+
   @media (max-width: 448px) {
     padding: 5px;
     font-size: 20px;
@@ -506,16 +506,16 @@ const Ligne = styled.div`
     right: 12%;
   }
 
-  @media(max-width: 570px) {
+  @media (max-width: 570px) {
     left: 7%;
     right: 7%;
   }
 
-  @media(max-width: 472px) {
+  @media (max-width: 472px) {
     padding: 40px 170px;
   }
 
-  @media(max-width: 401px) {
+  @media (max-width: 401px) {
     padding: 40px 150px;
   }
 `;
@@ -557,12 +557,12 @@ const WLchecker = styled.div`
     right: 10%;
   }
 
-  @media(max-width: 570px) {
+  @media (max-width: 570px) {
     left: 5%;
     right: 5%;
   }
 
-  @media(max-width: 472px) {
+  @media (max-width: 472px) {
     left: 2%;
     right: 2%;
   }

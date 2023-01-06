@@ -1,24 +1,28 @@
-import React from 'react'
-import styled from 'styled-components'
-import {Link} from 'react-scroll';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-scroll";
 
 function Foot() {
   return (
     <Container>
       <LeftNav>
-      <Link activeClass="active" to="Body" spy={true} smooth={true}><div>
-        <Button><img src="/images/Arrow.png" alt="" /></Button>
-        </div></Link>
+        <Link activeClass="active" to="Body" spy={true} smooth={true}>
+          <div>
+            <Button>
+              <img src="/images/Arrow.png" alt="" />
+            </Button>
+          </div>
+        </Link>
       </LeftNav>
 
       <RightNav>
         <img src="/images/faded-logo.png" alt="" />
       </RightNav>
     </Container>
-  )
+  );
 }
 
-export default Foot
+export default Foot;
 
 const Container = styled.div`
   background-color: rgb(33, 12, 94);
@@ -27,7 +31,7 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-`
+`;
 
 const RightNav = styled.div`
   margin-left: 10px;
@@ -40,12 +44,12 @@ const RightNav = styled.div`
   img {
     width: 300px;
   }
-`
+`;
 
 const LeftNav = styled.div`
   color: white;
   margin-left: 5%;
-`
+`;
 
 const Button = styled.div`
   font-family: Arial;
@@ -62,4 +66,4 @@ const Button = styled.div`
     width: 20px;
     rotate: 180deg;
   }
-`
+`;

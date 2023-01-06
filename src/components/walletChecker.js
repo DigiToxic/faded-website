@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { addresses } from "./MintButton";
-import styled from 'styled-components';
+import styled from "styled-components";
 
 function WalletChecker() {
   const [address, setAddress] = useState("");
@@ -22,16 +22,24 @@ function WalletChecker() {
 
   return (
     <Container>
-      <input type="text" id="address" value={address} placeholder="Write wallet here..." onChange={handleAddressChange} />
+      <input
+        type="text"
+        id="address"
+        value={address}
+        placeholder="Write wallet here..."
+        onChange={handleAddressChange}
+      />
       <button type="button" onClick={handleCheckAddress}>
         Check address
       </button>
-      <Text><p>{result}</p></Text>
+      <Text>
+        <p>{result}</p>
+      </Text>
     </Container>
   );
 }
 
-export default WalletChecker
+export default WalletChecker;
 
 const Container = styled.div`
   margin-top: 5px;
@@ -57,45 +65,45 @@ const Container = styled.div`
     padding-left: 5px;
     width: 330px;
 
-    @media(max-width: 1400px) {
+    @media (max-width: 1400px) {
       width: 290px;
     }
 
-    @media(max-width: 1260px) {
+    @media (max-width: 1260px) {
       width: 260px;
     }
 
-    @media(max-width: 1190px) {
+    @media (max-width: 1190px) {
       width: 230px;
     }
 
-    @media(max-width: 1090px) {
+    @media (max-width: 1090px) {
       width: 200px;
     }
 
-    @media(max-width: 1000px) {
+    @media (max-width: 1000px) {
       width: 330px;
     }
 
-    @media(max-width: 570px) {
+    @media (max-width: 570px) {
       width: 300px;
     }
 
-    @media(max-width: 472px) {
+    @media (max-width: 472px) {
       width: 280px;
     }
 
-    @media(max-width: 430px) {
+    @media (max-width: 430px) {
       width: 260px;
     }
-    
-    @media(max-width: 401px) {
+
+    @media (max-width: 401px) {
       width: 240px;
     }
   }
-`
+`;
 
 const Text = styled.div`
   margin-top: 10px;
   color: white;
-`
+`;

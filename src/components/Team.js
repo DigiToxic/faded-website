@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 import styled from "styled-components";
-import Popup from './Popup';
+import Popup from "./Popup";
 import { Fade, Zoom } from "react-awesome-reveal";
 
 function Team(props) {
@@ -10,206 +10,226 @@ function Team(props) {
   const [buttonPopup4, setButtonPopup4] = useState(false);
 
   return (
-    <Container id='Team'>
-
-        <Zoom triggerOnce="true">
+    <Container id="Team">
+      <Zoom triggerOnce="true">
         <NoblesName>
           <span>Nobles Team</span>
         </NoblesName>
-        </Zoom>
+      </Zoom>
 
-        <NobleText>
-          <p>A guided tour of the nobles of the castle!</p>
-        </NobleText>
+      <NobleText>
+        <p>A great project has a great team behind</p>
+      </NobleText>
 
-        <TeamButton>
+      <TeamButton>
         <Fade triggerOnce="true">
-        <FounderButton onClick={() => setButtonPopup1(true)}>
-          <span>Founder</span>
-        </FounderButton>
+          <FounderButton onClick={() => setButtonPopup1(true)}>
+            <span>Founder</span>
+          </FounderButton>
         </Fade>
 
         <Fade triggerOnce="true">
-        <CoFounderButton onClick={() => setButtonPopup2(true)}>
-          <span>Co-Founder</span>
-        </CoFounderButton>
+          <CoFounderButton onClick={() => setButtonPopup2(true)}>
+            <span>Co-Founder</span>
+          </CoFounderButton>
         </Fade>
 
         <Fade triggerOnce="true">
-        <DevButton onClick={() => setButtonPopup3(true)}>
-          <span>Developer</span>
-        </DevButton>
+          <DevButton onClick={() => setButtonPopup3(true)}>
+            <span>Developer</span>
+          </DevButton>
         </Fade>
 
         <Fade triggerOnce="true">
-        <ArtistButton onClick={() => setButtonPopup4(true)}>
-          <span>Artist</span>
-        </ArtistButton>
+          <ArtistButton onClick={() => setButtonPopup4(true)}>
+            <span>Artist</span>
+          </ArtistButton>
         </Fade>
-        </TeamButton>
-        
+      </TeamButton>
 
       <Popup trigger={buttonPopup1} setTrigger={setButtonPopup1}>
         <Header>
-           <p>{props.titleWolf}</p>
+          <p>{props.titleWolf}</p>
         </Header>
         <PopupText>
           <Content>
             <img src={props.pfpWolf} alt="" />
-          <Handle>
-            <p>{props.NameWolf}</p>
-            <a href={props.TwitterWolf} rel="noreferrer" target="_blank"><img src="/images/twitter.png" alt="" /></a>
-          </Handle>
+            <Handle>
+              <p>{props.NameWolf}</p>
+              <a href={props.TwitterWolf} rel="noreferrer" target="_blank">
+                <img src="/images/twitter.png" alt="" />
+              </a>
+            </Handle>
           </Content>
           <Text>
-            {props.Description1Wolf}<br/>
-            <br/>
-            {props.Description2Wolf}<br/>
-            <br/>
+            {props.Description1Wolf}
+            <br />
+            <br />
+            {props.Description2Wolf}
+            <br />
+            <br />
             {props.Description3Wolf}
           </Text>
         </PopupText>
       </Popup>
 
-
       <Popup trigger={buttonPopup2} setTrigger={setButtonPopup2}>
         <HeaderDom>
-           <p>{props.titleDom}</p>
+          <p>{props.titleDom}</p>
         </HeaderDom>
         <PopupTextDom>
           <ContentDom>
             <img src={props.pfpDom} alt="" />
-          <HandleDom>
-            <p>{props.NameDom}</p>
-            <a href={props.TwitterDom} rel="noreferrer" target="_blank"><img src="/images/twitter.png" alt="" /></a>
-          </HandleDom>
+            <HandleDom>
+              <p>{props.NameDom}</p>
+              <a href={props.TwitterDom} rel="noreferrer" target="_blank">
+                <img src="/images/twitter.png" alt="" />
+              </a>
+            </HandleDom>
           </ContentDom>
           <TextDom>
-            {props.Description1Dom}<br/>
-            <br/>
-            {props.Description2Dom}<br/>
-            <br/>
+            {props.Description1Dom}
+            <br />
+            <br />
+            {props.Description2Dom}
+            <br />
+            <br />
             {props.Description3Dom}
           </TextDom>
         </PopupTextDom>
       </Popup>
 
-
       <Popup trigger={buttonPopup3} setTrigger={setButtonPopup3}>
         <HeaderDigi>
-           <p>{props.titleDigi}</p>
+          <p>{props.titleDigi}</p>
         </HeaderDigi>
         <PopupTextDigi>
           <ContentDigi>
             <img src={props.pfpDigi} alt="" />
-          <HandleDigi>
-            <p>{props.NameDigi}</p>
-            <a href={props.TwitterDigi} rel="noreferrer" target="_blank"><img src="/images/twitter.png" alt="" /></a>
-          </HandleDigi>
+            <HandleDigi>
+              <p>{props.NameDigi}</p>
+              <a href={props.TwitterDigi} rel="noreferrer" target="_blank">
+                <img src="/images/twitter.png" alt="" />
+              </a>
+            </HandleDigi>
           </ContentDigi>
           <TextDigi>
-          <br/>
-            {props.Description1Digi}<br/>
-            <br/>
+            <br />
+            {props.Description1Digi}
+            <br />
+            <br />
             {props.Description2Digi}
           </TextDigi>
         </PopupTextDigi>
 
         <HeaderAlpha>
-           <p>{props.titleAlpha}</p>
+          <p>{props.titleAlpha}</p>
         </HeaderAlpha>
         <PopupTextAlpha>
           <ContentAlpha>
             <img src={props.pfpAlpha} alt="" />
-          <HandleAlpha>
-            <p>{props.NameAlpha}</p>
-            <a href={props.TwitterAlpha} rel="noreferrer" target="_blank"><img src="/images/twitter.png" alt="" /></a>
-          </HandleAlpha>
+            <HandleAlpha>
+              <p>{props.NameAlpha}</p>
+              <a href={props.TwitterAlpha} rel="noreferrer" target="_blank">
+                <img src="/images/twitter.png" alt="" />
+              </a>
+            </HandleAlpha>
           </ContentAlpha>
           <TextAlpha>
-          <br/>
-            {props.Description1Alpha}<br/>
-            <br/>
-            {props.Description2Alpha}<br/>
-            <br/>
-            {props.Description3Alpha}<br/>
-            <br/>
+            <br />
+            {props.Description1Alpha}
+            <br />
+            <br />
+            {props.Description2Alpha}
+            <br />
+            <br />
+            {props.Description3Alpha}
+            <br />
+            <br />
             {props.Description4Alpha}
           </TextAlpha>
         </PopupTextAlpha>
       </Popup>
 
-        <Splash3>
-          <img src="/images/splash/splash 3.png" alt="" />
-        </Splash3>
+      <Splash3>
+        <img src="/images/splash/splash 3.png" alt="" />
+      </Splash3>
 
       <Popup trigger={buttonPopup4} setTrigger={setButtonPopup4}>
         <HeaderLinh>
-           <p>{props.titleLinh}</p>
+          <p>{props.titleLinh}</p>
         </HeaderLinh>
         <PopupTextLinh>
           <ContentLinh>
             <img src={props.pfpLinh} alt="" />
-          <HandleLinh>
-            <p>{props.NameLinh}</p>
-            <a href={props.TwitterLinh} rel="noreferrer" target="_blank"><img src="/images/twitter.png" alt="" /></a>
-          </HandleLinh>
+            <HandleLinh>
+              <p>{props.NameLinh}</p>
+              <a href={props.TwitterLinh} rel="noreferrer" target="_blank">
+                <img src="/images/twitter.png" alt="" />
+              </a>
+            </HandleLinh>
           </ContentLinh>
           <TextLinh>
-          <br/>
-            {props.Description1Linh}<br/>
-            <br/>
-            {props.Description2Linh}<br/>
-            <br/>
+            <br />
+            {props.Description1Linh}
+            <br />
+            <br />
+            {props.Description2Linh}
+            <br />
+            <br />
             {props.Description3Linh}
           </TextLinh>
         </PopupTextLinh>
 
         <HeaderFunky>
-           <p>{props.titleFunky}</p>
+          <p>{props.titleFunky}</p>
         </HeaderFunky>
         <PopupTextFunky>
           <ContentFunky>
             <img src={props.pfpFunky} alt="" />
-          <HandleFunky>
-            <p>{props.NameFunky}</p>
-            <a href={props.TwitterFunky} rel="noreferrer" target="_blank"><img src="/images/twitter.png" alt="" /></a>
-          </HandleFunky>
+            <HandleFunky>
+              <p>{props.NameFunky}</p>
+              <a href={props.TwitterFunky} rel="noreferrer" target="_blank">
+                <img src="/images/twitter.png" alt="" />
+              </a>
+            </HandleFunky>
           </ContentFunky>
           <TextFunky>
-          <br/>
-            {props.Description1Funky}<br/>
-            <br/>
-            {props.Description2Funky}<br/>
-            <br/>
+            <br />
+            {props.Description1Funky}
+            <br />
+            <br />
+            {props.Description2Funky}
+            <br />
+            <br />
             {props.Description3Funky}
           </TextFunky>
         </PopupTextFunky>
 
         <HeaderAreum>
-           <p>{props.titleAreum}</p>
+          <p>{props.titleAreum}</p>
         </HeaderAreum>
         <PopupTextAreum>
           <ContentAreum>
             <img src={props.pfpAreum} alt="" />
-          <HandleAreum>
-            <p>{props.NameAreum}</p>
-            <a href={props.TwitterAreum} rel="noreferrer" target="_blank"><img src="/images/twitter.png" alt="" /></a>
-          </HandleAreum>
+            <HandleAreum>
+              <p>{props.NameAreum}</p>
+              <a href={props.TwitterAreum} rel="noreferrer" target="_blank">
+                <img src="/images/twitter.png" alt="" />
+              </a>
+            </HandleAreum>
           </ContentAreum>
           <TextAreum>
-          <br/>
+            <br />
             {props.DescriptionAreum}
           </TextAreum>
- 
         </PopupTextAreum>
       </Popup>
-
     </Container>
-  )
+  );
 }
 
-export default Team
+export default Team;
 
 const Container = styled.div`
   margin-top: 5px;
@@ -219,7 +239,7 @@ const Container = styled.div`
   @media (max-width: 1040px) {
     padding-bottom: 50px;
   }
-`
+`;
 
 const NoblesName = styled.div`
   display: flex;
@@ -241,7 +261,7 @@ const NoblesName = styled.div`
       margin-top: 40px;
     }
   }
-`
+`;
 
 const NobleText = styled.div`
   font-style: italic;
@@ -253,7 +273,7 @@ const NobleText = styled.div`
     font-family: BlackChancery;
     font-size: 30px;
   }
-`
+`;
 
 const TeamButton = styled.div`
   margin-top: 70px;
@@ -266,28 +286,28 @@ const TeamButton = styled.div`
     margin-top: 40px;
   }
 
-  @media(max-width: 730px) {
+  @media (max-width: 730px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-right: 10%;
     margin-left: 10%;
   }
 
-  @media(max-width: 480px) {
+  @media (max-width: 480px) {
     margin-right: 5%;
     margin-left: 5%;
   }
 
-  @media(max-width: 480px) {
+  @media (max-width: 480px) {
     margin-right: 2%;
     margin-left: 2%;
   }
 
-  @media(max-width: 401px) {
+  @media (max-width: 401px) {
     margin-right: 5px;
     margin-left: 3px;
   }
-`
+`;
 
 const FounderButton = styled.div`
   background-color: rgb(1, 173, 1, 0.4);
@@ -316,8 +336,8 @@ const FounderButton = styled.div`
     transition-timing-function: ease-in;
     transition-duration: 0.3s;
   }
-  
-  @media(max-width: 1310px) {
+
+  @media (max-width: 1310px) {
     padding: 90px 35px;
     margin-left: 5px;
 
@@ -326,7 +346,7 @@ const FounderButton = styled.div`
     }
   }
 
-  @media(max-width: 1140px) {
+  @media (max-width: 1140px) {
     padding: 80px 25px;
 
     &:hover {
@@ -334,7 +354,7 @@ const FounderButton = styled.div`
     }
   }
 
-  @media(max-width: 1100px) {
+  @media (max-width: 1100px) {
     padding: 70px 15px;
 
     &:hover {
@@ -342,7 +362,7 @@ const FounderButton = styled.div`
     }
   }
 
-  @media(max-width: 980px) {
+  @media (max-width: 980px) {
     padding: 60px 5px;
 
     &:hover {
@@ -350,9 +370,9 @@ const FounderButton = styled.div`
     }
   }
 
-  @media(max-width: 900px) {
+  @media (max-width: 900px) {
     padding: 50px 10px;
-    
+
     span {
       font-size: 46px;
     }
@@ -362,7 +382,7 @@ const FounderButton = styled.div`
     }
   }
 
-  @media(max-width: 730px) {
+  @media (max-width: 730px) {
     margin-bottom: 10px;
     margin-right: 5px;
 
@@ -370,7 +390,7 @@ const FounderButton = styled.div`
       background-size: 200px;
     }
   }
-`
+`;
 
 const CoFounderButton = styled.div`
   background-color: rgb(109, 109, 245);
@@ -400,7 +420,7 @@ const CoFounderButton = styled.div`
     transition-duration: 0.3s;
   }
 
-  @media(max-width: 1310px) {
+  @media (max-width: 1310px) {
     padding: 100px 24px;
 
     &:hover {
@@ -408,7 +428,7 @@ const CoFounderButton = styled.div`
     }
   }
 
-  @media(max-width: 1140px) {
+  @media (max-width: 1140px) {
     padding: 90px 14px;
 
     &:hover {
@@ -416,7 +436,7 @@ const CoFounderButton = styled.div`
     }
   }
 
-  @media(max-width: 1100px) {
+  @media (max-width: 1100px) {
     padding: 80px 4px;
 
     &:hover {
@@ -424,7 +444,7 @@ const CoFounderButton = styled.div`
     }
   }
 
-  @media(max-width: 980px) {
+  @media (max-width: 980px) {
     padding: 74.1px 4px;
 
     span {
@@ -436,9 +456,9 @@ const CoFounderButton = styled.div`
     }
   }
 
-  @media(max-width: 900px) {
+  @media (max-width: 900px) {
     padding: 60px 4px;
-    
+
     span {
       font-size: 34.3px;
     }
@@ -448,7 +468,7 @@ const CoFounderButton = styled.div`
     }
   }
 
-  @media(max-width: 730px) {
+  @media (max-width: 730px) {
     margin-bottom: 10px;
     margin-left: 5px;
 
@@ -456,7 +476,7 @@ const CoFounderButton = styled.div`
       background-size: 200px;
     }
   }
-`
+`;
 
 const DevButton = styled.div`
   background-color: red;
@@ -487,7 +507,7 @@ const DevButton = styled.div`
     transition-duration: 0.3s;
   }
 
-  @media(max-width: 1310px) {
+  @media (max-width: 1310px) {
     padding: 100px 43px;
 
     &:hover {
@@ -495,7 +515,7 @@ const DevButton = styled.div`
     }
   }
 
-  @media(max-width: 1140px) {
+  @media (max-width: 1140px) {
     padding: 90px 33px;
 
     span {
@@ -508,16 +528,15 @@ const DevButton = styled.div`
     }
   }
 
-  @media(max-width: 1100px) {
+  @media (max-width: 1100px) {
     padding: 80px 23px;
-
 
     &:hover {
       background-size: 240px;
     }
   }
 
-  @media(max-width: 980px) {
+  @media (max-width: 980px) {
     padding: 76px 23.6px;
 
     span {
@@ -529,9 +548,9 @@ const DevButton = styled.div`
     }
   }
 
-  @media(max-width: 900px) {
+  @media (max-width: 900px) {
     padding: 62px 23px;
-    
+
     span {
       font-size: 32px;
     }
@@ -541,7 +560,7 @@ const DevButton = styled.div`
     }
   }
 
-  @media(max-width: 730px) {
+  @media (max-width: 730px) {
     padding: 55px 12px;
     margin-right: 5px;
 
@@ -553,7 +572,7 @@ const DevButton = styled.div`
       font-size: 40px;
     }
   }
-`
+`;
 
 const ArtistButton = styled.div`
   background-color: rgb(202, 202, 109);
@@ -636,13 +655,13 @@ const ArtistButton = styled.div`
       background-size: 200px;
     }
   }
-`
+`;
 
 /* Wolfgang 78 */
 
 const Header = styled.div`
-  Display: block;
-  background-color: #5AEFA5;
+  display: block;
+  background-color: #5aefa5;
   text-align: center;
   padding: 10px 0px;
   border: 5px solid black;
@@ -653,9 +672,9 @@ const Header = styled.div`
     font-family: Arial;
     font-weight: bold;
     font-size: 22px;
-    color: black
+    color: black;
   }
-`
+`;
 
 const PopupText = styled.div`
   display: flex;
@@ -665,16 +684,20 @@ const PopupText = styled.div`
   animation: fadeIn 1s;
 
   @keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;} 
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
-  @media(max-width: 1180px) {
+  @media (max-width: 1180px) {
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
   }
-`
+`;
 
 const Content = styled.div`
   display: flex;
@@ -686,7 +709,7 @@ const Content = styled.div`
     margin-top: 20px;
     width: 430px;
   }
-`
+`;
 
 const Handle = styled.div`
   display: flex;
@@ -724,49 +747,47 @@ const Handle = styled.div`
     justify-content: center;
     align-items: center;
   } 
-`
+`;
 const Text = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-top: -20px;
-  Font-family: Titillium Web;
+  font-family: Titillium Web;
   flex: 1;
   margin-right: 30px;
   font-size: 19px;
   line-height: 25px;
   color: white;
 
-  @media(max-width: 1285px) {
+  @media (max-width: 1285px) {
     margin-top: -10px;
     font-size: 18px;
   }
 
-  @media(max-width: 1250px) {
+  @media (max-width: 1250px) {
     margin-top: -10px;
     font-size: 16px;
   }
 
-  @media(max-width: 1180px) {
+  @media (max-width: 1180px) {
     margin-top: 20px;
     margin-left: 30px;
     margin-bottom: 20px;
   }
-
-`
+`;
 
 /* Dominic */
 
 const HeaderDom = styled(Header)`
   background-color: rgb(59, 112, 204);
-`
+`;
 
 const PopupTextDom = styled(PopupText)`
   background-color: rgb(206, 210, 217);
-`
+`;
 
-const ContentDom = styled(Content)`
-`
+const ContentDom = styled(Content)``;
 
 const TextDom = styled(Text)`
   flex: 1;
@@ -775,15 +796,15 @@ const TextDom = styled(Text)`
   line-height: 21px;
   color: black;
 
-    @media(max-width: 1250px) {
-      margin-bottom: 10px;
+  @media (max-width: 1250px) {
+    margin-bottom: 10px;
   }
 
-  @media(max-width: 1280px) {
+  @media (max-width: 1280px) {
     margin-top: 10px;
     font-size: 18px;
   }
-`
+`;
 
 const HandleDom = styled(Handle)`
   margin-left: 20px;
@@ -791,7 +812,7 @@ const HandleDom = styled(Handle)`
   p {
     color: black;
   }
-`
+`;
 
 /* Issues 
 
@@ -828,19 +849,18 @@ const PopupTextIssues = styled(PopupText)`
 
 const HeaderDigi = styled(Header)`
   background-color: rgb(232, 9, 9);
-`
+`;
 
 const PopupTextDigi = styled(PopupText)`
   background-color: rgb(53, 130, 219);
   margin-bottom: 20px;
-`
+`;
 
-const ContentDigi = styled(Content)`
-`
+const ContentDigi = styled(Content)``;
 
 const HandleDigi = styled(Handle)`
   margin-left: 30px;
-`
+`;
 
 const TextDigi = styled(Text)`
   margin-top: -20px;
@@ -852,20 +872,20 @@ const TextDigi = styled(Text)`
   line-height: 23px;
   font-size: 21px;
 
-  @media(max-width: 1180px) {
+  @media (max-width: 1180px) {
     margin-top: 0px;
   }
-`
+`;
 
 /* Alpha */
 
 const HeaderAlpha = styled(Header)`
   background-color: rgb(232, 9, 9);
-`
+`;
 
 const PopupTextAlpha = styled(PopupText)`
-background-color: rgb(227, 77, 162);
-`
+  background-color: rgb(227, 77, 162);
+`;
 
 const ContentAlpha = styled(Content)`
   grid-template-columns: 470px 1fr;
@@ -873,12 +893,12 @@ const ContentAlpha = styled(Content)`
   div {
     color: white;
     font-size: 18px;
-}
-`
+  }
+`;
 
 const HandleAlpha = styled(Handle)`
   margin-left: 25px;
-`
+`;
 
 const TextAlpha = styled(Text)`
   margin-top: -33px;
@@ -889,37 +909,36 @@ const TextAlpha = styled(Text)`
   margin-right: 30px;
   line-height: 20px;
 
-  @media(max-width: 1301px) {
+  @media (max-width: 1301px) {
     margin-top: -18px;
     font-size: 18px;
   }
 
-  @media(max-width: 1273px) {
+  @media (max-width: 1273px) {
     margin-bottom: 10px;
-}
+  }
 
-  @media(max-width: 1180px) {
+  @media (max-width: 1180px) {
     margin-top: 0px;
   }
-`
+`;
 
 /* Therealinh */
 
 const HeaderLinh = styled(Header)`
   background-color: rgb(249, 252, 18);
-`
+`;
 
 const PopupTextLinh = styled(PopupText)`
-background-color: rgb(49, 158, 40);
-margin-bottom: 20px;
-`
+  background-color: rgb(49, 158, 40);
+  margin-bottom: 20px;
+`;
 
-const ContentLinh = styled(Content)`
-`
+const ContentLinh = styled(Content)``;
 
 const HandleLinh = styled(Handle)`
   margin-left: 15px;
-`
+`;
 
 const TextLinh = styled(Text)`
   margin-top: -50px;
@@ -930,35 +949,33 @@ const TextLinh = styled(Text)`
   margin-right: 30px;
   line-height: 20px;
 
-  @media(max-width: 1180px) {
+  @media (max-width: 1180px) {
     margin-top: 0px;
   }
-`
+`;
 
 /* Funky */
 
 const HeaderFunky = styled(Header)`
   background-color: rgb(249, 252, 18);
-`
+`;
 
 const PopupTextFunky = styled(PopupText)`
   background-color: rgb(206, 210, 217);
   margin-bottom: 20px;
-`
+`;
 
-const ContentFunky = styled(Content)`
-
-`
+const ContentFunky = styled(Content)``;
 const HandleFunky = styled(Handle)`
   margin-left: 25px;
   p {
     color: black;
   }
 
-  @media(max-width: 418px) {
+  @media (max-width: 418px) {
     margin-left: 10px;
   }
-`
+`;
 
 const TextFunky = styled(Text)`
   margin-top: -50px;
@@ -970,25 +987,23 @@ const TextFunky = styled(Text)`
   line-height: 20px;
   color: black;
 
-  @media(max-width: 1180px) {
+  @media (max-width: 1180px) {
     margin-top: 0px;
     font-size: 18px;
   }
-
-`
+`;
 
 /* Areum */
 
 const HeaderAreum = styled(Header)`
   background-color: rgb(249, 252, 18);
-`
+`;
 
 const PopupTextAreum = styled(PopupText)`
   background-color: rgb(12, 70, 150);
-`
+`;
 
-const ContentAreum = styled(Content)`
-`
+const ContentAreum = styled(Content)``;
 
 const TextAreum = styled(Text)`
   margin-top: -50px;
@@ -1000,33 +1015,30 @@ const TextAreum = styled(Text)`
   margin-right: 30px;
   line-height: 30px;
 
-  @media(max-width: 1180px) {
+  @media (max-width: 1180px) {
     margin-top: 0px;
   }
-`
+`;
 
 const HandleAreum = styled(Handle)`
   margin-left: 12px;
-
-`
+`;
 
 const Splash3 = styled.div`
   position: absolute;
   right: 230px;
   top: 2250px;
 
-
   img {
-      width: 300px;
-      opacity: 0.8;
-    }
+    width: 300px;
+    opacity: 0.8;
+  }
 
-    
-  @media(max-width: 1049px) {
+  @media (max-width: 1049px) {
     z-index: 1;
   }
 
-  @media(max-width: 458px) {
+  @media (max-width: 458px) {
     top: 2350px;
   }
-`
+`;

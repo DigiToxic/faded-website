@@ -1,12 +1,11 @@
-import React from 'react'
-import styled from "styled-components"
-import Team from './Team'
+import React from "react";
+import styled from "styled-components";
+import Team from "./Team";
 
 function Info() {
   return (
     <Container>
-      <Team 
-
+      <Team
         /* Wolfgang 78 */
 
         titleWolf="Founder"
@@ -20,7 +19,6 @@ function Info() {
         Description3Wolf="An alpha caller, collab manager, and analyst at some reputable projects such as Early Birds Genesis, James NFT Club, The Whitelinks, and The Knights Cave with high winning percentages and detailed write-ups."
         NameWolf="Wolfgang 78"
         TwitterWolf="https://twitter.com/fadedonwolfgang?s=20&t=O6V6HPKpeRq-JGZhM6koIg"
-
         /* Dominic + Issues */
 
         titleDom="Co-Founder"
@@ -36,7 +34,6 @@ function Info() {
         Media production has opened up a ton of doors for him, he got to know many amazing people, got invited to several awesome communities, and even new doors have opened job-wise."
         NameDom="Dominic"
         TwitterDom="https://twitter.com/dominic_1654?s=20&t=SQSXaiAKq0T-TakNjiR8qA"
-
         /* titleIssues="Community Manager"
         pfpIssues="/images/Issues.jpg"
         Description1Issues="A nineteen-year old kid who decided to dip his toes into cryptocurrency in 2017 after discovering what bitcoin was while sitting in his french litterature class in high school. "
@@ -53,7 +50,6 @@ function Info() {
         Description2Digi="His desire to learn, continue to improve, and persevere in everything he does has allowed him to finish a serious industrial programming course. But it was never enough. When the word “inflation” came to his ear, he immediately got into crypto to save himself from the disaster. Hunger awakened inside of him to become a web3 developer, to have a better life, and to help as many projects as possible. He is now a developer, also a collab hunter as well as a moderator."
         NameDigi="Digi | Toxic"
         TwitterDigi="https://twitter.com/digi_toxic?s=21&t=uvesRa2IWu0lWT_VVu9VDQl"
-
         titleAlpha="Developer"
         pfpAlpha="/images/Alpha.jpg"
         Description1Alpha="An 18 year old degen & full stack developer in dont worry by faded. "
@@ -62,7 +58,6 @@ function Info() {
         Description4Alpha="My mid-long term goal is straightforward: helping traders and business owners achieve their best possible outcomes by integrating technologies and advanced business models."
         NameAlpha="Mr. Alpha"
         TwitterAlpha="https://twitter.com/mrAlpha5555?s=20&t=27W7Pqv9XlIWpS-r3m8Wdw"
-
         /* Therealinh + Funky + Areum */
 
         titleLinh="Artist"
@@ -79,7 +74,6 @@ function Info() {
         Description3Linh="&#34;The beauty is in the eye of the beholder.&#34; And she is looking forward to see people enjoy, as well as finding the artworks which build up 	&#34;Faded	&#34; aesthetically pleasing."
         NameLinh="Therealinh"
         TwitterLinh="https://twitter.com/WummieShadow?s=20&t=27W7Pqv9XlIWpS-r3m8Wdw"
-
         titleFunky="Artist"
         pfpFunky="/images/funky.jpg"
         Description1Funky="A 30-year-old average joe who always has a knack for trying anything and everything that piques his interest. An engineer & analyst by day, creator by night; he has been dabbling in the creative arts scene on and off for the past 18 years, from doodling with pen and paper to finally doing digital art as of 2021. "
@@ -87,20 +81,16 @@ function Info() {
         Description3Funky="Thus began his journey of creating pieces including fan arts of ongoing projects to original characters, the creativity does not end there. The NFT space has presented many opportunities and the recognition of his art has led him to where he is right now, from forming friendships all over the world to becoming the art advisor for Don’t Worry."
         NameFunky="funkyMusician"
         TwitterFunky="https://twitter.com/funky_musician?s=20&t=27W7Pqv9XlIWpS-r3m8Wdw"
-
         titleAreum="Artist"
         pfpAreum="/images/areums.jpg"
         DescriptionAreum="Areum is a 19 year old Turkish/Iraqi psychology student that loves art. They grew up with art and their mother used to be an art teacher which made them even more interested in art. They don't know much about the market but they try to learn about it. Having art turn from a hobby to a job makes them really happy and motivated to learn even more stuff. They are the second artist that makes the posters."
         NameAreum="Areum"
         TwitterAreum="https://twitter.com/simbaaab?s=20"
-
       />
     </Container>
-  )
+  );
 }
 
-export default Info
+export default Info;
 
-const Container = styled.div`
-
-`
+const Container = styled.div``;

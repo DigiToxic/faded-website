@@ -1,18 +1,20 @@
-import React from 'react'
+import React from "react";
 import styled from "styled-components";
 
 function Popup(props) {
-  return (props.trigger) ? (
+  return props.trigger ? (
     <PopUp>
       <Box>
         <span onClick={() => props.setTrigger(false)}>x</span>
         {props.children}
       </Box>
     </PopUp>
-  ) : "";
-};
+  ) : (
+    ""
+  );
+}
 
-export default Popup
+export default Popup;
 
 const PopUp = styled.div`
   position: fixed;
@@ -23,7 +25,7 @@ const PopUp = styled.div`
   left: 0;
   animation: fadeIn 1s;
   z-index: 100;
-`
+`;
 
 const Box = styled.div`
   position: relative;
@@ -39,7 +41,7 @@ const Box = styled.div`
   overflow: auto;
 
   span {
-    content: 'x';
+    content: "x";
     cursor: pointer;
     position: fixed;
     right: calc(10% - 30px);
@@ -52,6 +54,5 @@ const Box = styled.div`
     text-align: center;
     border: 1px solid #999;
     font-size: 20px;
-
   }
-`
+`;

@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 function FootMint() {
   return (
@@ -8,10 +8,10 @@ function FootMint() {
         <img src="/images/faded-logo.png" alt="" />
       </RightNav>
     </Container>
-  )
+  );
 }
 
-export default FootMint
+export default FootMint;
 
 const Container = styled.div`
   background-color: rgb(33, 12, 94);
@@ -20,7 +20,7 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-`
+`;
 
 const RightNav = styled.div`
   margin-left: 10px;
@@ -33,4 +33,4 @@ const RightNav = styled.div`
   img {
     width: 300px;
   }
-`
+`;

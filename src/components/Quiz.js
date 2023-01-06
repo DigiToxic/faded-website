@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import styled from "styled-components";
 
 function FillInTheBlank() {
@@ -9,13 +9,12 @@ function FillInTheBlank() {
   const [randomNumber, setRandomNumber] = useState("");
   const [buttonDisabled, setButtonDisabled] = useState(false);
 
-
   function handleSubmit() {
     if (inputValue === "" || inputValue2 === "" || inputValue3 === "") {
-      setMessage('The king need a answer!');
+      setMessage("The king need a answer!");
     } else {
-      setMessage('');
-      Whitelist()
+      setMessage("");
+      Whitelist();
     }
   }
 
@@ -25,21 +24,22 @@ function FillInTheBlank() {
     setRandomNumber(number);
     setButtonDisabled(true);
   }
-  
+
   let text;
   if (randomNumber === 0) {
-    text = 'You are now Whitelisted! Please open a ticket in our discord with the proof!';
+    text =
+      "You are now Whitelisted! Please open a ticket in our discord with the proof!";
   } else if (randomNumber >= 1) {
-    text = 'You did not get Whitelisted...';
+    text = "You did not get Whitelisted...";
   } else {
-    text = '';
+    text = "";
   }
 
   return (
     <Container>
       <h1>The king want to ask you some questions...</h1>
       <Question1>
-      <p>What do you think is the reason behind the name “faded” ?</p>
+        <p>What do you think is the reason behind the name “faded” ?</p>
         <input
           type="text"
           className="blank"
@@ -50,7 +50,7 @@ function FillInTheBlank() {
       </Question1>
 
       <Question2>
-      <p>What would u think faded's utility will be ?</p>
+        <p>What would u think faded's utility will be ?</p>
         <input
           type="text"
           className="blank"
@@ -61,7 +61,11 @@ function FillInTheBlank() {
       </Question2>
 
       <Question3>
-      <p> Had you gotten the chance, would you like to be a builder or a successor ? </p>
+        <p>
+          {" "}
+          Had you gotten the chance, would you like to be a builder or a
+          successor ?{" "}
+        </p>
         <input
           type="text"
           className="blank"
@@ -71,9 +75,14 @@ function FillInTheBlank() {
         />
       </Question3>
       <Button>
-        <button disabled={buttonDisabled} onClick={handleSubmit}>Submit</button><p>{message}</p>
+        <button disabled={buttonDisabled} onClick={handleSubmit}>
+          Submit
+        </button>
+        <p>{message}</p>
       </Button>
-      <Text><p>{text}</p></Text>
+      <Text>
+        <p>{text}</p>
+      </Text>
     </Container>
   );
 }
@@ -106,7 +115,7 @@ const Container = styled.div`
       }
     }
   }
-`
+`;
 
 const Question1 = styled.div`
   display: flex;
@@ -130,15 +139,13 @@ const Question1 = styled.div`
     border-width: 0.5px;
     border-style: solid;
   }
-`
+`;
 
-const Question2 = styled(Question1)`
-
-`
+const Question2 = styled(Question1)``;
 
 const Question3 = styled(Question1)`
   margin-bottom: 30px;
-`
+`;
 
 const Text = styled.div`
   margin-top: 20px;
@@ -147,7 +154,7 @@ const Text = styled.div`
     font-size: 20px;
     font-family: BlackChancery;
   }
-`
+`;
 
 const Button = styled.div`
   display: flex;
@@ -178,7 +185,6 @@ const Button = styled.div`
       margin-right: -5px;
       margin-top: 5px;
       margin-bottom: -5px;
-
     }
   }
 
@@ -187,4 +193,4 @@ const Button = styled.div`
     font-size: 20px;
     font-family: BlackChancery;
   }
-`
+`;

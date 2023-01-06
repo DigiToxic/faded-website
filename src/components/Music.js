@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
-import Song from "./music/scientist.mp3"
+import Song from "./music/scientist.mp3";
 
 function Music() {
   const audioRef = useRef(null);
@@ -28,7 +28,11 @@ function Music() {
 
       {/* Add a play/pause button that the user can click to control the audio */}
       <button onClick={handlePlayPauseClick}>
-        {isPlaying ? <img src="/images/play.png" alt="" /> : <img src="/images/pause.png" alt="" /> }
+        {isPlaying ? (
+          <img src="/images/play.png" alt="" />
+        ) : (
+          <img src="/images/pause.png" alt="" />
+        )}
       </button>
     </Container>
   );
@@ -46,4 +50,4 @@ const Container = styled.div`
   img {
     width: 50px;
   }
-`
+`;

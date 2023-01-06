@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 import styled from "styled-components";
 import Marquee from "react-fast-marquee";
 import { Fade } from "react-awesome-reveal";
 
 function KingdomReward() {
   return (
-    <Container id='Kingdom'>
+    <Container id="Kingdom">
       <Fade triggerOnce="true">
         <KingdomName>
           <span>Kingdom's reward</span>
@@ -19,13 +19,21 @@ function KingdomReward() {
         <Kingdom>
           <img src="/images/castle.gif" alt="" />
           <KingdomText>
-            <p>The king promises that all soldiers who successfully complete their mission will be rewarded with eternal wealth, whether it be in the form of magic money or real money.</p>
-            <p>In addition, the soldiers will be granted health, eternal freedom, and the opportunity to speak freely with the kingdom's high leaders.</p>
+            <p>
+              The king promises that all soldiers who successfully complete
+              their mission will be rewarded with eternal wealth, whether it be
+              in the form of magic money or real money.
+            </p>
+            <p>
+              In addition, the soldiers will be granted health, eternal freedom,
+              and the opportunity to speak freely with the kingdom's high
+              leaders.
+            </p>
           </KingdomText>
         </Kingdom>
       </Fade>
 
-      <Slider className='Overflow'>
+      <Slider className="Overflow">
         <Marquee gradient={false} speed={200} className="Marquee">
           <FirstDiv>
             <img src="/images/Carousel/Faded 1.jpg" alt="" />
@@ -94,16 +102,16 @@ function KingdomReward() {
         <img src="/images/splash/splash 2.png" alt="" />
       </Splash2>
     </Container>
-  )
+  );
 }
 
-export default KingdomReward
+export default KingdomReward;
 
 const Container = styled.div`
   position: relative;
   background-color: rgb(234, 189, 252);
   padding-bottom: 70px;
-`
+`;
 
 const KingdomName = styled.div`
   display: flex;
@@ -124,7 +132,7 @@ const KingdomName = styled.div`
   @media (max-width: 1040px) {
     margin-top: 40px;
   }
-`
+`;
 
 const Kingdom = styled.div`
   display: flex;
@@ -163,7 +171,7 @@ const Kingdom = styled.div`
           width: 350px;
         }
   }
-`
+`;
 
 const KingdomText = styled.div`
   margin-top: 150px;
@@ -200,7 +208,7 @@ const KingdomText = styled.div`
     margin-left: 50px;
     margin-right: 50px;
   }
-`
+`;
 
 const Slider = styled.div`
   margin-top: 80px;
@@ -213,7 +221,7 @@ const Slider = styled.div`
   @media (max-width: 1040px) {
     margin-top: 40px;
   }
-  
+
   @media (max-width: 1100px) {
     img {
       width: 250px;
@@ -227,70 +235,70 @@ const Slider = styled.div`
       width: 200px;
     }
   }
-`
+`;
 
 const FirstDiv = styled.div`
   margin-left: 60px;
-`
+`;
 
 const SecondDiv = styled.div`
   margin-left: 60px;
-`
+`;
 
 const ThirdDiv = styled.div`
   margin-left: 60px;
-`
+`;
 
 const ForthDiv = styled.div`
   margin-left: 60px;
-`
+`;
 
 const FiveDiv = styled.div`
   margin-left: 60px;
-`
+`;
 
 const SixDiv = styled.div`
   margin-left: 60px;
-`
+`;
 
 const SevenDiv = styled.div`
   margin-left: 60px;
-`
+`;
 
 const HeightDiv = styled.div`
   margin-left: 60px;
-`
+`;
 
 const NineDiv = styled.div`
   margin-left: 60px;
-`
+`;
 
 const LastDiv = styled.div`
   margin-left: 60px;
-`
+`;
 
 const Splash1 = styled.div`
   position: absolute;
   left: 80%;
-  
-  img {
-      width: 100%;
-      opacity: 0.8;
-    }
 
-    @media (max-width: 1040px) {
-      left: 70%;
-      top: 40%;
-    }
-`
+  img {
+    width: 100%;
+    opacity: 0.8;
+  }
+
+  @media (max-width: 1040px) {
+    left: 70%;
+    top: 40%;
+  }
+`;
 
 const Splash2 = styled.div`
   position: absolute;
   left: 80px;
   bottom: -200px;
-  
+
   img {
-      width: 300px;
-      opacity: 0.8;
-    }
-`
+    width: 300px;
+    opacity: 0.8;
+  }
+`;

@@ -1,83 +1,179 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
 import styled from "styled-components";
-import {Link} from 'react-scroll';
-import Music from './Music';
+import { Link } from "react-scroll";
+import Music from "./Music";
 
 function Header() {
   const [burgerStatus, setBurgerStatus] = useState(false);
 
   return (
-      <Container>
-          <Section1>
-            <Link activeClass="active" to="Body" spy={true} smooth={true}><div>
-              <img src="/images/faded-logo.png" alt=""/>
-            </div></Link>
-          </Section1>
+    <Container>
+      <Section1>
+        <Link activeClass="active" to="Body" spy={true} smooth={true}>
+          <div>
+            <img src="/images/faded-logo.png" alt="" />
+          </div>
+        </Link>
+      </Section1>
 
-          <Section2>
-            <Link to="Kingdom" spy={true} smooth={true}><div>
+      <Section2>
+        <Link to="Kingdom" spy={true} smooth={true}>
+          <div>
             <ButtonKingdom>
               <span>Kingdom</span>
             </ButtonKingdom>
-            </div></Link>
+          </div>
+        </Link>
 
-            <Link to="Team" spy={true} smooth={true}><div>
+        <Link to="Team" spy={true} smooth={true}>
+          <div>
             <ButtonNobles>
               <span>Nobles</span>
             </ButtonNobles>
-            </div></Link>
+          </div>
+        </Link>
 
-            <Link to="Elixir" spy={true} smooth={true}><div>
+        <Link to="Elixir" spy={true} smooth={true}>
+          <div>
             <ButtonElixirs>
               <span>Elixirs</span>
             </ButtonElixirs>
-            </div></Link>
+          </div>
+        </Link>
 
-            <Link to="FAQ" spy={true} smooth={true}><div>
+        <Link to="FAQ" spy={true} smooth={true}>
+          <div>
             <ButtonFAQ>
               <span>FAQ</span>
             </ButtonFAQ>
-            </div></Link>
+          </div>
+        </Link>
 
-            <a href="/mint"><div>
-           <ButtonMint>
-           <span>Mint</span>
-          </ButtonMint>
-          </div></a>
-          </Section2>
+        <a href="/mint">
+          <div>
+            <ButtonMint>
+              <span>Mint</span>
+            </ButtonMint>
+          </div>
+        </a>
+      </Section2>
 
-          <Section4>
-            <Music />
-          </Section4>
+      <Section4>
+        <Music />
+      </Section4>
 
-          <Section3>
-            <a href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg" rel="noreferrer" target="_blank"><img src="/images/twitter.png" alt=""/></a>
-            <img src="/images/opensea.png" alt=""/>
-            <img src="/images/etherscan.png" alt=""/>
-          </Section3>
-          
-        <OpenWrapper>
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" color="white" xmlns="http://www.w3.org/2000/svg" onClick={() => setBurgerStatus(true)}><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
-        </OpenWrapper>
-          <BurgerNav show={burgerStatus}>
-            <CloseWrapper>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" height="50px" width="50px" xmlns="http://www.w3.org/2000/svg" onClick={() => setBurgerStatus(false)}><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/></svg>
-            </CloseWrapper>
-              <li><Link to="Kingdom" spy={true} smooth={true} onClick={() => setBurgerStatus(false)}>Kingdom</Link></li>
-              <li><Link to="Team" spy={true} smooth={true} onClick={() => setBurgerStatus(false)}>Nobles</Link></li>
-              <li><Link to="Elixir" spy={true} smooth={true} onClick={() => setBurgerStatus(false)}>Elixirs</Link></li>
-              <li><Link to="FAQ" spy={true} smooth={true} onClick={() => setBurgerStatus(false)}>FAQ</Link></li>
-              <a href="/MintButton"><div><li><a href="/mint">Mint</a></li></div></a>
-              <a href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg" rel="noreferrer" target="_blank"><img src="/images/twitter.png" alt=""/></a>
-              <img src="/images/opensea.png" alt=""/>
-              <img src="/images/etherscan.png" alt=""/>
-          </BurgerNav>
+      <Section3>
+        <a
+          href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img src="/images/twitter.png" alt="" />
+        </a>
+        <img src="/images/opensea.png" alt="" />
+        <img src="/images/etherscan.png" alt="" />
+      </Section3>
 
-      </Container>
-  )
+      <OpenWrapper>
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          color="white"
+          xmlns="http://www.w3.org/2000/svg"
+          onClick={() => setBurgerStatus(true)}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4 6h16M4 10h16M4 14h16M4 18h16"
+          />
+        </svg>
+      </OpenWrapper>
+      <BurgerNav show={burgerStatus}>
+        <CloseWrapper>
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            height="50px"
+            width="50px"
+            xmlns="http://www.w3.org/2000/svg"
+            onClick={() => setBurgerStatus(false)}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </CloseWrapper>
+        <li>
+          <Link
+            to="Kingdom"
+            spy={true}
+            smooth={true}
+            onClick={() => setBurgerStatus(false)}
+          >
+            Kingdom
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="Team"
+            spy={true}
+            smooth={true}
+            onClick={() => setBurgerStatus(false)}
+          >
+            Nobles
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="Elixir"
+            spy={true}
+            smooth={true}
+            onClick={() => setBurgerStatus(false)}
+          >
+            Elixirs
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="FAQ"
+            spy={true}
+            smooth={true}
+            onClick={() => setBurgerStatus(false)}
+          >
+            FAQ
+          </Link>
+        </li>
+        <a href="/MintButton">
+          <div>
+            <li>
+              <a href="/mint">Mint</a>
+            </li>
+          </div>
+        </a>
+        <a
+          href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img src="/images/twitter.png" alt="" />
+        </a>
+        <img src="/images/opensea.png" alt="" />
+        <img src="/images/etherscan.png" alt="" />
+      </BurgerNav>
+    </Container>
+  );
 }
 
-export default Header
+export default Header;
 
 const Container = styled.div`
   height: 60px;
@@ -96,7 +192,7 @@ const Container = styled.div`
   border-bottom-style: solid;
   border-bottom-color: white;
   z-index: 100;
-`
+`;
 
 const Section1 = styled.div`
   margin-left: 10px;
@@ -105,22 +201,22 @@ const Section1 = styled.div`
   align-items: center;
 
   img {
-      width: 350px;
-      cursor: pointer;
+    width: 350px;
+    cursor: pointer;
   }
 
-  @media(max-width: 1123px) {
+  @media (max-width: 1123px) {
     img {
       width: 95%;
     }
   }
 
-  @media(max-width: 950px) {
-      img {
-        width: 350px;
+  @media (max-width: 950px) {
+    img {
+      width: 350px;
     }
   }
-`
+`;
 
 const Section2 = styled.div`
   flex: 2.5;
@@ -132,10 +228,10 @@ const Section2 = styled.div`
     text-decoration-line: none;
   }
 
-  @media(max-width: 950px) {
+  @media (max-width: 950px) {
     display: none;
   }
-`
+`;
 const ButtonKingdom = styled.div`
   font-family: Arial;
   font-weight: bold;
@@ -154,21 +250,15 @@ const ButtonKingdom = styled.div`
     background-color: white;
     color: green;
   }
-`
-const ButtonNobles = styled(ButtonKingdom)`
+`;
+const ButtonNobles = styled(ButtonKingdom)``;
+const ButtonElixirs = styled(ButtonKingdom)``;
 
-`
-const ButtonElixirs = styled(ButtonKingdom)`
-
-`
-
-const ButtonFAQ = styled(ButtonKingdom)`
-
-`
+const ButtonFAQ = styled(ButtonKingdom)``;
 
 const ButtonMint = styled(ButtonKingdom)`
   margin-right: 0px;
-`
+`;
 
 const Section3 = styled.div`
   flex: 1;
@@ -182,20 +272,20 @@ const Section3 = styled.div`
     margin-right: 20px;
   }
 
-  @media(max-width: 950px) {
+  @media (max-width: 950px) {
     display: none;
   }
-`
+`;
 
 const Section4 = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @media(max-width: 950px) {
+  @media (max-width: 950px) {
     display: none;
   }
-`
+`;
 
 const OpenWrapper = styled.div`
   display: none;
@@ -205,10 +295,10 @@ const OpenWrapper = styled.div`
     height: 50px;
   }
 
-  @media(max-width: 950px) {
+  @media (max-width: 950px) {
     display: initial;
   }
-`
+`;
 
 const BurgerNav = styled.div`
   position: fixed;
@@ -223,13 +313,13 @@ const BurgerNav = styled.div`
   display: flex;
   flex-direction: column;
   text-align: start;
-  transform: ${props => props.show ? 'translateX(0)' : 'translateX(100%)'};
+  transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
   transition: transform 0.3s;
   display: none;
 
   li {
     padding: 15px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     font-weight: bold;
   }
 
@@ -239,13 +329,12 @@ const BurgerNav = styled.div`
     margin-top: 40px;
   }
 
-
-  @media(max-width: 950px) {
+  @media (max-width: 950px) {
     display: initial;
   }
-`
+`;
 
 const CloseWrapper = styled.div`
   display: flex;
-  justify-content: end
-`
+  justify-content: end;
+`;
