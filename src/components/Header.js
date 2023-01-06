@@ -144,13 +144,6 @@ function Header() {
             FAQ
           </Link>
         </li>
-        <a href="/MintButton">
-          <div>
-            <li>
-              <a href="/mint">Mint</a>
-            </li>
-          </div>
-        </a>
         <a
           href="https://twitter.com/ItsFadedNFT?s=20&t=E40QScTf_zPcpT8cOumLLg"
           rel="noreferrer"
