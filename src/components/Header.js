@@ -241,10 +241,6 @@ const ButtonElixirs = styled(ButtonKingdom)``;
 
 const ButtonFAQ = styled(ButtonKingdom)``;
 
-const ButtonMint = styled(ButtonKingdom)`
-  margin-right: 0px;
-`;
-
 const Section3 = styled.div`
   flex: 1;
   display: flex;
