@@ -48,14 +48,6 @@ function Header() {
             </ButtonFAQ>
           </div>
         </Link>
-
-        <a href="/mint">
-          <div>
-            <ButtonMint>
-              <span>Mint</span>
-            </ButtonMint>
-          </div>
-        </a>
       </Section2>
 
       <Section4>
