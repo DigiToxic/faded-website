@@ -183,6 +183,10 @@ const Answer = styled.div`
     font-size: 22px;
     font-family: BlackChancery;
   }
+  
+  @media (max-width: 1921px) {
+    width: 1800px;
+  }
 
   @media (max-width: 1890px) {
     width: 1700px;
