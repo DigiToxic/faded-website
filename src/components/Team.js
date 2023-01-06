@@ -18,7 +18,7 @@ function Team(props) {
       </Zoom>
 
       <NobleText>
-        <p>A great project has a great team behind</p>
+        <p>A great project has a great team behind!</p>
       </NobleText>
 
       <TeamButton>

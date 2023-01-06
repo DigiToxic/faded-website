@@ -48,11 +48,11 @@ function FAQ() {
         </Answer>
         <BurgerNav isVisible={isVisible}>
           <p>
-            We are a highly motivated team dedicated revolutionize the web3
-            space by bringing innovation plus excitement to create a truly
-            valuable and sustainable project. to create a truly valuable
-            project. Our focus encompasses everything from building businesses
-            to improving health and finding innovative ways to generate revenue.
+            We are a highly motivated team dedicated to revolutionize the web3
+            space by bringing innovation to create a truly valuable and
+            sustainable project. Our focus encompasses everything from building
+            businesses to improving health and finding innovative ways to
+            generate revenue.
           </p>
         </BurgerNav>
       </Box>
@@ -70,15 +70,15 @@ function FAQ() {
         </Answer2>
         <BurgerNav3 isVisible={isVisible2}>
           <p>
-            For those who didn't got faded, we are offering the opportunity to
+            For those who didn't get faded, we are offering the opportunity to
             participate in our alpha program, which includes guidance on
-            starting any type of business “such as E-commerce (building a brand
-            & dropshipping), various of digital marketing approaches, social
-            media marketing agency, models management, as well as how to trade
-            coins, jpeg, and fiat in any market. Our course is led by extremely
-            successful entrepreneurs who are committed to helping you succeed on
-            any path you choose. All the resources & networks needed will be
-            provided too, literally giving any of you the real unfair edge & a
+            starting any type of business such as E-commerce (building a brand &
+            dropshipping), various of digital marketing approaches, social media
+            marketing agency, models management, as well as how to trade coins,
+            jpeg, and fiat in any market. <br /> <br /> Our course is led by
+            extremely successful entrepreneurs who are committed to helping you
+            succeed on any path you choose. All the resources & networks needed
+            will be provided too, literally giving a literal unfair edge & a
             game changer to the web3 space.
           </p>
         </BurgerNav3>
@@ -99,12 +99,11 @@ function FAQ() {
           <p>
             The king is always watching your actions, so the best way to gain
             his favor is to provide as much value as possible to our Discord
-            community and work together to succeed. Occasionally, A big
-            percentage will be from doing an interview with our kingdom
-            visitors, we want to handpick the best possible people to ever hold
-            our NFTs. Finally, the king will send out quests that can be
-            completed by entering premints or participating in the Alphabot
-            raffle, giving you the chance to get whitelisted!
+            community. Occasionally, A big percentage will be from doing an
+            interview with our kingdom visitors, we want to handpick the best
+            possible people to ever hold our NFTs. Moreover, the king will send
+            out quests that can be completed by entering premints or
+            participating in the Alphabot raffle!
           </p>
         </BurgerNav4>
       </Box>
@@ -318,28 +317,24 @@ const BurgerNav = styled.div`
     width: 700px;
   }
 
-  @media (max-width: 885px) {
-    height: ${(props) => (props.isVisible ? "140px" : 0)};
-  }
-
   @media (max-width: 790px) {
     width: 600px;
-    height: ${(props) => (props.isVisible ? "160px" : 0)};
+    height: ${(props) => (props.isVisible ? "140px" : 0)};
   }
 
   @media (max-width: 655px) {
     width: 500px;
-    height: ${(props) => (props.isVisible ? "180px" : 0)};
+    height: ${(props) => (props.isVisible ? "160px" : 0)};
   }
 
   @media (max-width: 551px) {
     width: 400px;
-    height: ${(props) => (props.isVisible ? "220px" : 0)};
+    height: ${(props) => (props.isVisible ? "180px" : 0)};
   }
 
   @media (max-width: 450px) {
     width: 300px;
-    height: ${(props) => (props.isVisible ? "300px" : 0)};
+    height: ${(props) => (props.isVisible ? "240px" : 0)};
   }
 `;
 
@@ -357,11 +352,11 @@ const BurgerNav3 = styled.div`
   }
 
   @media (max-width: 1920px) {
-    width: 1650px;
+    width: 1675px;
   }
 
   @media (max-width: 1771px) {
-    width: 1550px;
+    width: 1600px;
   }
 
   @media (max-width: 1620px) {
@@ -370,6 +365,7 @@ const BurgerNav3 = styled.div`
 
   @media (max-width: 1560px) {
     width: 1350px;
+    height: ${(props) => (props.isVisible ? "180px" : 0)};
   }
 
   @media (max-width: 1420px) {
@@ -380,34 +376,33 @@ const BurgerNav3 = styled.div`
     width: 1000px;
   }
 
-  @media (max-width: 1200px) {
-    width: 900px;
-    height: ${(props) => (props.isVisible ? "180px" : 0)};
-  }
-
   @media (max-width: 1125px) {
     width: 800px;
-    height: ${(props) => (props.isVisible ? "220px" : 0)};
-  }
-
-  @media (max-width: 930px) {
-    width: 700px;
     height: ${(props) => (props.isVisible ? "240px" : 0)};
   }
 
-  @media (max-width: 856px) {
-    width: 600px;
+  @media (max-width: 920px) {
+    width: 700px;
     height: ${(props) => (props.isVisible ? "280px" : 0)};
+  }
+
+  @media (max-width: 856px) {
+    height: ${(props) => (props.isVisible ? "280px" : 0)};
+  }
+
+  @media (max-width: 790px) {
+    width: 600px;
+    height: ${(props) => (props.isVisible ? "300px" : 0)};
   }
 
   @media (max-width: 655px) {
     width: 500px;
-    height: ${(props) => (props.isVisible ? "300px" : 0)};
+    height: ${(props) => (props.isVisible ? "340px" : 0)};
   }
 
   @media (max-width: 551px) {
     width: 400px;
-    height: ${(props) => (props.isVisible ? "400px" : 0)};
+    height: ${(props) => (props.isVisible ? "460px" : 0)};
   }
 
   @media (max-width: 450px) {
@@ -447,11 +442,11 @@ const BurgerNav4 = styled.div`
 
   @media (max-width: 1420px) {
     width: 1200px;
-    height: ${(props) => (props.isVisible ? "120px" : 0)};
   }
 
-  @media (max-width: 1331px) {
+  @media (max-width: 1330px) {
     width: 1000px;
+    height: ${(props) => (props.isVisible ? "130px" : 0)};
   }
 
   @media (max-width: 1125px) {
@@ -461,27 +456,26 @@ const BurgerNav4 = styled.div`
 
   @media (max-width: 920px) {
     width: 700px;
-    height: ${(props) => (props.isVisible ? "180px" : 0)};
   }
 
   @media (max-width: 790px) {
     width: 600px;
-    height: ${(props) => (props.isVisible ? "220px" : 0)};
+    height: ${(props) => (props.isVisible ? "180px" : 0)};
   }
 
   @media (max-width: 655px) {
     width: 500px;
-    height: ${(props) => (props.isVisible ? "240px" : 0)};
+    height: ${(props) => (props.isVisible ? "220px" : 0)};
   }
 
   @media (max-width: 550px) {
     width: 400px;
-    height: ${(props) => (props.isVisible ? "300px" : 0)};
+    height: ${(props) => (props.isVisible ? "280px" : 0)};
   }
 
   @media (max-width: 450px) {
     width: 350px;
-    height: ${(props) => (props.isVisible ? "360px" : 0)};
+    height: ${(props) => (props.isVisible ? "320px" : 0)};
   }
 `;
 
