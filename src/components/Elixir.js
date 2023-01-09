@@ -184,6 +184,20 @@ const Splash4 = styled.div`
     width: 300px;
     opacity: 0.8;
   }
+
+  @media (max-width: 1920px) {
+    top: 2800px;
+    left: 100px;
+  }
+
+  @media (max-width: 1700px) {
+    top: 2700px;
+    left: 50px;
+  }
+
+  @media (max-width: 1500px) {
+    top: 2550px;
+  }
 `;
 
 const Splash5 = styled.div`
